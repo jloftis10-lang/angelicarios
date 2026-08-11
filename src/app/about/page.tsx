@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { PortraitImage } from "@/components/ui/PortraitImage";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { agent } from "@/config/site";
+import { agent, serviceAreas } from "@/config/site";
+import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
 
 export const metadata: Metadata = {
   title: "About Angelica",
@@ -26,7 +27,11 @@ export default function AboutPage() {
 
       <section className="pb-16">
         <Container className="grid items-start gap-10 md:grid-cols-2 md:gap-16">
-          <PlaceholderImage label="Angelica professional portrait" aspect="aspect-[4/5]" />
+          <PortraitImage
+            src={angelicaPortrait}
+            alt={`Angelica, ${agent.title} in ${serviceAreas.primary}`}
+            aspect="aspect-[4/5]"
+          />
           <div className="flex flex-col gap-4 text-base leading-relaxed text-slate">
             <p>
               Angelica&apos;s path to Georgia real estate started in California, where she previously worked in real

@@ -3,11 +3,13 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { PortraitImage } from "@/components/ui/PortraitImage";
 import { ThreePaths } from "@/components/sections/ThreePaths";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FinalCta } from "@/components/sections/FinalCta";
-import { serviceAreas } from "@/config/site";
+import { serviceAreas, agent } from "@/config/site";
+import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
 
 export const metadata: Metadata = {
   title: "Peachtree City Realtor",
@@ -38,7 +40,12 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <PlaceholderImage label="Angelica professional portrait" aspect="aspect-[4/5]" />
+          <PortraitImage
+            src={angelicaPortrait}
+            alt={`Angelica, ${agent.title} in ${serviceAreas.primary}`}
+            aspect="aspect-[4/5]"
+            priority
+          />
         </Container>
       </section>
 
