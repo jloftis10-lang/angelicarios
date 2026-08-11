@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/Button";
 import { PageHero } from "@/components/sections/PageHero";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { LeadForm } from "@/components/forms/LeadForm";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { TrackedLink } from "@/components/TrackedLink";
 import { propertySearch } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -25,6 +27,7 @@ const hasApprovedSearch = !propertySearch.url.startsWith("[");
 export default function BuyPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Buy", href: "/buy" }]} />
       <PageHero
         eyebrow="Buying"
         title="Buying in Peachtree City shouldn't start with a search box."
@@ -33,9 +36,13 @@ export default function BuyPage() {
         <div className="mt-8 flex flex-wrap gap-3">
           <Button href="#buyer-form">Tell Me What You&apos;re Looking For</Button>
           {hasApprovedSearch && (
-            <Button href={propertySearch.url} variant="secondary">
+            <TrackedLink
+              href={propertySearch.url}
+              event="listing_search_click"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-navy px-6 py-3 text-sm font-medium text-navy transition-colors hover:bg-navy hover:text-warm-white"
+            >
               Browse Current Listings
-            </Button>
+            </TrackedLink>
           )}
         </div>
       </PageHero>

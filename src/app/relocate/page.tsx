@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { PageHero } from "@/components/sections/PageHero";
 import { LeadForm } from "@/components/forms/LeadForm";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Relocating to Peachtree City",
@@ -24,6 +25,7 @@ const topics = [
 export default function RelocatePage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Relocate", href: "/relocate" }]} />
       <PageHero
         eyebrow="Relocation"
         title="Moving to Peachtree City? Start with someone who understands the move."

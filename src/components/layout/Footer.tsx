@@ -2,6 +2,7 @@ import Link from "next/link";
 import { footerNav, primaryNav } from "@/config/navigation";
 import { agent, brand, brokerage, contact, serviceAreas, social } from "@/config/site";
 import { Container } from "@/components/ui/Container";
+import { TrackedLink } from "@/components/TrackedLink";
 
 const socialLinks = [
   { label: "Instagram", href: social.instagram },
@@ -19,9 +20,9 @@ export function Footer() {
             Serving {serviceAreas.primary} and {serviceAreas.secondary}.
           </p>
           <div className="mt-4 flex flex-col gap-1 text-sm text-ink">
-            <a href={contact.phoneHref} className="hover:text-navy">
+            <TrackedLink href={contact.phoneHref} event="phone_click" params={{ location: "footer" }} className="hover:text-navy">
               {agent.phone}
-            </a>
+            </TrackedLink>
             <a href={contact.emailHref} className="hover:text-navy">
               {agent.email}
             </a>

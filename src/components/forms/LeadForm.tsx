@@ -17,10 +17,12 @@ export function LeadForm({
   intent,
   fields,
   submitLabel = "Send",
+  successMessage = "Angelica will follow up personally as soon as she can.",
 }: {
   intent: LeadIntent;
   fields: FormFieldConfig[];
   submitLabel?: string;
+  successMessage?: string;
 }) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
@@ -57,7 +59,7 @@ export function LeadForm({
     return (
       <div role="status" className="rounded-2xl border border-sage/40 bg-sage/10 p-6 text-ink">
         <p className="font-display text-lg font-semibold text-navy">Thank you — that&apos;s on its way.</p>
-        <p className="mt-1 text-sm text-slate">Angelica will follow up personally as soon as she can.</p>
+        <p className="mt-1 text-sm text-slate">{successMessage}</p>
       </div>
     );
   }

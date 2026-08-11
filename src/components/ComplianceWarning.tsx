@@ -11,7 +11,6 @@ import { isMissingComplianceInfo } from "@/config/site";
 export function ComplianceWarning() {
   useEffect(() => {
     if (isMissingComplianceInfo()) {
-      // eslint-disable-next-line no-console
       console.warn(
         "[angelicarios] NOT READY FOR PUBLIC LAUNCH — brokerage/agent compliance information in src/config/site.ts is still a placeholder. See docs/launch-checklist.md.",
       );

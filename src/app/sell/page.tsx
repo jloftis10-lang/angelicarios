@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/sections/PageHero";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { LeadForm } from "@/components/forms/LeadForm";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Sell Your Home in Peachtree City",
@@ -32,6 +33,7 @@ const overlooked = [
 export default function SellPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Sell", href: "/sell" }]} />
       <PageHero
         eyebrow="Selling"
         title="Selling starts with getting the price right."
