@@ -36,7 +36,7 @@ export default function PeachtreeCityPage() {
           <h2 className="font-display text-2xl font-semibold text-navy">What makes Peachtree City different</h2>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {[
-              { title: "Multi-use path network", copy: "Nearly 100 miles of paths connect neighborhoods, schools, shopping, and recreation across the city." },
+              { title: "Multi-use path network", copy: "100+ miles of paths connect neighborhoods, schools, shopping, and recreation across the city — one of the largest municipal cart-path systems in the country." },
               { title: "Golf carts", copy: "Golf carts are a common, registered way to get around on the path system, alongside walking and biking." },
               { title: "Lakes and recreation", copy: "Several lakes and public recreation areas are woven through the city's villages." },
               { title: "Planned-community structure", copy: "The city is organized into distinct villages, each with its own character and amenities." },

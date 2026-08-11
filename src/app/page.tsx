@@ -6,6 +6,7 @@ import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { PortraitImage } from "@/components/ui/PortraitImage";
 import { ThreePaths } from "@/components/sections/ThreePaths";
 import { HowItWorks } from "@/components/sections/HowItWorks";
+import { RecentPosts } from "@/components/sections/RecentPosts";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { serviceAreas, agent } from "@/config/site";
@@ -59,7 +60,7 @@ export default function Home() {
               There&apos;s nowhere quite like Peachtree City.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-slate">
-              Five villages connected by nearly 100 miles of multi-use paths, a golf-cart culture that shapes daily
+              Five villages connected by 100+ miles of multi-use paths, a golf-cart culture that shapes daily
               life, lakes and public recreation, and easy access to the rest of South Metro Atlanta.
             </p>
             <Button href="/peachtree-city-ga" variant="ghost" className="mt-6 px-0">
@@ -94,6 +95,7 @@ export default function Home() {
       </section>
 
       <HowItWorks />
+      <RecentPosts />
       <Testimonials />
       <FinalCta />
     </>

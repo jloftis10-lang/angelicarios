@@ -9,6 +9,8 @@ export const primaryNav = [
 
 export const footerNav = [
   { label: "Contact", href: "/contact" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Blog", href: "/blog" },
   { label: "Peachtree City Guide", href: "/guide" },
   { label: "Privacy", href: "/privacy" },
   { label: "Terms", href: "/terms" },

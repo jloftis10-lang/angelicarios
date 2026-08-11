@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     siteName: brand.name,
     type: "website",
   },
+  alternates: {
+    types: { "application/rss+xml": `${siteUrl}/rss.xml` },
+  },
+  robots: { index: true, follow: true },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#193247",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

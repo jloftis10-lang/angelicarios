@@ -54,11 +54,18 @@ need to change.
 - [ ] Website disclaimer legal review (`src/app/terms/page.tsx`)
 - [ ] Fair-housing review of all page copy
 - [ ] Peachtree City market data — `src/config/site.ts` → `marketData`
-      is currently empty (hidden in the UI by design); populate from a
-      named, dated source before the market-stats section should render
-- [ ] Five-village descriptions in `src/config/villages.ts` are
-      intentionally general orientation copy — enrich with sourced detail
-      when available
+      is currently empty (hidden in the UI by design). An attempt was made
+      to source this automatically; public real-estate data sites
+      (Redfin, Zillow, Movoto, etc.) returned inconsistent numbers across
+      sources ($515K–$725K median price, 13–65 days on market depending on
+      source/period) and weren't independently fetchable to verify, so
+      nothing was published rather than guessing. Pull one clean, dated
+      figure from your MLS or a source you trust and give it to me, or
+      update `marketData.peachtreeCity` directly.
+- [ ] Five-village descriptions in `src/config/villages.ts` were enriched
+      from general web research (not a single verified primary document)
+      — reasonable for launch, but worth a sanity check against firsthand
+      knowledge of each village before publishing as final.
 
 ## How to tell what's still a placeholder
 
