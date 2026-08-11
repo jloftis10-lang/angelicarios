@@ -8,7 +8,7 @@ need to change.
 
 ## Angelica / agent info (`src/config/site.ts` → `agent`)
 
-- [ ] Angelica's last name
+- [x] Angelica's last name — Rios
 - [ ] Angelica's Georgia real-estate license number
 - [ ] Angelica's phone number
 - [ ] Angelica's email address

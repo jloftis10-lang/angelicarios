@@ -10,7 +10,6 @@
  */
 
 export const PLACEHOLDER = {
-  lastName: "[ANGELICA_LAST_NAME]",
   agentPhone: "[ANGELICA_PHONE]",
   agentEmail: "[ANGELICA_EMAIL]",
   agentLicense: "[ANGELICA_LICENSE]",
@@ -39,7 +38,7 @@ export const isMissingComplianceInfo = (): boolean => {
 };
 
 export const brand = {
-  name: `Angelica ${PLACEHOLDER.lastName}`,
+  name: "Angelica Rios",
   shortName: "Angelica",
   tagline: "Peachtree City real estate, handled personally.",
   supportingLine: "Local guidance. Personal attention. A move you can feel good about.",
@@ -47,8 +46,8 @@ export const brand = {
 
 export const agent = {
   firstName: "Angelica",
-  lastName: PLACEHOLDER.lastName,
-  fullName: `Angelica ${PLACEHOLDER.lastName}`,
+  lastName: "Rios",
+  fullName: "Angelica Rios",
   title: "Realtor",
   phone: PLACEHOLDER.agentPhone,
   email: PLACEHOLDER.agentEmail,
