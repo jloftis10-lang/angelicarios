@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { StickyMobileContact } from "@/components/layout/StickyMobileContact";
 import { ComplianceWarning } from "@/components/ComplianceWarning";
 import { AnalyticsScripts } from "@/components/AnalyticsScripts";
-import { siteUrl, brand } from "@/config/site";
+import { siteUrl, brand, agent } from "@/config/site";
 import { JsonLd } from "@/components/JsonLd";
 
 const inter = Inter({
@@ -44,6 +44,8 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
+  const hasStickyContact = !agent.phone.startsWith("[");
+
   return (
     <html lang="en" className={`${inter.variable} ${newsreader.variable} h-full`}>
       <body className="flex min-h-full flex-col bg-warm-white text-ink antialiased">
@@ -57,7 +59,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <Header />
-        <main id="main" className="flex-1 pb-16 md:pb-0">
+        <main id="main" className={`flex-1 ${hasStickyContact ? "pb-16 md:pb-0" : ""}`}>
           {children}
         </main>
         <Footer />

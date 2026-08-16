@@ -4,6 +4,8 @@ import { agent, contact } from "@/config/site";
 import { trackEvent } from "@/lib/analytics";
 
 export function StickyMobileContact() {
+  if (agent.phone.startsWith("[")) return null;
+
   return (
     <div className="fixed inset-x-0 bottom-0 z-30 flex border-t border-sand/60 bg-warm-white/95 backdrop-blur md:hidden">
       <a

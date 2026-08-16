@@ -11,6 +11,13 @@ const socialLinks = [
 ].filter((link) => !link.href.startsWith("["));
 
 export function Footer() {
+  const hasPhone = !agent.phone.startsWith("[");
+  const hasEmail = !agent.email.startsWith("[");
+  const hasLicense = !agent.licenseNumber.startsWith("[");
+  const hasBrokerage = !brokerage.legalName.startsWith("[");
+  const hasBrokerageLicense = !brokerage.licenseNumber.startsWith("[");
+  const hasBrokeragePhone = !brokerage.officePhone.startsWith("[");
+
   return (
     <footer className="mt-24 border-t border-sand/60 bg-canvas">
       <Container className="grid gap-10 py-12 md:grid-cols-4">
@@ -19,14 +26,20 @@ export function Footer() {
           <p className="mt-2 max-w-sm text-sm text-slate">
             Serving {serviceAreas.primary} and {serviceAreas.secondary}.
           </p>
-          <div className="mt-4 flex flex-col gap-1 text-sm text-ink">
-            <TrackedLink href={contact.phoneHref} event="phone_click" params={{ location: "footer" }} className="hover:text-navy">
-              {agent.phone}
-            </TrackedLink>
-            <a href={contact.emailHref} className="hover:text-navy">
-              {agent.email}
-            </a>
-          </div>
+          {(hasPhone || hasEmail) && (
+            <div className="mt-4 flex flex-col gap-1 text-sm text-ink">
+              {hasPhone && (
+                <TrackedLink href={contact.phoneHref} event="phone_click" params={{ location: "footer" }} className="hover:text-navy">
+                  {agent.phone}
+                </TrackedLink>
+              )}
+              {hasEmail && (
+                <a href={contact.emailHref} className="hover:text-navy">
+                  {agent.email}
+                </a>
+              )}
+            </div>
+          )}
           {socialLinks.length > 0 && (
             <div className="mt-4 flex gap-4 text-sm text-slate">
               {socialLinks.map((link) => (
@@ -68,12 +81,17 @@ export function Footer() {
       <div className="border-t border-sand/60">
         <Container className="flex flex-col gap-2 py-6 text-xs text-slate">
           <p>
-            {agent.fullName}, {agent.title} — License {agent.licenseNumber}
+            {agent.fullName}, {agent.title}
+            {hasLicense ? ` — License ${agent.licenseNumber}` : ""}
           </p>
-          <p>
-            {brokerage.legalName} — License {brokerage.licenseNumber} — {brokerage.officePhone}
-          </p>
-          {!brokerage.address.startsWith("[") && <p>{brokerage.address}</p>}
+          {hasBrokerage && (
+            <p>
+              {brokerage.legalName}
+              {hasBrokerageLicense ? ` — License ${brokerage.licenseNumber}` : ""}
+              {hasBrokeragePhone ? ` — ${brokerage.officePhone}` : ""}
+            </p>
+          )}
+          {hasBrokerage && !brokerage.address.startsWith("[") && <p>{brokerage.address}</p>}
           <p className="text-slate/80">
             Equal Housing Opportunity. Information deemed reliable but not guaranteed. © {new Date().getFullYear()} {brand.name}.
           </p>

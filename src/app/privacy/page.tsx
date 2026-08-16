@@ -9,6 +9,8 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPage() {
+  const hasEmail = !agent.email.startsWith("[");
+
   return (
     <section className="py-14 md:py-20">
       <Container className="max-w-2xl">
@@ -28,11 +30,23 @@ export default function PrivacyPage() {
             configuration for details.
           </p>
           <p>
-            Questions about this policy can be directed to {agent.firstName} at{" "}
-            <a href={contact.emailHref} className="underline">
-              {agent.email}
-            </a>
-            .
+            {hasEmail ? (
+              <>
+                Questions about this policy can be directed to {agent.firstName} at{" "}
+                <a href={contact.emailHref} className="underline">
+                  {agent.email}
+                </a>
+                .
+              </>
+            ) : (
+              <>
+                Questions about this policy can be directed to {agent.firstName} through the{" "}
+                <a href="/contact" className="underline">
+                  contact page
+                </a>
+                .
+              </>
+            )}
           </p>
         </div>
       </Container>

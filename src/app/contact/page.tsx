@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const hasPhone = !agent.phone.startsWith("[");
+  const hasEmail = !agent.email.startsWith("[");
 
   return (
     <>
@@ -34,17 +35,23 @@ export default function ContactPage() {
               Relocating
             </Button>
           </div>
-          {hasPhone && (
+          {(hasPhone || hasEmail) && (
             <div className="mt-6 flex flex-wrap gap-4 text-sm text-slate">
-              <TrackedLink href={contact.phoneHref} event="phone_click" params={{ location: "contact_page" }} className="hover:text-navy">
-                Call {agent.phone}
-              </TrackedLink>
-              <TrackedLink href={contact.smsHref} event="text_click" params={{ location: "contact_page" }} className="hover:text-navy">
-                Text
-              </TrackedLink>
-              <a href={contact.emailHref} className="hover:text-navy">
-                Email
-              </a>
+              {hasPhone && (
+                <>
+                  <TrackedLink href={contact.phoneHref} event="phone_click" params={{ location: "contact_page" }} className="hover:text-navy">
+                    Call {agent.phone}
+                  </TrackedLink>
+                  <TrackedLink href={contact.smsHref} event="text_click" params={{ location: "contact_page" }} className="hover:text-navy">
+                    Text
+                  </TrackedLink>
+                </>
+              )}
+              {hasEmail && (
+                <a href={contact.emailHref} className="hover:text-navy">
+                  Email
+                </a>
+              )}
             </div>
           )}
         </Container>
