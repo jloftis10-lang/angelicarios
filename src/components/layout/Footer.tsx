@@ -92,7 +92,7 @@ export function Footer() {
             </p>
           )}
           {hasBrokerage && !brokerage.address.startsWith("[") && <p>{brokerage.address}</p>}
-          <p className="text-slate/80">
+          <p className="text-slate">
             Equal Housing Opportunity. Information deemed reliable but not guaranteed. © {new Date().getFullYear()} {brand.name}.
           </p>
         </Container>

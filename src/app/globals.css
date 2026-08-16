@@ -4,8 +4,13 @@
   --color-warm-white: #faf8f4;
   --color-navy: #193247;
   --color-navy-dark: #10212f;
-  --color-slate: #5f7180;
-  --color-sage: #8fa194;
+  /* Darkened from the original palette pick (#5f7180 / #8fa194) — those
+     read below WCAG AA's 4.5:1 for normal-size text against warm-white/
+     canvas/sand backgrounds (as low as 2.57:1 for sage). These clear 4.5:1
+     with margin against every background token in use; don't lighten back
+     without rechecking contrast. */
+  --color-slate: #465560;
+  --color-sage: #54695d;
   --color-sand: #d8c9b8;
   --color-canvas: #f4f2ed;
   --color-ink: #17242d;

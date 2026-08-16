@@ -20,6 +20,16 @@ export const faqCategories: FaqCategory[] = [
         answer:
           "No. A conversation about your situation, timeline, and options doesn't cost anything and doesn't commit you to anything.",
       },
+      {
+        question: "Do you only work in Peachtree City itself?",
+        answer:
+          "Peachtree City is the primary focus, but the service area extends across South Metro Atlanta — including Fayetteville, Trilith, Tyrone, Senoia, Newnan, and the rest of Coweta County where it fits.",
+      },
+      {
+        question: "What about Trilith or Fayetteville — are those covered too?",
+        answer:
+          "Yes. Trilith and Fayetteville are both part of the broader South Metro Atlanta area Angelica works in, alongside Peachtree City itself.",
+      },
     ],
   },
   {

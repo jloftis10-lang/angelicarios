@@ -28,7 +28,7 @@ export function ThreePaths() {
       <Container className="grid gap-6 md:grid-cols-3">
         {paths.map((path) => (
           <div key={path.href} className="flex flex-col rounded-2xl border border-sand/60 bg-white p-8">
-            <h3 className="font-display text-xl font-semibold text-navy">{path.heading}</h3>
+            <h2 className="font-display text-xl font-semibold text-navy">{path.heading}</h2>
             <p className="mt-3 flex-1 text-sm leading-relaxed text-slate">{path.copy}</p>
             <Button href={path.href} variant="ghost" className="mt-6 self-start px-0">
               {path.cta} →

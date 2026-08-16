@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
@@ -87,7 +88,11 @@ export default function PeachtreeCityPage() {
           <h2 className="font-display text-2xl font-semibold text-navy">Peachtree City and South Metro Atlanta</h2>
           <p className="mt-3 text-sm leading-relaxed text-slate">
             Peachtree City sits in Fayette County, in South Metro Atlanta, with access to nearby communities including
-            Fayetteville, Trilith, Tyrone, Senoia, and Newnan, and to the broader Atlanta metro area.
+            Fayetteville,{" "}
+            <Link href="/blog/living-near-trilith" className="underline hover:text-navy">
+              Trilith
+            </Link>
+            , Tyrone, Senoia, and Newnan, and to the broader Atlanta metro area.
           </p>
         </Container>
       </section>
