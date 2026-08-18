@@ -10,9 +10,7 @@
  */
 
 export const PLACEHOLDER = {
-  agentPhone: "[ANGELICA_PHONE]",
   agentEmail: "[ANGELICA_EMAIL]",
-  agentLicense: "[ANGELICA_LICENSE]",
   brokerageLegalName: "[BROKERAGE_LEGAL_NAME]",
   brokerageLicense: "[BROKERAGE_LICENSE]",
   brokeragePhone: "[BROKERAGE_PHONE]",
@@ -49,9 +47,23 @@ export const agent = {
   lastName: "Rios",
   fullName: "Angelica Rios",
   title: "Realtor",
-  phone: PLACEHOLDER.agentPhone,
+  phone: "714-785-2859",
   email: PLACEHOLDER.agentEmail,
-  licenseNumber: PLACEHOLDER.agentLicense,
+  licenseNumber: "455962",
+};
+
+/**
+ * Angelica's professional background beyond real estate itself — real,
+ * confirmed facts, not marketing filler. Used on the homepage and About
+ * page as concrete differentiators instead of generic adjectives.
+ */
+export const expertise = {
+  yearsInFinance: 15,
+  background: [
+    { label: "15+ Years", detail: "In mortgage finance & underwriting" },
+    { label: "360° Perspective", detail: "Investor and transaction experience" },
+    { label: "Hands-On", detail: "Property renovation experience" },
+  ],
 };
 
 export const brokerage = {
@@ -63,9 +75,9 @@ export const brokerage = {
 };
 
 export const contact = {
-  phoneHref: `tel:${PLACEHOLDER.agentPhone}`,
-  smsHref: `sms:${PLACEHOLDER.agentPhone}`,
-  emailHref: `mailto:${PLACEHOLDER.agentEmail}`,
+  phoneHref: `tel:${agent.phone}`,
+  smsHref: `sms:${agent.phone}`,
+  emailHref: `mailto:${agent.email}`,
 };
 
 export const serviceAreas = {
@@ -121,6 +133,7 @@ export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.example.
 export const siteConfig = {
   brand,
   agent,
+  expertise,
   brokerage,
   contact,
   serviceAreas,

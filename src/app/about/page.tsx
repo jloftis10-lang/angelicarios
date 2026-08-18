@@ -9,7 +9,7 @@ import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
 export const metadata: Metadata = {
   title: "About Angelica",
   description:
-    "Angelica relocated from Newport Beach, California to Georgia and works personally with every buyer, seller, and relocating client.",
+    "15+ years in mortgage finance and underwriting, plus firsthand relocation experience from Newport Beach, California to Georgia. Angelica works personally with every client.",
   alternates: { canonical: "/about" },
 };
 
@@ -22,6 +22,9 @@ export default function AboutPage() {
           <h1 className="font-display text-4xl font-semibold leading-tight text-navy md:text-5xl">
             A real-estate relationship should feel like a relationship.
           </h1>
+          <p className="mt-4 text-sm font-medium uppercase tracking-[0.14em] text-sage">
+            Underwriter&apos;s insight. Realtor&apos;s guidance. A neighbor&apos;s care.
+          </p>
         </Container>
       </section>
 
@@ -34,14 +37,21 @@ export default function AboutPage() {
           />
           <div className="flex flex-col gap-4 text-base leading-relaxed text-slate">
             <p>
-              Angelica&apos;s path to Georgia real estate started in California, where she previously worked in real
-              estate and held a California real-estate license while living in Newport Beach. Relocating from
-              Newport Beach to Georgia gave her a firsthand understanding of what it actually takes to move across
-              the country — the questions, the unknowns, and the adjustment that comes after the boxes are unpacked.
+              Angelica brings more than 15 years in mortgage finance and underwriting to her real-estate work, along
+              with hands-on experience as a property investor and renovator. That background gives her a 360-degree
+              view of a transaction — the financing, the property condition, and the numbers behind a deal, not just
+              the real-estate side of it.
+            </p>
+            <p>
+              Her path to Georgia real estate started in California, where she previously worked in real estate and
+              held a California real-estate license while living in Newport Beach. Relocating from Newport Beach to
+              Georgia gave her a firsthand understanding of what it actually takes to move across the country — the
+              questions, the unknowns, and the adjustment that comes after the boxes are unpacked.
             </p>
             <p>
               Today she works with buyers, sellers, and relocating clients in Peachtree City and South Metro
-              Atlanta. Every client works directly with her — not a team, not a rotating point of contact.
+              Atlanta, holding Georgia real-estate license #{agent.licenseNumber}. Every client works directly with
+              her — not a team, not a rotating point of contact.
             </p>
             <p>
               Outside of work, Angelica is a mother and a dog lover. Her son is beginning college, a milestone

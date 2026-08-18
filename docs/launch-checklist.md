@@ -9,8 +9,8 @@ need to change.
 ## Angelica / agent info (`src/config/site.ts` → `agent`)
 
 - [x] Angelica's last name — Rios
-- [ ] Angelica's Georgia real-estate license number
-- [ ] Angelica's phone number
+- [x] Angelica's Georgia real-estate license number — #455962
+- [x] Angelica's phone number — 714-785-2859
 - [ ] Angelica's email address
 
 ## Brokerage / compliance (`src/config/site.ts` → `brokerage`)

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { PortraitImage } from "@/components/ui/PortraitImage";
+import { ExpertiseBadges } from "@/components/sections/ExpertiseBadges";
 import { ThreePaths } from "@/components/sections/ThreePaths";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { RecentPosts } from "@/components/sections/RecentPosts";
@@ -15,7 +16,7 @@ import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
 export const metadata: Metadata = {
   title: "Peachtree City Realtor & Relocation Guide",
   description:
-    "Personal real-estate guidance for buyers, sellers, and people relocating to Peachtree City and South Metro Atlanta.",
+    "Personal real-estate guidance for buyers, sellers, and people relocating to Peachtree City and South Metro Atlanta — backed by 15+ years in mortgage finance and underwriting.",
   alternates: { canonical: "/" },
 };
 
@@ -50,6 +51,8 @@ export default function Home() {
         </Container>
       </section>
 
+      <ExpertiseBadges />
+
       <ThreePaths />
 
       <section className="py-16 md:py-24">
@@ -77,10 +80,15 @@ export default function Home() {
               Real estate is personal. Angelica treats it that way.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-slate">
-              Angelica&apos;s perspective on moving is shaped by experience on both sides of the country. After
-              previously working in real estate in California and relocating from Newport Beach to Georgia, she
-              understands that moving isn&apos;t simply about choosing a house — it&apos;s about figuring out where
-              life fits next.
+              Angelica brings more than 15 years in mortgage finance and underwriting to every transaction, along
+              with hands-on experience as a property investor and renovator — a 360-degree view of a deal that goes
+              beyond the real-estate side of it alone.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-slate">
+              That perspective is shaped by experience on both sides of the country, too. After previously working
+              in real estate in California and relocating from Newport Beach to Georgia herself, she understands
+              that moving isn&apos;t simply about choosing a house — it&apos;s about figuring out where life fits
+              next.
             </p>
             <p className="mt-4 text-base leading-relaxed text-slate">
               Clients work directly with Angelica throughout the process — as a mother and a dog lover herself, she
