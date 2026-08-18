@@ -11,7 +11,7 @@ need to change.
 - [x] Angelica's last name — Rios
 - [x] Angelica's Georgia real-estate license number — #455962
 - [x] Angelica's phone number — 714-785-2859
-- [ ] Angelica's email address
+- [x] Angelica's email address — angelicarios@yahoo.com
 
 ## Brokerage / compliance (`src/config/site.ts` → `brokerage`)
 
@@ -45,9 +45,22 @@ need to change.
       which would have pointed every canonical tag on the live site at
       example.com. Set `NEXT_PUBLIC_SITE_URL` only to override for a
       preview/staging environment.
-- [ ] Email delivery for lead forms — set `RESEND_API_KEY` and
-      `LEAD_NOTIFICATION_EMAIL` env vars (see `src/app/api/lead/route.ts`);
-      until then, submissions are only logged server-side, not emailed
+- [ ] **Email delivery for lead forms — THE ONE THING BLOCKING LEADS.**
+      Destination is already wired to angelicarios@yahoo.com via
+      `agent.email`, but nothing sends until `RESEND_API_KEY` is set in
+      Vercel (Project Settings → Environment Variables), then redeploy.
+      Until then every form submission shows the visitor an error with
+      Angelica's phone/email as a fallback — no lead is silently lost, but
+      no lead arrives by email either.
+      1. Create a free account at resend.com **using angelicarios@yahoo.com**
+         (the shared `onboarding@resend.dev` sender can only deliver to the
+         account owner's own address until a domain is verified).
+      2. Create an API key, add it to Vercel as `RESEND_API_KEY`, redeploy.
+      3. Optional but better: verify angelicarios.com in Resend (DNS is
+         already at Vercel), then set `LEAD_FROM_EMAIL` to
+         `Angelica Rios Website <leads@angelicarios.com>` so mail comes
+         from her own domain and lands in inboxes more reliably.
+      4. Submit a test form on the live site and confirm it arrives.
 - [ ] Analytics IDs if desired — `NEXT_PUBLIC_GA4_ID`,
       `NEXT_PUBLIC_CLARITY_ID`
 - [ ] Google Search Console verification

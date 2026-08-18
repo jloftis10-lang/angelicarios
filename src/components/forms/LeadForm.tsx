@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import type { FormFieldConfig, LeadIntent } from "@/lib/leadTypes";
 import { trackEvent, type AnalyticsEvent } from "@/lib/analytics";
-import { contact } from "@/config/site";
+import { agent, contact } from "@/config/site";
 
 const intentEvent: Record<LeadIntent, AnalyticsEvent | null> = {
   buyer: "buyer_lead",
@@ -127,14 +127,32 @@ export function LeadForm({
         {status === "submitting" ? "Sending…" : submitLabel}
       </button>
 
+      {/* If delivery fails the lead would otherwise just be lost, so hand the
+          visitor Angelica's actual contact details rather than a dead end. */}
       {status === "error" && (
-        <p role="alert" className="text-sm text-red-700">
-          Something went wrong sending that. Please try again, or email{" "}
-          <a href={contact.emailHref} className="underline">
-            directly
-          </a>
-          .
-        </p>
+        <div role="alert" className="rounded-2xl border border-red-200 bg-red-50/60 p-5 text-sm">
+          <p className="font-medium text-red-800">That didn&apos;t go through.</p>
+          <p className="mt-1 text-slate">
+            Please try again — or reach Angelica directly, which always works:
+          </p>
+          <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 font-medium text-navy">
+            {!agent.phone.startsWith("[") && (
+              <>
+                <a href={contact.phoneHref} className="underline underline-offset-4">
+                  Call {agent.phone}
+                </a>
+                <a href={contact.smsHref} className="underline underline-offset-4">
+                  Text
+                </a>
+              </>
+            )}
+            {!agent.email.startsWith("[") && (
+              <a href={contact.emailHref} className="underline underline-offset-4">
+                {agent.email}
+              </a>
+            )}
+          </div>
+        </div>
       )}
     </form>
   );

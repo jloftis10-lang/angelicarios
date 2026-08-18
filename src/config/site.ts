@@ -10,7 +10,6 @@
  */
 
 export const PLACEHOLDER = {
-  agentEmail: "[ANGELICA_EMAIL]",
   brokerageLegalName: "[BROKERAGE_LEGAL_NAME]",
   brokerageLicense: "[BROKERAGE_LICENSE]",
   brokeragePhone: "[BROKERAGE_PHONE]",
@@ -48,7 +47,7 @@ export const agent = {
   fullName: "Angelica Rios",
   title: "Realtor",
   phone: "714-785-2859",
-  email: PLACEHOLDER.agentEmail,
+  email: "angelicarios@yahoo.com",
   licenseNumber: "455962",
 };
 

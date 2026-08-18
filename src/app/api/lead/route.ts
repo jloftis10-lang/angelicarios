@@ -58,7 +58,12 @@ export async function POST(request: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: process.env.LEAD_FROM_EMAIL ?? "Angelica Rios Website <leads@resend.dev>",
+        // Resend only accepts a sender on a domain you've verified, or its
+        // shared test sender `onboarding@resend.dev`. Anything else (e.g.
+        // a made-up address @resend.dev) is rejected. Once angelicarios.com
+        // is verified in Resend, set LEAD_FROM_EMAIL to something like
+        // "Angelica Rios Website <leads@angelicarios.com>".
+        from: process.env.LEAD_FROM_EMAIL ?? "Angelica Rios Website <onboarding@resend.dev>",
         to: leadToEmail,
         reply_to: email,
         subject: `New ${payload.intent} lead — ${name}`,
