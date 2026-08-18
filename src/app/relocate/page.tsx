@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { PortraitImage } from "@/components/ui/PortraitImage";
 import { PageHero } from "@/components/sections/PageHero";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { agent, serviceAreas } from "@/config/site";
+import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
 
 export const metadata: Metadata = {
   title: "Relocating to Peachtree City",
@@ -41,13 +43,21 @@ export default function RelocatePage() {
 
       <section className="py-8">
         <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-          <PlaceholderImage label="Angelica — relocation story" aspect="aspect-[4/5]" />
+          <PortraitImage
+            src={angelicaPortrait}
+            alt={`Angelica Rios, ${agent.title} serving ${serviceAreas.primary}`}
+            aspect="aspect-[4/5]"
+          />
           <div>
             <h2 className="font-display text-2xl font-semibold text-navy">Angelica has done this herself.</h2>
             <p className="mt-4 text-sm leading-relaxed text-slate">
               She knows what it&apos;s like to leave a familiar coastline, a familiar market, and a familiar way of
               life — and to learn a brand-new community from scratch. That perspective shapes how she works with
               clients moving into Peachtree City and South Metro Atlanta today.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-slate">
+              If you are relocating from California or another state, Angelica can help you get oriented before you
+              visit, narrow the areas that deserve your time, and plan an efficient in-person or remote home search.
             </p>
           </div>
         </Container>
@@ -58,12 +68,25 @@ export default function RelocatePage() {
           <h2 className="font-display text-3xl font-semibold text-navy">What relocating here actually involves</h2>
           <div className="mt-8 grid gap-8 md:grid-cols-3">
             {topics.map((topic) => (
-              <div key={topic.title}>
+              <div key={topic.title} className="rounded-2xl border border-sand/60 bg-white p-6">
                 <h3 className="text-base font-semibold text-navy">{topic.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate">{topic.copy}</p>
               </div>
             ))}
           </div>
+        </Container>
+      </section>
+
+      <section className="py-4">
+        <Container className="rounded-3xl bg-canvas p-8 md:p-10">
+          <h2 className="font-display text-2xl font-semibold text-navy">Start researching before you start packing.</h2>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate">
+            The Peachtree City Starter Guide covers the five villages, path system, nearby communities, questions to
+            ask before touring, and practical relocation planning.
+          </p>
+          <Button href="/guide" variant="ghost" className="mt-5 px-0">
+            Read the relocation guide →
+          </Button>
         </Container>
       </section>
 
