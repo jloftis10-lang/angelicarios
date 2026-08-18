@@ -38,29 +38,48 @@ export async function POST(request: NextRequest) {
   const resendApiKey = process.env.RESEND_API_KEY;
   const leadToEmail = process.env.LEAD_NOTIFICATION_EMAIL ?? (agent.email.startsWith("[") ? null : agent.email);
 
-  if (resendApiKey && leadToEmail) {
-    try {
-      await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${resendApiKey}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          from: process.env.LEAD_FROM_EMAIL ?? "leads@resend.dev",
-          to: leadToEmail,
-          subject: `New ${payload.intent} lead — ${name}`,
-          text: summaryLines.join("\n"),
-        }),
-      });
-    } catch (error) {
-      console.error("[api/lead] failed to send email", error);
+  if (!resendApiKey || !leadToEmail) {
+    console.error("[api/lead] delivery is not configured", {
+      hasResendKey: Boolean(resendApiKey),
+      hasDestination: Boolean(leadToEmail),
+      intent: payload.intent,
+    });
+    return NextResponse.json(
+      { error: "Lead delivery is temporarily unavailable. Please try again later." },
+      { status: 503 },
+    );
+  }
+
+  try {
+    const response = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${resendApiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: process.env.LEAD_FROM_EMAIL ?? "Angelica Rios Website <leads@resend.dev>",
+        to: leadToEmail,
+        reply_to: email,
+        subject: `New ${payload.intent} lead — ${name}`,
+        text: summaryLines.join("\n"),
+      }),
+    });
+
+    if (!response.ok) {
+      const detail = await response.text();
+      console.error("[api/lead] Resend rejected delivery", response.status, detail);
+      return NextResponse.json(
+        { error: "We could not deliver your message. Please try again shortly." },
+        { status: 502 },
+      );
     }
-  } else {
-    // No email provider configured yet — log so the submission isn't lost
-    // during development/preview. Wire RESEND_API_KEY + LEAD_NOTIFICATION_EMAIL
-    // before launch.
-    console.log("[api/lead] lead received (no email provider configured):", summaryLines.join(" | "));
+  } catch (error) {
+    console.error("[api/lead] failed to send email", error);
+    return NextResponse.json(
+      { error: "We could not deliver your message. Please try again shortly." },
+      { status: 502 },
+    );
   }
 
   return NextResponse.json({ ok: true });
