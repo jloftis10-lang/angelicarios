@@ -13,7 +13,7 @@ import { serviceAreas, agent } from "@/config/site";
 import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
 
 export const metadata: Metadata = {
-  title: "Peachtree City Realtor",
+  title: "Peachtree City Realtor & Relocation Guide",
   description:
     "Personal real-estate guidance for buyers, sellers, and people relocating to Peachtree City and South Metro Atlanta.",
   alternates: { canonical: "/" },
@@ -36,14 +36,14 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href="/contact">Talk With Angelica</Button>
-              <Button href="/peachtree-city-ga" variant="secondary">
-                Explore Peachtree City
+              <Button href="/guide" variant="secondary">
+                Get the Peachtree City Guide
               </Button>
             </div>
           </div>
           <PortraitImage
             src={angelicaPortrait}
-            alt={`Angelica, ${agent.title} in ${serviceAreas.primary}`}
+            alt={`Angelica Rios, ${agent.title} in ${serviceAreas.primary}`}
             aspect="aspect-[4/5]"
             priority
           />
@@ -54,7 +54,7 @@ export default function Home() {
 
       <section className="py-16 md:py-24">
         <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-          <PlaceholderImage label="Peachtree City multi-use path / lake" aspect="aspect-[4/3]" className="md:order-2" />
+          <PlaceholderImage label="Peachtree City multi-use path and lake" aspect="aspect-[4/3]" className="md:order-2" />
           <div>
             <h2 className="font-display text-3xl font-semibold text-navy md:text-4xl">
               There&apos;s nowhere quite like Peachtree City.
@@ -90,7 +90,11 @@ export default function Home() {
               Meet Angelica →
             </Button>
           </div>
-          <PlaceholderImage label="Angelica casual / lifestyle" aspect="aspect-[4/5]" />
+          <PortraitImage
+            src={angelicaPortrait}
+            alt={`Angelica Rios, Peachtree City real-estate advisor`}
+            aspect="aspect-[4/5]"
+          />
         </Container>
       </section>
 
