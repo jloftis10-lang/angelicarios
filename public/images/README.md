@@ -19,10 +19,14 @@ className/aspect ratio.
 - **`src/assets/images/angelica-hiking.jpg`** — a real photo of Angelica
   and her partner hiking, used in the About page's "Beyond real estate"
   section (both confirmed by the user as real and approved for publication).
-- Two more real photos were sent but aren't in use yet — both still have
-  the source app's crop-tool UI (a "Crop" button/status bar) burned into
-  the image itself. They need a clean crop before they're publishable;
-  ask for re-cropped versions or crop them locally before adding.
+- **`src/assets/images/angelica-portrait-blue.jpg`** — real photo, sharp
+  and well-lit, used on the Relocate page (previously a duplicate of the
+  hero portrait). Originally arrived with the source app's crop-tool UI
+  burned in; cropped to 4:5 below the chrome.
+- **`src/assets/images/angelica-candid.jpg`** — real photo, used on the
+  Contact page. Same crop treatment. **Noticeably soft/out of focus and
+  very tightly zoomed** — it's real and it works, but it's the weakest
+  image on the site. Replace it first when better photography exists.
 - A separate photo ("angelicaJim", a sports-bar selfie) was reviewed
   earlier and intentionally **not** used — different setting/context from
   what's since been confirmed appropriate; the hiking photo replaced the
@@ -49,6 +53,7 @@ className/aspect ratio.
 ## Where placeholders currently render
 
 - `src/app/page.tsx` (homepage) — Peachtree City path/lake photo
-- `src/app/relocate/page.tsx` — reuses the primary portrait; a distinct
-  relocation-story photo would be a nice-to-have, not urgent
 - `src/app/peachtree-city-ga/page.tsx` — golf-cart / path photo
+
+Every page that should show Angelica now shows a real, distinct photo of
+her; the only remaining placeholders are Peachtree City *place* shots.

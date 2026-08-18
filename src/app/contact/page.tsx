@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/Button";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { TrackedLink } from "@/components/TrackedLink";
+import { PortraitImage } from "@/components/ui/PortraitImage";
 import { agent, contact } from "@/config/site";
+import angelicaCandid from "@/assets/images/angelica-candid.jpg";
 
 export const metadata: Metadata = {
   title: "Contact Angelica",
@@ -20,7 +22,8 @@ export default function ContactPage() {
     <>
       <Breadcrumbs items={[{ label: "Contact", href: "/contact" }]} />
       <section className="py-14 md:py-20">
-        <Container className="max-w-2xl">
+        <Container className="grid items-center gap-10 md:grid-cols-[1.4fr_1fr] md:gap-16">
+          <div>
           <h1 className="font-display text-4xl font-semibold leading-tight text-navy md:text-5xl">
             Start with a conversation.
           </h1>
@@ -54,6 +57,8 @@ export default function ContactPage() {
               )}
             </div>
           )}
+          </div>
+          <PortraitImage src={angelicaCandid} alt="Angelica Rios" aspect="aspect-[4/5]" />
         </Container>
       </section>
 
