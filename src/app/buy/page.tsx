@@ -24,6 +24,14 @@ const steps = [
 
 const hasApprovedSearch = !propertySearch.url.startsWith("[");
 
+const buyerSupport = [
+  "Needs and neighborhood discovery",
+  "Property and offer strategy",
+  "Financing-aware guidance",
+  "Inspection and appraisal coordination",
+  "Clear communication through closing",
+];
+
 export default function BuyPage() {
   return (
     <>
@@ -51,7 +59,15 @@ export default function BuyPage() {
 
       <section className="py-16">
         <Container className="max-w-2xl">
-          <p className="text-sm leading-relaxed text-slate">
+          <h2 className="font-display text-2xl font-semibold text-navy">How Angelica helps</h2>
+          <ul className="mt-5 grid gap-3 text-sm text-ink sm:grid-cols-2">
+            {buyerSupport.map((item) => (
+              <li key={item} className="rounded-lg bg-canvas px-4 py-3">
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-sm leading-relaxed text-slate">
             Before touring homes, Angelica will walk you through how buyer representation works and what it means for
             you — representation terms are discussed and documented up front, consistent with current industry
             practice.

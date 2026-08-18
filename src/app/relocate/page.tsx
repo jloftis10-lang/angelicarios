@@ -15,6 +15,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/relocate" },
 };
 
+const relocationSupport = [
+  "Remote discovery consultation",
+  "Peachtree City area orientation",
+  "Focused home-search planning",
+  "Virtual touring coordination",
+  "A smoother transition into local life",
+];
+
 const topics = [
   { title: "The villages", copy: "Understanding how Peachtree City's five villages relate to each other." },
   { title: "Getting around", copy: "The golf-cart and multi-use path system, and how it factors into daily life." },
@@ -60,6 +68,19 @@ export default function RelocatePage() {
               visit, narrow the areas that deserve your time, and plan an efficient in-person or remote home search.
             </p>
           </div>
+        </Container>
+      </section>
+
+      <section className="py-8">
+        <Container className="max-w-2xl">
+          <h2 className="font-display text-2xl font-semibold text-navy">How Angelica helps</h2>
+          <ul className="mt-5 grid gap-3 text-sm text-ink sm:grid-cols-2">
+            {relocationSupport.map((item) => (
+              <li key={item} className="rounded-lg bg-canvas px-4 py-3">
+                {item}
+              </li>
+            ))}
+          </ul>
         </Container>
       </section>
 

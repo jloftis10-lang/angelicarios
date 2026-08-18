@@ -1,4 +1,4 @@
-export type LeadIntent = "buyer" | "seller" | "relocation" | "contact" | "guide";
+export type LeadIntent = "buyer" | "seller" | "relocation" | "investor" | "contact" | "guide";
 
 export type FieldType = "text" | "email" | "tel" | "select" | "textarea";
 

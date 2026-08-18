@@ -8,6 +8,7 @@ export type AnalyticsEvent =
   | "buyer_lead"
   | "seller_lead"
   | "relocation_lead"
+  | "investor_lead"
   | "phone_click"
   | "text_click"
   | "guide_signup"

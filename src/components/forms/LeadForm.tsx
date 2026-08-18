@@ -9,6 +9,7 @@ const intentEvent: Record<LeadIntent, AnalyticsEvent | null> = {
   buyer: "buyer_lead",
   seller: "seller_lead",
   relocation: "relocation_lead",
+  investor: "investor_lead",
   contact: "contact_form_submit",
   guide: "guide_signup",
 };

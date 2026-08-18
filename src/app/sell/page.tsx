@@ -20,6 +20,15 @@ const steps = [
   { title: "Close", copy: "Angelica stays involved through closing." },
 ];
 
+const sellerSupport = [
+  "Property preparation plan",
+  "Home staging and presentation guidance",
+  "Market positioning and pricing",
+  "Launch and showing strategy",
+  "Offer comparison and negotiation",
+  "Contract-to-closing oversight",
+];
+
 const overlooked = [
   "condition",
   "renovations",
@@ -41,6 +50,19 @@ export default function SellPage() {
       />
 
       <ProcessSteps heading="How selling works" steps={steps} />
+
+      <section className="py-16">
+        <Container className="max-w-2xl">
+          <h2 className="font-display text-2xl font-semibold text-navy">How Angelica helps</h2>
+          <ul className="mt-5 grid gap-3 text-sm text-ink sm:grid-cols-2">
+            {sellerSupport.map((item) => (
+              <li key={item} className="rounded-lg bg-canvas px-4 py-3">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
 
       <section className="py-16">
         <Container className="max-w-2xl">

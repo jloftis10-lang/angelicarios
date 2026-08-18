@@ -41,7 +41,7 @@ export default function PeachtreeCityPage() {
           <h2 className="font-display text-2xl font-semibold text-navy">What makes Peachtree City different</h2>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {[
-              { title: "Multi-use path network", copy: "100+ miles of paths connect neighborhoods, shopping, recreation, and other destinations across the city." },
+              { title: "Multi-use path network", copy: "100+ miles of shared-use paths connect neighborhoods with shopping, schools, parks, offices, recreation centers, places of worship, and lakes." },
               { title: "Golf-cart culture", copy: "Registered golf carts are a familiar part of local transportation on the path system, alongside walking and biking." },
               { title: "Lakes and recreation", copy: "Lakes, parks, recreation facilities, and green space are woven through the city and its villages." },
               { title: "Five-village structure", copy: "Peachtree City is organized into Aberdeen, Braelinn, Glenloch, Kedron, and Wilksmoor — useful starting points for understanding the city." },
@@ -84,8 +84,10 @@ export default function PeachtreeCityPage() {
           <div>
             <h2 className="font-display text-2xl font-semibold text-navy">Getting around</h2>
             <p className="mt-3 text-sm leading-relaxed text-slate">
-              The multi-use path system is central to daily life in Peachtree City. Many residents use golf carts,
-              bikes, or walking for local trips, while cars remain the primary way to travel beyond the city.
+              The multi-use path system is central to daily life in Peachtree City. It serves motorized carts,
+              pedestrians, runners, and cyclists — many residents use golf carts, bikes, or walking for local trips,
+              while cars remain the primary way to travel beyond the city. Registration and use rules change from
+              time to time, so confirm current requirements with the city directly before assuming anything.
             </p>
             <Link href="/blog/golf-cart-path-guide" className="mt-5 inline-block text-sm font-medium text-navy underline underline-offset-4">
               Read the golf-cart and path guide
@@ -103,8 +105,8 @@ export default function PeachtreeCityPage() {
             parts of Fayette and Coweta counties. Comparing nearby areas can help clarify the tradeoffs that matter to
             your household.
           </p>
-          <Link href="/blog/living-near-trilith" className="mt-5 inline-block text-sm font-medium text-navy underline underline-offset-4">
-            Read about living near Trilith
+          <Link href="/communities" className="mt-5 inline-block text-sm font-medium text-navy underline underline-offset-4">
+            Explore all nearby communities
           </Link>
         </Container>
       </section>

@@ -11,6 +11,8 @@ const routes = [
   "/peachtree-city-ga",
   "/about",
   "/contact",
+  "/communities",
+  "/invest",
   "/faq",
   "/blog",
   "/guide",

@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { PortraitImage } from "@/components/ui/PortraitImage";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
 import { agent, serviceAreas } from "@/config/site";
 import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
 
@@ -25,6 +26,9 @@ export default function AboutPage() {
           <p className="mt-4 text-sm font-medium uppercase tracking-[0.14em] text-sage">
             Underwriter&apos;s insight. Realtor&apos;s guidance. A neighbor&apos;s care.
           </p>
+          <blockquote className="mt-8 border-l-2 border-sage pl-5 font-display text-xl italic text-navy md:text-2xl">
+            &ldquo;My clients deserve to understand not only what is happening, but why it matters.&rdquo;
+          </blockquote>
         </Container>
       </section>
 
@@ -54,10 +58,10 @@ export default function AboutPage() {
               her — not a team, not a rotating point of contact.
             </p>
             <p>
-              Outside of work, Angelica is a mother and a dog lover. Her son is beginning college, a milestone
-              that&apos;s given her a fresh appreciation for the way home and place shift at different stages of
-              life — which is part of why she takes the same question seriously for every client: where does life
-              fit next?
+              Outside of work, Angelica treasures time with her son and enjoys exploring the outdoors with her
+              partner and their dog. Her son is beginning college, a milestone that&apos;s given her a fresh
+              appreciation for the way home and place shift at different stages of life — which is part of why she
+              takes the same question seriously for every client: where does life fit next?
             </p>
             <p>
               That personal experience is why she treats real estate as a relationship, not a transaction — and why
@@ -66,6 +70,8 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+
+      <AdvisoryDisclaimer />
 
       <section className="py-16 md:py-24">
         <Container className="flex flex-col items-start gap-6 rounded-3xl bg-sand/30 p-10 md:p-16">
