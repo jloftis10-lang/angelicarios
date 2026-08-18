@@ -128,7 +128,15 @@ export const analyticsConfig = {
   clarityProjectId: process.env.NEXT_PUBLIC_CLARITY_ID ?? null,
 };
 
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.example.com";
+/**
+ * Drives canonical URLs, the sitemap, RSS links, and absolute OG image
+ * URLs. The default is the real production domain (the apex 308-redirects
+ * to www, so www is the canonical form) — do NOT leave this as a
+ * placeholder domain, or every canonical tag on the live site points
+ * somewhere that isn't the site. `NEXT_PUBLIC_SITE_URL` overrides it for
+ * preview/staging environments.
+ */
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.angelicarios.com";
 
 export const siteConfig = {
   brand,

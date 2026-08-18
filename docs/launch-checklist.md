@@ -39,8 +39,12 @@ need to change.
 
 ## Site infrastructure
 
-- [ ] Final production domain (`NEXT_PUBLIC_SITE_URL` env var, drives
-      canonical URLs / sitemap / OG tags)
+- [x] Final production domain — `www.angelicarios.com`, now the built-in
+      default in `src/config/site.ts` (drives canonical URLs / sitemap /
+      RSS / OG tags). It previously defaulted to a placeholder domain,
+      which would have pointed every canonical tag on the live site at
+      example.com. Set `NEXT_PUBLIC_SITE_URL` only to override for a
+      preview/staging environment.
 - [ ] Email delivery for lead forms — set `RESEND_API_KEY` and
       `LEAD_NOTIFICATION_EMAIL` env vars (see `src/app/api/lead/route.ts`);
       until then, submissions are only logged server-side, not emailed
