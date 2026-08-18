@@ -105,9 +105,14 @@ export default function PeachtreeCityPage() {
             parts of Fayette and Coweta counties. Comparing nearby areas can help clarify the tradeoffs that matter to
             your household.
           </p>
-          <Link href="/communities" className="mt-5 inline-block text-sm font-medium text-navy underline underline-offset-4">
-            Explore all nearby communities
-          </Link>
+          <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+            <Link href="/communities" className="text-sm font-medium text-navy underline underline-offset-4">
+              Explore all nearby communities
+            </Link>
+            <Link href="/blog/living-near-trilith" className="text-sm font-medium text-navy underline underline-offset-4">
+              Read about living near Trilith
+            </Link>
+          </div>
         </Container>
       </section>
 
