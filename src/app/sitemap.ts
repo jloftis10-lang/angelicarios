@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteUrl } from "@/config/site";
 import { posts } from "@/content/blog";
+import { villages } from "@/config/villages";
 
 const routes = [
   "",
@@ -26,5 +27,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(`${post.publishedAt}T00:00:00Z`),
   }));
 
-  return [...staticEntries, ...postEntries];
+  const villageEntries = villages.map((village) => ({
+    url: `${siteUrl}/peachtree-city-ga/${village.slug}`,
+    lastModified: new Date(),
+  }));
+
+  return [...staticEntries, ...villageEntries, ...postEntries];
 }
