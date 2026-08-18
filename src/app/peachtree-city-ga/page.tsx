@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { SiteImage } from "@/components/ui/SiteImage";
+import ptcGolfCartStreet from "@/assets/images/ptc-golf-cart-street.jpg";
 import { MarketStats } from "@/components/sections/MarketStats";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { brand } from "@/config/site";
@@ -93,7 +94,11 @@ export default function PeachtreeCityPage() {
               Read the golf-cart and path guide
             </Link>
           </div>
-          <PlaceholderImage label="Golf-cart and multi-use path in Peachtree City" aspect="aspect-[4/3]" />
+          <SiteImage
+            src={ptcGolfCartStreet}
+            alt="A golf cart parked along a tree-lined residential street in Peachtree City"
+            aspect="aspect-[4/3]"
+          />
         </Container>
       </section>
 

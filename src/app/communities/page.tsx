@@ -3,7 +3,9 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { communities } from "@/config/communities";
+import ptcPathWalkers from "@/assets/images/ptc-path-walkers.jpg";
 
 export const metadata: Metadata = {
   title: "Communities — Peachtree City & South Metro Atlanta",
@@ -17,15 +19,22 @@ export default function CommunitiesPage() {
     <>
       <Breadcrumbs items={[{ label: "Communities", href: "/communities" }]} />
       <section className="py-14 md:py-20">
-        <Container className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">South Metro Atlanta</p>
-          <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-navy md:text-5xl">
-            Find your place along the way.
-          </h1>
-          <p className="mt-5 text-base leading-relaxed text-slate">
-            Explore Peachtree City and the surrounding communities — a starting orientation, not a ranking. The
-            right fit depends on your priorities and what daily life looks like for you.
-          </p>
+        <Container className="grid items-center gap-10 md:grid-cols-[1.3fr_1fr] md:gap-16">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">South Metro Atlanta</p>
+            <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-navy md:text-5xl">
+              Find your place along the way.
+            </h1>
+            <p className="mt-5 text-base leading-relaxed text-slate">
+              Explore Peachtree City and the surrounding communities — a starting orientation, not a ranking. The
+              right fit depends on your priorities and what daily life looks like for you.
+            </p>
+          </div>
+          <SiteImage
+            src={ptcPathWalkers}
+            alt="Two people walking along a shaded multi-use path beside a lake"
+            aspect="aspect-[4/5]"
+          />
         </Container>
       </section>
 

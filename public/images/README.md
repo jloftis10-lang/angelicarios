@@ -35,6 +35,34 @@ className/aspect ratio.
   blazer, white top) is confirmed **not real** — never use it or anything
   visually similar to it.
 
+## Peachtree City scene imagery — AI-GENERATED, read this
+
+`ptc-path-lake.jpg`, `ptc-golf-cart-street.jpg`, and `ptc-path-walkers.jpg`
+came from the client's Drive folder and are **AI-generated images, not
+photographs of Peachtree City**. They were added at the client's explicit
+request to fill the scene slots on the homepage, Peachtree City page, and
+Communities page.
+
+Treat this as a deliberate, temporary exception to the no-fake-imagery rule
+that governs everything else here, and understand the distinction being
+drawn: a fabricated likeness of Angelica is never acceptable, while
+generic AI-generated *scenery* is being used the way generic stock
+photography would be. It is still not a picture of this city. Replace all
+three with real local photography as soon as any exists — that is the
+single highest-value photo upgrade left on the site.
+
+Two items from the same source were deliberately **excluded**:
+
+- A collage panel of fabricated Peachtree City wayfinding signs ("LAKE
+  PEACHTREE", "SENOIA ROAD", "THE AVENUE"). Invented signage naming real
+  roads reads as real municipal signage, which is a step beyond generic
+  scenery.
+- Every instance of the invented "Peachtree City" peach logo that appeared
+  throughout the collage on signage, a tumbler, and golf carts. It is not
+  the city's real mark, and applying a made-up civic logo would imply an
+  affiliation that does not exist. All three images in use were cropped so
+  none of it survives.
+
 ## Still needed
 
 1. **Peachtree City multi-use paths.** Homepage "Why Peachtree City"
@@ -53,7 +81,10 @@ className/aspect ratio.
 ## Where placeholders currently render
 
 - `src/app/page.tsx` (homepage) — Peachtree City path/lake photo
-- `src/app/peachtree-city-ga/page.tsx` — golf-cart / path photo
+None. Every image slot on the site is now filled — real photos of Angelica
+throughout, and AI-generated scenery in the three Peachtree City slots
+noted above.
 
-Every page that should show Angelica now shows a real, distinct photo of
-her; the only remaining placeholders are Peachtree City *place* shots.
+`src/components/ui/PlaceholderImage.tsx` (the SVG artwork fallback) is
+currently unused but kept for any future image slot added before real
+photography exists.

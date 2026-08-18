@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { PortraitImage } from "@/components/ui/PortraitImage";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { ExpertiseBadges } from "@/components/sections/ExpertiseBadges";
 import { ThreePaths } from "@/components/sections/ThreePaths";
 import { HowItWorks } from "@/components/sections/HowItWorks";
@@ -13,6 +13,7 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { serviceAreas, agent } from "@/config/site";
 import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
 import angelicaLifestyle from "@/assets/images/angelica-lifestyle.png";
+import ptcPathLake from "@/assets/images/ptc-path-lake.jpg";
 
 export const metadata: Metadata = {
   title: "Peachtree City Realtor & Relocation Guide",
@@ -58,7 +59,12 @@ export default function Home() {
 
       <section className="py-16 md:py-24">
         <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-          <PlaceholderImage label="Peachtree City multi-use path and lake" aspect="aspect-[4/3]" className="md:order-2" />
+          <SiteImage
+            src={ptcPathLake}
+            alt="A multi-use path running alongside a lake with a fountain in Peachtree City"
+            aspect="aspect-[4/3]"
+            className="md:order-2"
+          />
           <div>
             <h2 className="font-display text-3xl font-semibold text-navy md:text-4xl">
               There&apos;s nowhere quite like Peachtree City.
