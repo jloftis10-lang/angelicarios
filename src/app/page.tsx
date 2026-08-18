@@ -12,6 +12,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { serviceAreas, agent } from "@/config/site";
 import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
+import angelicaLifestyle from "@/assets/images/angelica-lifestyle.png";
 
 export const metadata: Metadata = {
   title: "Peachtree City Realtor & Relocation Guide",
@@ -99,8 +100,8 @@ export default function Home() {
             </Button>
           </div>
           <PortraitImage
-            src={angelicaPortrait}
-            alt={`Angelica Rios, Peachtree City real-estate advisor`}
+            src={angelicaLifestyle}
+            alt="Angelica Rios, Peachtree City real-estate advisor"
             aspect="aspect-[4/5]"
           />
         </Container>

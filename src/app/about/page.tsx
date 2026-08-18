@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
 import { agent, serviceAreas } from "@/config/site";
 import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
+import angelicaHiking from "@/assets/images/angelica-hiking.jpg";
 
 export const metadata: Metadata = {
   title: "About Angelica",
@@ -58,10 +59,9 @@ export default function AboutPage() {
               her — not a team, not a rotating point of contact.
             </p>
             <p>
-              Outside of work, Angelica treasures time with her son and enjoys exploring the outdoors with her
-              partner and their dog. Her son is beginning college, a milestone that&apos;s given her a fresh
-              appreciation for the way home and place shift at different stages of life — which is part of why she
-              takes the same question seriously for every client: where does life fit next?
+              Her son is beginning college, a milestone that&apos;s given her a fresh appreciation for the way home
+              and place shift at different stages of life — which is part of why she takes the same question
+              seriously for every client: where does life fit next?
             </p>
             <p>
               That personal experience is why she treats real estate as a relationship, not a transaction — and why
@@ -72,6 +72,33 @@ export default function AboutPage() {
       </section>
 
       <AdvisoryDisclaimer />
+
+      <section className="py-16">
+        <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">Beyond real estate</p>
+            <h2 className="mt-2 font-display text-3xl font-semibold text-navy">At home in Georgia.</h2>
+            <p className="mt-4 text-sm leading-relaxed text-slate">
+              Outside of work, Angelica treasures time with her son and enjoys exploring the outdoors with her
+              partner and their dog. Her appreciation for home, family, and community shapes the care she brings to
+              every relationship.
+            </p>
+            <ul className="mt-6 flex flex-col gap-3 text-sm text-ink">
+              {[
+                "Peachtree City resident",
+                "Personal interstate relocation experience",
+                "15+ years in mortgage finance and underwriting",
+                "Hands-on acquisition, renovation, staging, and resale experience",
+              ].map((item) => (
+                <li key={item} className="border-t border-sand/60 pt-3 first:border-t-0 first:pt-0">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <PortraitImage src={angelicaHiking} alt="Angelica hiking with her partner" aspect="aspect-[4/5]" />
+        </Container>
+      </section>
 
       <section className="py-16 md:py-24">
         <Container className="flex flex-col items-start gap-6 rounded-3xl bg-sand/30 p-10 md:p-16">
