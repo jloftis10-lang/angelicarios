@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { H2, P } from "@/components/blog/Prose";
 import type { BlogPost } from "@/content/blog/types";
 
@@ -52,7 +53,7 @@ export const post: BlogPost = {
       <P>
         The right village usually comes down to commute direction, housing type, and which recreational facilities
         matter most to you. That&apos;s a conversation worth having directly —{" "}
-        <a href="/contact" className="underline">reach out</a> and Angelica can walk through the tradeoffs based on
+        <Link href="/contact" className="underline">reach out</Link> and Angelica can walk through the tradeoffs based on
         what you&apos;re actually looking for.
       </P>
     </>

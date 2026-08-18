@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { H2, P, UL, LI } from "@/components/blog/Prose";
 import type { BlogPost } from "@/content/blog/types";
 
@@ -32,7 +33,7 @@ export const post: BlogPost = {
 
       <H2>Starting the conversation</H2>
       <P>
-        If you&apos;re considering a similar move, the <a href="/relocate" className="underline">Relocate page</a>{" "}
+        If you&apos;re considering a similar move, the <Link href="/relocate" className="underline">Relocate page</Link>{" "}
         covers how Angelica works with out-of-state clients, from remote orientation through closing.
       </P>
     </>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { H2, P } from "@/components/blog/Prose";
 import type { BlogPost } from "@/content/blog/types";
 
@@ -40,7 +41,7 @@ export const post: BlogPost = {
       <H2>Questions about the area?</H2>
       <P>
         If Trilith or the broader Fayetteville area is on your list alongside Peachtree City,{" "}
-        <a href="/contact" className="underline">reach out</a> and Angelica can walk through how the options compare.
+        <Link href="/contact" className="underline">reach out</Link> and Angelica can walk through how the options compare.
       </P>
     </>
   ),

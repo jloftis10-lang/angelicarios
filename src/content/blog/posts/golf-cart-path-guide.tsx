@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { H2, P, UL, LI } from "@/components/blog/Prose";
 import type { BlogPost } from "@/content/blog/types";
 
@@ -38,7 +39,7 @@ export const post: BlogPost = {
 
       <H2>Learn more</H2>
       <P>
-        The <a href="/peachtree-city-ga" className="underline">Peachtree City guide</a> has more on how the path
+        The <Link href="/peachtree-city-ga" className="underline">Peachtree City guide</Link> has more on how the path
         system connects to each village, and the city&apos;s own resources are the best source for current
         registration rules and path maps.
       </P>

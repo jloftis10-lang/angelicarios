@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { H2, P, UL, LI } from "@/components/blog/Prose";
 import type { BlogPost } from "@/content/blog/types";
 
@@ -40,8 +41,8 @@ export const post: BlogPost = {
       <H2>Where to start</H2>
       <P>
         If you&apos;re relocating from out of state, remote orientation and a touring strategy matter more than they
-        would for a local move — see the <a href="/relocate" className="underline">Relocate page</a> for how that
-        typically works, or the <a href="/peachtree-city-ga" className="underline">Peachtree City guide</a> for more
+        would for a local move — see the <Link href="/relocate" className="underline">Relocate page</Link> for how that
+        typically works, or the <Link href="/peachtree-city-ga" className="underline">Peachtree City guide</Link> for more
         detail on the villages and getting around.
       </P>
     </>
