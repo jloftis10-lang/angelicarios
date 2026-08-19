@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { StickyMobileContact } from "@/components/layout/StickyMobileContact";
 import { ComplianceWarning } from "@/components/ComplianceWarning";
 import { AnalyticsScripts } from "@/components/AnalyticsScripts";
+import { AttributionTracker } from "@/components/AttributionTracker";
 import { siteUrl, brand, agent } from "@/config/site";
 import { JsonLd } from "@/components/JsonLd";
 
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`${inter.variable} ${newsreader.variable} h-full`}>
       <body className="flex min-h-full flex-col bg-warm-white text-ink antialiased">
         <ComplianceWarning />
+        <AttributionTracker />
         <AnalyticsScripts />
         <JsonLd />
         <a

@@ -2,6 +2,9 @@
  * Thin, dependency-free analytics hook. Pushes to a dataLayer-style queue
  * so GA4/Clarity (or nothing, if not configured) can pick events up
  * without every call site knowing which provider is wired in.
+ *
+ * Privacy-conscious by construction: events carry intent and page context,
+ * never personally identifying form values.
  */
 export type AnalyticsEvent =
   | "contact_form_submit"
@@ -9,9 +12,13 @@ export type AnalyticsEvent =
   | "seller_lead"
   | "relocation_lead"
   | "investor_lead"
+  | "guide_lead"
+  | "area_match_complete"
   | "phone_click"
   | "text_click"
-  | "guide_signup"
+  | "email_click"
+  | "community_click"
+  | "village_click"
   | "listing_search_click";
 
 declare global {
