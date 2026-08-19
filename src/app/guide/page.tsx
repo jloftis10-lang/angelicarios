@@ -105,7 +105,7 @@ export default function GuidePage() {
           <div>
             <h2 className="font-display text-3xl font-semibold text-navy">Nearby areas worth understanding</h2>
             <p className="mt-4 text-sm leading-relaxed text-slate">
-              A Peachtree City search often overlaps with Fayetteville, Trilith, Tyrone, Senoia, Newnan, and other
+              A Peachtree City search often overlaps with Fayetteville, Trilith, Tyrone, Senoia, Newnan, Sharpsburg, and other
               parts of Fayette and Coweta counties. Comparing those areas can clarify what you value most instead of
               treating city limits as the first decision.
             </p>

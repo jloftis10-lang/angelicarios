@@ -106,7 +106,7 @@ export default function PeachtreeCityPage() {
         <Container className="max-w-2xl">
           <h2 className="font-display text-2xl font-semibold text-navy">Peachtree City and South Metro Atlanta</h2>
           <p className="mt-3 text-sm leading-relaxed text-slate">
-            A Peachtree City home search can overlap with Fayetteville, Trilith, Tyrone, Senoia, Newnan, and other
+            A Peachtree City home search can overlap with Fayetteville, Trilith, Tyrone, Senoia, Newnan, Sharpsburg, and other
             parts of Fayette and Coweta counties. Comparing nearby areas can help clarify the tradeoffs that matter to
             your household.
           </p>

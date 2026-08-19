@@ -82,7 +82,17 @@ export const contact = {
 export const serviceAreas = {
   primary: "Peachtree City, Georgia",
   secondary: "South Metro Atlanta",
-  mentioned: ["Fayetteville", "Trilith", "Tyrone", "Senoia", "Newnan", "Coweta County"],
+  mentioned: [
+    "Fayetteville",
+    "Trilith",
+    "Tyrone",
+    "Senoia",
+    "Newnan",
+    "Serenbe",
+    "Palmetto",
+    "Sharpsburg",
+    "Coweta County",
+  ],
 };
 
 export const social = {

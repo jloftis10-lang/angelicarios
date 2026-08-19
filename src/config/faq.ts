@@ -8,7 +8,7 @@ export const faqCategories: FaqCategory[] = [
       {
         question: "What areas do you serve?",
         answer:
-          "Peachtree City is the primary focus, along with South Metro Atlanta more broadly — including nearby communities like Fayetteville, Trilith, Tyrone, Senoia, Newnan, and the rest of Coweta County where it makes sense.",
+          "Peachtree City is the primary focus, along with South Metro Atlanta more broadly — including nearby communities like Fayetteville, Trilith, Tyrone, Senoia, Newnan, Sharpsburg, Serenbe, Palmetto, and the rest of Coweta County where it makes sense.",
       },
       {
         question: "Will I work with Angelica directly, or with a team?",
@@ -23,7 +23,7 @@ export const faqCategories: FaqCategory[] = [
       {
         question: "Do you only work in Peachtree City itself?",
         answer:
-          "Peachtree City is the primary focus, but the service area extends across South Metro Atlanta — including Fayetteville, Trilith, Tyrone, Senoia, Newnan, and the rest of Coweta County where it fits.",
+          "Peachtree City is the primary focus, but the service area extends across South Metro Atlanta — including Fayetteville, Trilith, Tyrone, Senoia, Newnan, Sharpsburg, Serenbe, Palmetto, and the rest of Coweta County where it fits.",
       },
       {
         question: "What about Trilith or Fayetteville — are those covered too?",

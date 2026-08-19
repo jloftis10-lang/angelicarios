@@ -8,7 +8,7 @@ import { RelatedGuides } from "@/components/sections/RelatedGuides";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { SiteImage } from "@/components/ui/SiteImage";
 import { siteUrl, brand } from "@/config/site";
-import angelicaPortraitBlue from "@/assets/images/angelica-portrait-blue.jpg";
+import angelicaOverlookDog from "@/assets/images/angelica-overlook-dog.jpg";
 
 export const metadata: Metadata = {
   title: "Moving From California to Georgia",
@@ -93,8 +93,8 @@ export default function MovingFromCaliforniaPage() {
             </div>
           </div>
           <SiteImage
-            src={angelicaPortraitBlue}
-            alt="Angelica Rios, who relocated from Newport Beach, California to Georgia"
+            src={angelicaOverlookDog}
+            alt="Angelica Rios hiking with her dog at a mountain overlook in Georgia"
             aspect="aspect-[4/5]"
           />
         </Container>

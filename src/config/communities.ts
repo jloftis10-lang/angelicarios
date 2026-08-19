@@ -136,7 +136,7 @@ export const communities: Community[] = [
     ],
     location:
       "Trilith is located within the Fayetteville area of Fayette County, near Peachtree City and within South Metro Atlanta. Its position gives reasonable access toward the airport and the metro, but as always the number that matters is your own drive at your own hours.",
-    compareWith: ["fayetteville", "peachtree-city", "senoia"],
+    compareWith: ["fayetteville", "peachtree-city", "serenbe"],
     considerations: [
       "Does a walkable, higher-density layout genuinely fit how you live, or does it mainly appeal in the abstract?",
       "What are the current HOA or community association terms, fees, and rules for the specific property? Verify these in the actual governing documents.",
@@ -232,7 +232,7 @@ export const communities: Community[] = [
     ],
     location:
       "Senoia sits in Coweta County, south of Peachtree City and further from the airport and central Atlanta than the Fayette County options. If commute is a significant factor, this is the community where you most need to drive the route yourself before committing.",
-    compareWith: ["newnan", "peachtree-city", "trilith"],
+    compareWith: ["newnan", "sharpsburg", "peachtree-city"],
     considerations: [
       "Have you driven your realistic commute from Senoia, at the actual hours you would drive it?",
       "For an older in-town home, what does the inspection reveal about systems, roof, foundation, and any historic-district requirements?",
@@ -280,7 +280,7 @@ export const communities: Community[] = [
     ],
     location:
       "Newnan sits in Coweta County, west and south of Peachtree City, positioned along the I-85 corridor. That corridor position shapes the drive toward Atlanta differently than the Fayette County communities do — again, worth timing yourself rather than relying on an estimate.",
-    compareWith: ["senoia", "peachtree-city", "fayetteville"],
+    compareWith: ["senoia", "sharpsburg", "peachtree-city"],
     considerations: [
       "Which part of Newnan are you actually looking at? The city is large enough that neighborhoods differ substantially from one another.",
       "Have you driven the commute at real hours, particularly if it involves I-85?",
@@ -294,6 +294,154 @@ export const communities: Community[] = [
     metaTitle: "Newnan GA Real Estate & Relocation Guide",
     metaDescription:
       "An orientation to buying a home in Newnan, Georgia — the largest nearby Coweta County city, its wide housing range, location context, and what to verify before touring.",
+  },
+  {
+    slug: "serenbe",
+    href: "/serenbe-ga",
+    name: "Serenbe",
+    county: "Fulton County",
+    summary:
+      "A planned community in Chattahoochee Hills built as walkable hamlets surrounded by preserved land — the most unusual housing format anywhere near this part of the metro.",
+    intro:
+      "Serenbe is a planned community in Chattahoochee Hills, in south Fulton County, organized into distinct hamlets set among preserved woodland and farmland rather than laid out as conventional subdivisions. Buyers usually arrive here because they want something specific that nothing else nearby offers — and it is worth being clear-eyed about both what that is and what it costs in convenience.",
+    distinctives: [
+      {
+        title: "Hamlets rather than subdivisions",
+        copy: "Development is concentrated into compact, walkable hamlets, each with its own character, rather than spread evenly across the land. The pattern is closer to a village than to a suburban neighborhood.",
+      },
+      {
+        title: "Land held as open space",
+        copy: "A large share of the surrounding land is kept undeveloped, with trails connecting the hamlets. That preserved setting is the central design idea of the place, not an amenity added on top of it.",
+      },
+      {
+        title: "Walkability and shared space",
+        copy: "Homes, restaurants, shops, and gathering space are placed close enough together to reach on foot or by trail — a deliberate contrast with the car-based pattern of most of the surrounding area.",
+      },
+      {
+        title: "Design guidelines",
+        copy: "Architecture across the community follows design standards, which is why it reads as visually cohesive. Ask exactly what those standards govern for a specific property before you plan any changes to it.",
+      },
+      {
+        title: "A genuinely rural setting",
+        copy: "Chattahoochee Hills is rural. The trade for the setting and the quiet is real distance from everyday errands, and that is the single factor most likely to decide whether Serenbe works for you.",
+      },
+    ],
+    housing: [
+      "Housing at Serenbe spans several formats — attached homes, cottages on small lots, larger single-family homes, and live/work configurations — but they share a design language rather than varying the way housing varies across an ordinary city.",
+      "Because it is a distinctive, comparatively small market, it does not behave like the broader South Metro market around it. What a home is worth here depends on Serenbe-specific factors more than on regional trends, so lean on current, verified comparable sales inside the community rather than on anything drawn from the surrounding area.",
+    ],
+    location:
+      "Serenbe sits in Chattahoochee Hills, in south Fulton County, west of the Fayette County communities and reachable mainly by two-lane rural roads. It is closer to Hartsfield-Jackson Atlanta International Airport than the drive feels, and further from routine shopping than most buyers expect. Drive the roads yourself, at the hours you would really be driving them, before deciding.",
+    compareWith: ["trilith", "palmetto", "peachtree-city"],
+    considerations: [
+      "What do the community documents actually govern — design review, short-term rentals, landscaping, additions? Read them in full rather than relying on a summary.",
+      "What are the current fees and assessments, what do they cover, and how have they changed? Verify with the association directly.",
+      "How far is the nearest grocery, pharmacy, and urgent care from the specific hamlet you are considering?",
+      "In a small, distinctive market, how long have comparable homes taken to sell? That matters more here than in a large one.",
+      "What are the current, verified school attendance zones for the specific address? Confirm with the district rather than a listing site.",
+    ],
+    angelicasTake:
+      "Serenbe is not a compromise choice, and it is not for everyone. The people it suits know within about an hour of walking it. The question I push on is the drive — not whether you like it today, but whether you will still like it on a Wednesday in year three when you need one thing from a store.",
+    relatedPosts: ["buying-remotely-in-georgia", "new-construction-near-peachtree-city", "due-diligence-in-georgia"],
+    metaTitle: "Serenbe GA Real Estate & Community Guide",
+    metaDescription:
+      "An orientation to buying a home in Serenbe, Georgia — the hamlet layout in Chattahoochee Hills, how the market differs from the surrounding area, and what to verify before touring.",
+  },
+  {
+    slug: "palmetto",
+    href: "/palmetto-ga",
+    name: "Palmetto",
+    county: "Fulton County",
+    summary:
+      "A small city along the US 29 and I-85 corridor southwest of Atlanta, with a historic center and rural surroundings — and generally more land for the money than the Fayette County communities.",
+    intro:
+      "Palmetto is a small city southwest of Atlanta, near Chattahoochee Hills and within reach of both the Fayette County communities and Coweta County. It comes up for buyers who want acreage or a rural setting without going far out, and for whom the structured, amenity-driven feel of a planned community is not the point.",
+    distinctives: [
+      {
+        title: "Small-town center, rural edges",
+        copy: "The city has a compact historic center with rural land surrounding it, so the character can change substantially within a short drive.",
+      },
+      {
+        title: "Corridor position",
+        copy: "Palmetto sits along the US 29 and I-85 corridor, which shapes access toward Atlanta and toward the airport differently than the Fayette County routes do.",
+      },
+      {
+        title: "Land availability",
+        copy: "Larger parcels are more common here than in the planned communities to the east, which is the practical reason most buyers start looking.",
+      },
+      {
+        title: "A county line worth checking",
+        copy: "Palmetto is primarily in Fulton County, but the area near the city extends toward the Coweta County line. County determines taxes, schools, and services, so confirm which one a specific address is actually in rather than assuming from the mailing address.",
+      },
+    ],
+    housing: [
+      "Housing here is not uniform. Older homes near the historic center, newer subdivisions, and properties on acreage all exist within the same area, so the range of what you might find is wide and a single description of 'a house in Palmetto' does not tell you much.",
+      "For rural or acreage properties, the questions that matter shift. Well and septic rather than municipal water and sewer, road frontage and access, easements, and current zoning all become central — and none of them are answerable from a listing photo.",
+    ],
+    location:
+      "Palmetto sits in south Fulton County, west of the Fayette County communities and north of Coweta County, along the US 29 and I-85 corridor. Access toward Atlanta and toward Hartsfield-Jackson Atlanta International Airport runs differently than it does from Peachtree City, so time the specific drives that matter to you rather than working from a map estimate.",
+    compareWith: ["serenbe", "newnan", "sharpsburg"],
+    considerations: [
+      "Which county is this exact address in? Confirm it — taxes, schools, and services follow the county line, not the mailing address.",
+      "Is the property on well and septic or on municipal systems? If well and septic, what do inspection and flow testing show?",
+      "What is the current zoning, and what does it permit — now, and for anything you might want to do later?",
+      "How is the property accessed, and are there easements or shared drives recorded against it?",
+      "Have you driven the commute at real hours, particularly if it involves I-85?",
+    ],
+    angelicasTake:
+      "Palmetto tends to attract people who want room, and room comes with a different set of questions than a subdivision does. Well, septic, zoning, access — that is where the risk lives out here, and it is entirely manageable as long as you ask before you are under contract instead of after.",
+    relatedPosts: ["due-diligence-in-georgia", "buying-an-older-home-peachtree-city", "peachtree-city-vs-newnan"],
+    metaTitle: "Palmetto GA Real Estate & Relocation Guide",
+    metaDescription:
+      "An orientation to buying a home in Palmetto, Georgia — the corridor location, rural and acreage properties, county-line and septic questions to verify, and how it compares nearby.",
+  },
+  {
+    slug: "sharpsburg",
+    href: "/sharpsburg-ga",
+    name: "Sharpsburg",
+    county: "Coweta County",
+    summary:
+      "A small Coweta County town between Newnan and Peachtree City, whose mailing address stretches across a much larger area than the town itself.",
+    intro:
+      "Sharpsburg is a small town in Coweta County, positioned between Newnan and Peachtree City. It comes up constantly in searches in this area — and it is also the community most often misunderstood, because the Sharpsburg mailing address covers far more ground than the town limits do.",
+    distinctives: [
+      {
+        title: "The address covers more than the town",
+        copy: "A great deal of unincorporated Coweta County carries a Sharpsburg mailing address. Two homes both listed as 'Sharpsburg' can sit miles apart, in different settings, with different services. Always work from the actual location, not the address line.",
+      },
+      {
+        title: "Between two anchors",
+        copy: "Its position between Newnan and Peachtree City is the practical draw — buyers who work or spend time in both directions often end up looking here.",
+      },
+      {
+        title: "More land, less density",
+        copy: "The surrounding area is generally less densely developed than the Fayette County communities, and larger lots are more common.",
+      },
+      {
+        title: "Coweta County systems",
+        copy: "Sharpsburg is in Coweta County, so county government, schools, taxes, and services differ from the Fayette County communities on the other side of the line.",
+      },
+    ],
+    housing: [
+      "Because the Sharpsburg address spans so much unincorporated county, housing ranges from subdivision homes to properties on acreage, across a wide span of construction eras. The variation is larger than in most of the nearby towns.",
+      "That breadth is the reason to look here and the reason to be careful. Whether a given property is on municipal water and sewer or on well and septic, and how far it actually sits from the places you go, both vary enormously between two addresses that read identically on paper.",
+    ],
+    location:
+      "Sharpsburg sits in Coweta County along the corridor between Newnan and Peachtree City. For a lot of buyers that middle position is precisely the appeal — but 'Sharpsburg' spans enough ground that the drive from one address can be meaningfully different from the drive from another. Map and time the specific property.",
+    compareWith: ["newnan", "senoia", "peachtree-city"],
+    considerations: [
+      "Where is this property actually located — inside the town limits or in unincorporated Coweta County? It changes services and sometimes taxes.",
+      "Is it on municipal water and sewer or on well and septic? If well and septic, what do the inspections show?",
+      "What are the current, verified Coweta County school attendance zones for this specific address?",
+      "How long is the drive to the places you actually go, from this address rather than from 'Sharpsburg' generally?",
+      "For a property on acreage, what does current zoning permit, and are there easements recorded against it?",
+    ],
+    angelicasTake:
+      "More than anywhere else around here, Sharpsburg is a place where the address tells you almost nothing. I have shown two houses in the same morning, both listed as Sharpsburg, that had nothing in common. Pin the location on a map first — everything else follows from that.",
+    relatedPosts: ["peachtree-city-vs-newnan", "due-diligence-in-georgia", "new-construction-near-peachtree-city"],
+    metaTitle: "Sharpsburg GA Real Estate & Relocation Guide",
+    metaDescription:
+      "An orientation to buying a home in Sharpsburg, Georgia — why the mailing address spans so much of Coweta County, what varies between addresses, and what to verify before touring.",
   },
 ];
 

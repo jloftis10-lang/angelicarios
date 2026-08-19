@@ -5,8 +5,7 @@ import { PortraitImage } from "@/components/ui/PortraitImage";
 import { PageHero } from "@/components/sections/PageHero";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { agent, serviceAreas } from "@/config/site";
-import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
+import angelicaLakeDog from "@/assets/images/angelica-lake-dog.jpg";
 
 export const metadata: Metadata = {
   title: "Relocating to Peachtree City",
@@ -52,8 +51,8 @@ export default function RelocatePage() {
       <section className="py-8">
         <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <PortraitImage
-            src={angelicaPortrait}
-            alt={`Angelica Rios, ${agent.title} serving ${serviceAreas.primary}`}
+            src={angelicaLakeDog}
+            alt="Angelica Rios outdoors with her dog on a lakeside dock"
             aspect="aspect-[4/5]"
           />
           <div>

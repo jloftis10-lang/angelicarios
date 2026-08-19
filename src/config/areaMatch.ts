@@ -16,7 +16,10 @@ export type AreaKey =
   | "fayetteville"
   | "tyrone"
   | "senoia"
-  | "newnan";
+  | "newnan"
+  | "serenbe"
+  | "palmetto"
+  | "sharpsburg";
 
 export type AreaMatchOption = {
   value: string;
@@ -53,7 +56,7 @@ export const areaMatchQuestions: AreaMatchQuestion[] = [
       {
         value: "indifferent",
         label: "Not important to me",
-        weights: { fayetteville: 2, newnan: 2, tyrone: 2, senoia: 2 },
+        weights: { fayetteville: 2, newnan: 2, tyrone: 2, senoia: 2, sharpsburg: 2, palmetto: 1 },
         reason: "you're not tied to the path network, which opens up the surrounding communities",
       },
     ],
@@ -65,11 +68,11 @@ export const areaMatchQuestions: AreaMatchQuestion[] = [
       {
         value: "yes",
         label: "Yes — walkability is a priority",
-        weights: { trilith: 5, senoia: 2 },
+        weights: { trilith: 5, serenbe: 4, senoia: 2 },
         reason: "you want a walkable setting rather than a drive-to-everything layout",
       },
       { value: "somewhat", label: "Somewhat — a short drive is fine", weights: { "peachtree-city": 2, fayetteville: 1, senoia: 1 } },
-      { value: "no", label: "No — I expect to drive", weights: { tyrone: 2, newnan: 2, fayetteville: 1 } },
+      { value: "no", label: "No — I expect to drive", weights: { tyrone: 2, newnan: 2, sharpsburg: 2, palmetto: 2, fayetteville: 1 } },
     ],
   },
   {
@@ -79,14 +82,14 @@ export const areaMatchQuestions: AreaMatchQuestion[] = [
       {
         value: "lot",
         label: "More land, further out",
-        weights: { tyrone: 4, senoia: 3, newnan: 2 },
+        weights: { tyrone: 4, palmetto: 4, sharpsburg: 3, senoia: 3, newnan: 2 },
         reason: "you prioritized land, which generally means looking outside the denser planned areas",
       },
       { value: "balance", label: "A balance of both", weights: { "peachtree-city": 2, fayetteville: 3 } },
       {
         value: "close",
         label: "Closer in, smaller lot is fine",
-        weights: { trilith: 4, "peachtree-city": 2 },
+        weights: { trilith: 4, serenbe: 3, "peachtree-city": 2 },
         reason: "you're willing to trade lot size for proximity",
       },
     ],
@@ -104,7 +107,7 @@ export const areaMatchQuestions: AreaMatchQuestion[] = [
       {
         value: "newer",
         label: "Newer construction",
-        weights: { trilith: 4, "peachtree-city": 2, fayetteville: 2 },
+        weights: { trilith: 4, serenbe: 3, "peachtree-city": 2, fayetteville: 2, sharpsburg: 1 },
         reason: "you leaned toward newer construction",
       },
       { value: "either", label: "Either, depends on the house", weights: { fayetteville: 2, newnan: 2, "peachtree-city": 1 } },
@@ -125,7 +128,7 @@ export const areaMatchQuestions: AreaMatchQuestion[] = [
       {
         value: "rarely",
         label: "Rarely — I work locally or remotely",
-        weights: { senoia: 3, newnan: 2, "peachtree-city": 2 },
+        weights: { senoia: 3, serenbe: 3, palmetto: 2, newnan: 2, sharpsburg: 2, "peachtree-city": 2 },
         reason: "the commute isn't a constraint for you, which widens the map considerably",
       },
     ],
@@ -137,19 +140,19 @@ export const areaMatchQuestions: AreaMatchQuestion[] = [
       {
         value: "planned",
         label: "A planned community with shared amenities",
-        weights: { "peachtree-city": 4, trilith: 2 },
+        weights: { "peachtree-city": 4, serenbe: 3, trilith: 2 },
         reason: "you're drawn to a planned setting with shared amenities",
       },
       {
         value: "historic",
         label: "A historic small town with a real downtown",
-        weights: { senoia: 5, newnan: 3 },
+        weights: { senoia: 5, newnan: 3, palmetto: 2 },
         reason: "you're drawn to a historic small-town setting",
       },
       {
         value: "conventional",
         label: "A conventional suburb with variety",
-        weights: { fayetteville: 4, newnan: 3, tyrone: 2 },
+        weights: { fayetteville: 4, newnan: 3, tyrone: 2, sharpsburg: 2 },
         reason: "you're drawn to a conventional suburban setting with more variety",
       },
     ],
@@ -175,7 +178,7 @@ export const areaMatchQuestions: AreaMatchQuestion[] = [
       {
         value: "willing",
         label: "Open to it — I'd take on a project",
-        weights: { newnan: 3, senoia: 3, tyrone: 2 },
+        weights: { newnan: 3, senoia: 3, tyrone: 2, palmetto: 2, sharpsburg: 2 },
         reason: "you're open to a project, which tends to widen what's worth looking at",
       },
       { value: "cosmetic", label: "Cosmetic updates only", weights: { "peachtree-city": 2, fayetteville: 2, newnan: 1 } },

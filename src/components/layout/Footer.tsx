@@ -3,6 +3,7 @@ import { footerNav, primaryNav } from "@/config/navigation";
 import { agent, brand, brokerage, contact, serviceAreas, social } from "@/config/site";
 import { Container } from "@/components/ui/Container";
 import { TrackedLink } from "@/components/TrackedLink";
+import { Logo } from "@/components/brand/Logo";
 
 const socialLinks = [
   { label: "Instagram", href: social.instagram },
@@ -22,8 +23,8 @@ export function Footer() {
     <footer className="mt-24 border-t border-sand/60 bg-canvas">
       <Container className="grid gap-10 py-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <p className="font-display text-lg font-semibold text-navy">{brand.name}</p>
-          <p className="mt-2 max-w-sm text-sm text-slate">
+          <Logo variant="stacked" className="items-start text-left" />
+          <p className="mt-4 max-w-sm text-sm text-slate">
             Serving {serviceAreas.primary} and {serviceAreas.secondary}.
           </p>
           {(hasPhone || hasEmail) && (

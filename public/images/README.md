@@ -20,9 +20,21 @@ className/aspect ratio.
   and her partner hiking, used in the About page's "Beyond real estate"
   section (both confirmed by the user as real and approved for publication).
 - **`src/assets/images/angelica-portrait-blue.jpg`** — real photo, sharp
-  and well-lit, used on the Relocate page (previously a duplicate of the
-  hero portrait). Originally arrived with the source app's crop-tool UI
-  burned in; cropped to 4:5 below the chrome.
+  and well-lit, used on the homepage hero. Originally arrived with the
+  source app's crop-tool UI burned in; cropped to 4:5 below the chrome.
+- **`src/assets/images/angelica-lake-dog.jpg`** — real photo of Angelica
+  with her dog on a lakeside dock, used on the Relocate page. Cropped to
+  4:5 from a full-screen phone capture.
+- **`src/assets/images/angelica-overlook-dog.jpg`** — real photo of
+  Angelica hiking with her dog at a mountain overlook, used on
+  `/moving-from-california-to-georgia`. Same crop treatment.
+
+  Both dog photos are confirmed real and were added to retire the last two
+  duplicate image placements on the site. **Their alt text deliberately
+  names no location** — the lake is not confirmed to be a Peachtree City
+  lake and the overlook is not confirmed to be any particular Georgia
+  summit, so neither is captioned as one. If the locations are confirmed,
+  the alt text is worth making specific; do not guess.
 - **`src/assets/images/angelica-candid.jpg`** — real photo, used on the
   Contact page. Same crop treatment. **Noticeably soft/out of focus and
   very tightly zoomed** — it's real and it works, but it's the weakest
@@ -71,8 +83,7 @@ Two items from the same source were deliberately **excluded**:
 3. **Golf-cart lifestyle.** Peachtree City page, "Getting Around."
 4. **Residential streets / homes** (generic, not a specific listing).
 5. **Natural local scenery.**
-6. **Dog-related image** — only if it's an authentic photo of Angelica's
-   own dog; skip otherwise rather than substituting a stock pet photo.
+6. ~~**Dog-related image**~~ — done; see the two photos above.
 7. **Professional headshot** (optional upgrade) — the current portraits
    work for V1 but a studio/professionally-lit headshot would read more
    polished for the hero specifically. (Not the AI-generated one above —

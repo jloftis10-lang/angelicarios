@@ -6,6 +6,7 @@ import { primaryNav, resourcesNav } from "@/config/navigation";
 import { brand } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { Logo } from "@/components/brand/Logo";
 
 function ChevronDown() {
   return (
@@ -44,8 +45,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-sand/60 bg-warm-white/95 backdrop-blur">
       <Container className="flex h-16 items-center justify-between md:h-20">
-        <Link href="/" className="font-display text-lg font-semibold text-navy md:text-xl">
-          {brand.name}
+        <Link href="/" aria-label={`${brand.name} — home`} className="shrink-0">
+          <Logo variant="horizontal" />
         </Link>
 
         <nav aria-label="Main" className="hidden items-center gap-6 md:flex">

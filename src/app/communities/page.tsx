@@ -11,7 +11,7 @@ import ptcPathWalkers from "@/assets/images/ptc-path-walkers.jpg";
 export const metadata: Metadata = {
   title: "Communities — Peachtree City & South Metro Atlanta",
   description:
-    "Compare Peachtree City, Trilith, Fayetteville, Tyrone, Senoia, and Newnan — how these South Metro Atlanta communities differ and which are worth exploring for your move.",
+    "Compare Peachtree City, Trilith, Fayetteville, Tyrone, Senoia, Newnan, Serenbe, Palmetto, and Sharpsburg — how these South Metro Atlanta communities differ and which are worth exploring for your move.",
   alternates: { canonical: "/communities" },
 };
 

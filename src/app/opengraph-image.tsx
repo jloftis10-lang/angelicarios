@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { brand, serviceAreas } from "@/config/site";
+import { BRAND_MARK_PNG } from "@/config/brandMark";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -20,6 +21,7 @@ export default function Image() {
           fontFamily: "sans-serif",
         }}
       >
+        <img src={BRAND_MARK_PNG} width={148} height={122} alt="" style={{ marginBottom: 28 }} />
         <div style={{ fontSize: 28, letterSpacing: 4, textTransform: "uppercase", color: "#8fa194", display: "flex" }}>
           {`${serviceAreas.primary} • ${serviceAreas.secondary}`}
         </div>
