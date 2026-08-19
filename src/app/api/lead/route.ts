@@ -2,6 +2,24 @@ import { NextRequest, NextResponse } from "next/server";
 import { agent } from "@/config/site";
 import type { LeadPayload } from "@/lib/leadTypes";
 
+const INTENT_LABEL: Record<string, string> = {
+  buyer: "Buyer",
+  seller: "Seller",
+  relocation: "Relocation",
+  investor: "Investor",
+  contact: "Contact",
+  guide: "Guide",
+  "area-match": "Area Match",
+};
+
+/** Turn camelCase field names into something readable in an email. */
+function humanize(key: string): string {
+  return key
+    .replace(/([A-Z])/g, " $1")
+    .replace(/^./, (c) => c.toUpperCase())
+    .trim();
+}
+
 export async function POST(request: NextRequest) {
   let payload: LeadPayload;
 
@@ -25,20 +43,34 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Name and email are required." }, { status: 400 });
   }
 
+  const intentLabel = INTENT_LABEL[payload.intent] ?? payload.intent;
+
+  const detailLines = Object.entries(payload.values)
+    .filter(([key, value]) => !["name", "email", "phone"].includes(key) && value)
+    .map(([key, value]) => `${humanize(key)}: ${value}`);
+
+  const attributionLines = Object.entries(payload.attribution ?? {})
+    .filter(([, value]) => Boolean(value))
+    .map(([key, value]) => `${humanize(key)}: ${value}`);
+
   const summaryLines = [
-    `New ${payload.intent} lead`,
+    `New ${intentLabel.toLowerCase()} lead from angelicarios.com`,
+    "",
     `Name: ${name}`,
     `Email: ${email}`,
     phone ? `Phone: ${phone}` : null,
-    ...Object.entries(payload.values)
-      .filter(([key]) => !["name", "email", "phone"].includes(key))
-      .map(([key, value]) => `${key}: ${value}`),
+    detailLines.length ? ["", "— Details —", ...detailLines].join("\n") : null,
+    attributionLines.length ? ["", "— Where this came from —", ...attributionLines].join("\n") : null,
+    "",
+    "Reply directly to this email to reach the sender.",
   ].filter(Boolean);
 
   const resendApiKey = process.env.RESEND_API_KEY;
   const leadToEmail = process.env.LEAD_NOTIFICATION_EMAIL ?? (agent.email.startsWith("[") ? null : agent.email);
 
   if (!resendApiKey || !leadToEmail) {
+    // Never report success we can't back up — the form surfaces Angelica's
+    // direct contact details instead so the lead isn't silently lost.
     console.error("[api/lead] delivery is not configured", {
       hasResendKey: Boolean(resendApiKey),
       hasDestination: Boolean(leadToEmail),
@@ -66,12 +98,13 @@ export async function POST(request: NextRequest) {
         from: process.env.LEAD_FROM_EMAIL ?? "Angelica Rios Website <onboarding@resend.dev>",
         to: leadToEmail,
         reply_to: email,
-        subject: `New ${payload.intent} lead — ${name}`,
+        subject: `New ${intentLabel.toLowerCase()} lead — ${name}`,
         text: summaryLines.join("\n"),
       }),
     });
 
     if (!response.ok) {
+      // Log status/body for diagnosis but never the API key.
       const detail = await response.text();
       console.error("[api/lead] Resend rejected delivery", response.status, detail);
       return NextResponse.json(

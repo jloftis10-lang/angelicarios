@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import type { FormFieldConfig, LeadIntent } from "@/lib/leadTypes";
 import { trackEvent, type AnalyticsEvent } from "@/lib/analytics";
+import { getAttribution } from "@/lib/attribution";
 import { agent, contact } from "@/config/site";
 
 const intentEvent: Record<LeadIntent, AnalyticsEvent | null> = {
@@ -11,7 +12,8 @@ const intentEvent: Record<LeadIntent, AnalyticsEvent | null> = {
   relocation: "relocation_lead",
   investor: "investor_lead",
   contact: "contact_form_submit",
-  guide: "guide_signup",
+  guide: "guide_lead",
+  "area-match": "area_match_complete",
 };
 
 export function LeadForm({
@@ -19,11 +21,14 @@ export function LeadForm({
   fields,
   submitLabel = "Send",
   successMessage = "Angelica will follow up personally as soon as she can.",
+  extraValues,
 }: {
   intent: LeadIntent;
   fields: FormFieldConfig[];
   submitLabel?: string;
   successMessage?: string;
+  /** Context the form itself didn't collect — e.g. area-match answers, the village being asked about. */
+  extraValues?: Record<string, string>;
 }) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
@@ -31,8 +36,9 @@ export function LeadForm({
     event.preventDefault();
     setStatus("submitting");
 
-    const formData = new FormData(event.currentTarget);
-    const values: Record<string, string> = {};
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const values: Record<string, string> = { ...extraValues };
     fields.forEach((field) => {
       values[field.name] = String(formData.get(field.name) ?? "");
     });
@@ -42,7 +48,7 @@ export function LeadForm({
       const response = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ intent, values, website }),
+        body: JSON.stringify({ intent, values, website, attribution: getAttribution() }),
       });
 
       if (!response.ok) throw new Error("Request failed");
@@ -50,7 +56,7 @@ export function LeadForm({
       setStatus("success");
       const event_ = intentEvent[intent];
       if (event_) trackEvent(event_, { intent });
-      event.currentTarget.reset();
+      form.reset();
     } catch {
       setStatus("error");
     }
@@ -79,6 +85,11 @@ export function LeadForm({
             {field.label}
             {field.required && <span className="text-slate"> *</span>}
           </label>
+          {field.hint && (
+            <p id={`${field.name}-hint`} className="text-xs text-slate">
+              {field.hint}
+            </p>
+          )}
 
           {field.type === "textarea" ? (
             <textarea
@@ -86,6 +97,7 @@ export function LeadForm({
               name={field.name}
               required={field.required}
               placeholder={field.placeholder}
+              aria-describedby={field.hint ? `${field.name}-hint` : undefined}
               rows={4}
               className="rounded-lg border border-sand bg-warm-white px-4 py-3 text-sm text-ink outline-none focus:border-navy"
             />
@@ -95,6 +107,7 @@ export function LeadForm({
               name={field.name}
               required={field.required}
               defaultValue=""
+              aria-describedby={field.hint ? `${field.name}-hint` : undefined}
               className="rounded-lg border border-sand bg-warm-white px-4 py-3 text-sm text-ink outline-none focus:border-navy"
             >
               <option value="" disabled>
@@ -113,6 +126,7 @@ export function LeadForm({
               type={field.type}
               required={field.required}
               placeholder={field.placeholder}
+              aria-describedby={field.hint ? `${field.name}-hint` : undefined}
               className="rounded-lg border border-sand bg-warm-white px-4 py-3 text-sm text-ink outline-none focus:border-navy"
             />
           )}
