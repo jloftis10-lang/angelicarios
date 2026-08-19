@@ -16,6 +16,11 @@ export const faqCategories: FaqCategory[] = [
           "Directly with Angelica. There's no team hand-off, ISA, or rotating point of contact — when you reach out, you're talking with her.",
       },
       {
+        question: "Does Angelica speak languages other than English?",
+        answer:
+          "Yes — Angelica is fluent in Spanish, French, and Italian in addition to English, and is glad to work through the whole process in whichever you prefer. Note that contracts, disclosures, and closing documents themselves are prepared in English; what she can do is make sure you understand every part of them before you sign.",
+      },
+      {
         question: "Is there a cost to just talk things through?",
         answer:
           "No. A conversation about your situation, timeline, and options doesn't cost anything and doesn't commit you to anything.",
@@ -49,6 +54,36 @@ export const faqCategories: FaqCategory[] = [
         question: "I'm just starting to look — is that too early to reach out?",
         answer:
           "No. Early conversations are often the most useful ones, since they shape what the rest of the search looks like. There's no pressure to be ready to buy immediately.",
+      },
+    ],
+  },
+  {
+    category: "Financing",
+    items: [
+      {
+        question: "Do I need to be prequalified before Angelica will show me homes?",
+        answer:
+          "For a first conversation, no. But before touring seriously — and certainly before writing an offer — you'll want a letter from a lender. Many listing agents ask for one with any offer, so without it your offer may simply not be considered alongside the others.",
+      },
+      {
+        question: "Can Angelica prequalify me or tell me what I qualify for?",
+        answer:
+          "No. Prequalification, preapproval, rates, and approval decisions come from a licensed mortgage lender, not from a real-estate agent. Angelica can help you prepare for that conversation, explain what the lender is likely to ask and why, and introduce you to lenders if you'd like an introduction.",
+      },
+      {
+        question: "What's the difference between prequalified and preapproved?",
+        answer:
+          "Prequalification is based on what you tell a lender, without documents being verified. Preapproval means the lender has actually reviewed your documentation. Both produce a letter, but they don't carry the same weight when an offer is on the table. There's a full explanation on the Get Prequalified page.",
+      },
+      {
+        question: "How do I know if I'm ready to talk to a lender?",
+        answer:
+          "There's a short readiness check on the Get Prequalified page — six questions, no numbers required, and nothing is sent anywhere unless you choose to send it. It tells you what to gather rather than whether you qualify.",
+      },
+      {
+        question: "Does Angelica need to see my financial documents?",
+        answer:
+          "No, and you shouldn't send them. Income, asset, and credit documentation goes to your lender through whatever secure method they provide — never by ordinary email, and never to a real-estate agent.",
       },
     ],
   },

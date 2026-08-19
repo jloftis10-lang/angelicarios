@@ -5,7 +5,8 @@ export type LeadIntent =
   | "investor"
   | "contact"
   | "guide"
-  | "area-match";
+  | "area-match"
+  | "financing";
 
 export type FieldType = "text" | "email" | "tel" | "select" | "textarea";
 

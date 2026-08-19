@@ -13,6 +13,7 @@ export type AnalyticsEvent =
   | "relocation_lead"
   | "investor_lead"
   | "guide_lead"
+  | "financing_lead"
   | "area_match_complete"
   | "phone_click"
   | "text_click"

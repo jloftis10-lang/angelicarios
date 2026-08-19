@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { PortraitImage } from "@/components/ui/PortraitImage";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
-import { agent, serviceAreas } from "@/config/site";
+import { agent, additionalLanguageList, serviceAreas } from "@/config/site";
 import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
 import angelicaHiking from "@/assets/images/angelica-hiking.jpg";
 
@@ -59,6 +59,11 @@ export default function AboutPage() {
               her — not a team, not a rotating point of contact.
             </p>
             <p>
+              She is fluent in {additionalLanguageList} as well as English. Buying or selling a home involves
+              contracts, disclosures, and deadlines that are demanding to follow in any language, and being able to
+              work through them in the one a client thinks in changes how much of it actually lands.
+            </p>
+            <p>
               Her son is beginning college, a milestone that&apos;s given her a fresh appreciation for the way home
               and place shift at different stages of life — which is part of why she takes the same question
               seriously for every client: where does life fit next?
@@ -88,6 +93,7 @@ export default function AboutPage() {
                 "Peachtree City resident",
                 "Personal interstate relocation experience",
                 "15+ years in mortgage finance and underwriting",
+                `Fluent in ${additionalLanguageList} as well as English`,
                 "Hands-on acquisition, renovation, staging, and resale experience",
               ].map((item) => (
                 <li key={item} className="border-t border-sand/60 pt-3 first:border-t-0 first:pt-0">

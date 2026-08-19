@@ -11,7 +11,7 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { RecentPosts } from "@/components/sections/RecentPosts";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FinalCta } from "@/components/sections/FinalCta";
-import { serviceAreas, agent } from "@/config/site";
+import { serviceAreas, agent, additionalLanguageList } from "@/config/site";
 import { villages } from "@/config/villages";
 import angelicaPortraitBlue from "@/assets/images/angelica-portrait-blue.jpg";
 import angelicaLifestyle from "@/assets/images/angelica-lifestyle.jpg";
@@ -48,7 +48,7 @@ export default function Home() {
             </div>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-slate">
               Mortgage finance &amp; underwriting experience · Property investor perspective · Firsthand
-              California-to-Georgia relocation
+              California-to-Georgia relocation · Fluent in {additionalLanguageList}
             </p>
           </div>
           <PortraitImage

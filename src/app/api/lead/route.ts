@@ -10,6 +10,7 @@ const INTENT_LABEL: Record<string, string> = {
   contact: "Contact",
   guide: "Guide",
   "area-match": "Area Match",
+  financing: "Financing Readiness",
 };
 
 /** Turn camelCase field names into something readable in an email. */

@@ -15,6 +15,7 @@ const routes = [
   "/peachtree-city-ga",
   "/communities",
   "/area-match",
+  "/get-prequalified",
   "/guide",
   "/moving-from-california-to-georgia",
   "/underwriting-experience-real-estate",

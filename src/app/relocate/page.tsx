@@ -5,6 +5,7 @@ import { PortraitImage } from "@/components/ui/PortraitImage";
 import { PageHero } from "@/components/sections/PageHero";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { additionalLanguageList } from "@/config/site";
 import angelicaLakeDog from "@/assets/images/angelica-lake-dog.jpg";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ const relocationSupport = [
   "Focused home-search planning",
   "Virtual touring coordination",
   "A smoother transition into local life",
+  `Conversations in ${additionalLanguageList} as well as English`,
 ];
 
 const topics = [

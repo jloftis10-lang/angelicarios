@@ -1,9 +1,15 @@
-import { agent, brand, brokerage, serviceAreas, siteUrl, social } from "@/config/site";
+import { agent, brand, brokerage, languages, serviceAreas, siteUrl, social } from "@/config/site";
 
 export function JsonLd() {
   const isPlaceholder = (value: string) => value.startsWith("[");
 
   const sameAs = [social.instagram, social.facebook, social.linkedin].filter((url) => !isPlaceholder(url));
+
+  const knowsLanguage = languages.map((language) => ({
+    "@type": "Language",
+    name: language.name,
+    alternateName: language.code,
+  }));
 
   const person = {
     "@context": "https://schema.org",
@@ -11,6 +17,7 @@ export function JsonLd() {
     name: isPlaceholder(agent.lastName) ? undefined : agent.fullName,
     givenName: agent.firstName,
     jobTitle: agent.title,
+    knowsLanguage,
     url: siteUrl,
     sameAs: sameAs.length > 0 ? sameAs : undefined,
     worksFor: isPlaceholder(brokerage.legalName)
@@ -26,6 +33,7 @@ export function JsonLd() {
     "@type": "RealEstateAgent",
     name: brand.name,
     areaServed: [serviceAreas.primary, serviceAreas.secondary],
+    knowsLanguage,
     url: siteUrl,
     telephone: isPlaceholder(agent.phone) ? undefined : agent.phone,
     email: isPlaceholder(agent.email) ? undefined : agent.email,

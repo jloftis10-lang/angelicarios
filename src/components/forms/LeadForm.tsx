@@ -14,6 +14,7 @@ const intentEvent: Record<LeadIntent, AnalyticsEvent | null> = {
   contact: "contact_form_submit",
   guide: "guide_lead",
   "area-match": "area_match_complete",
+  financing: "financing_lead",
 };
 
 export function LeadForm({

@@ -6,7 +6,7 @@ import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { TrackedLink } from "@/components/TrackedLink";
-import { propertySearch } from "@/config/site";
+import { propertySearch, expertise } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Buy a Home in Peachtree City",
@@ -75,6 +75,22 @@ export default function BuyPage() {
         </Container>
       </section>
 
+      <section className="bg-canvas py-16">
+        <Container className="max-w-2xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sage">First things first</p>
+          <h2 className="mt-2 font-display text-2xl font-semibold text-navy">Sort out financing before you tour.</h2>
+          <p className="mt-4 text-sm leading-relaxed text-slate">
+            Most listing agents will ask for a lender letter with any offer, so the strength of yours affects how your
+            offer is received. Angelica can&apos;t prequalify you — only a licensed lender can — but after
+            {" "}{expertise.yearsInFinance}+ years in mortgage finance and underwriting, she knows exactly what stalls
+            a file and what to have ready before you start.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Button href="/get-prequalified">Get Prequalified — What It Takes</Button>
+          </div>
+        </Container>
+      </section>
+
       <section id="buyer-form" className="py-16 md:py-24">
         <Container className="max-w-xl">
           <h2 className="font-display text-3xl font-semibold text-navy">
@@ -98,6 +114,19 @@ export default function BuyPage() {
                   options: ["Just exploring", "0–3 months", "3–6 months", "6–12 months", "More than a year"],
                 },
                 { name: "priceRange", label: "Price range", type: "text", placeholder: "e.g. $400k–$500k" },
+                {
+                  name: "financingStatus",
+                  label: "Where are you on financing?",
+                  type: "select",
+                  hint: "No wrong answer — it just tells Angelica what's useful to send you first.",
+                  options: [
+                    "Haven't started",
+                    "Talking to a lender",
+                    "Prequalified",
+                    "Preapproved",
+                    "Paying cash",
+                  ],
+                },
                 { name: "lookingFor", label: "What are you looking for?", type: "text" },
                 { name: "message", label: "Optional message", type: "textarea" },
               ]}

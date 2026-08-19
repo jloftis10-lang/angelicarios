@@ -62,8 +62,29 @@ export const expertise = {
     { label: "15+ Years", detail: "In mortgage finance & underwriting" },
     { label: "360° Perspective", detail: "Investor and transaction experience" },
     { label: "Hands-On", detail: "Property renovation experience" },
+    { label: "Four Languages", detail: "English, Spanish, French & Italian" },
   ],
 };
+
+/**
+ * Languages Angelica speaks fluently. `code` is the BCP-47 tag used for
+ * `knowsLanguage` in the structured data; `name` is what the site
+ * displays. Add one here and it carries into the schema and every
+ * language line automatically — don't hardcode language names in copy.
+ */
+export const languages = [
+  { name: "English", code: "en" },
+  { name: "Spanish", code: "es" },
+  { name: "French", code: "fr" },
+  { name: "Italian", code: "it" },
+] as const;
+
+/** "Spanish, French, and Italian" — the non-English list, ready for prose. */
+export const additionalLanguageList = (() => {
+  const names = languages.filter((l) => l.code !== "en").map((l) => l.name);
+  if (names.length <= 1) return names.join("");
+  return `${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`;
+})();
 
 export const brokerage = {
   legalName: PLACEHOLDER.brokerageLegalName,

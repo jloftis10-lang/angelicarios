@@ -5,7 +5,7 @@ import { LeadForm } from "@/components/forms/LeadForm";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { TrackedLink } from "@/components/TrackedLink";
 import { PortraitImage } from "@/components/ui/PortraitImage";
-import { agent, contact } from "@/config/site";
+import { agent, additionalLanguageList, contact } from "@/config/site";
 import angelicaCandid from "@/assets/images/angelica-candid.jpg";
 
 export const metadata: Metadata = {
@@ -27,6 +27,9 @@ export default function ContactPage() {
           <h1 className="font-display text-4xl font-semibold leading-tight text-navy md:text-5xl">
             Start with a conversation.
           </h1>
+          <p className="mt-5 text-base leading-relaxed text-slate">
+            Reach out in English, {additionalLanguageList} — whichever you would rather have this conversation in.
+          </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button href="#contact-form" variant="secondary">
               Buying
