@@ -13,7 +13,7 @@ className/aspect ratio.
 - **`src/assets/images/angelica-portrait.jpg`** — a real, current photo of
   Angelica (candid, warm restaurant lighting), used on the homepage hero
   and the About page.
-- **`src/assets/images/angelica-lifestyle.png`** — a real photo (red
+- **`src/assets/images/angelica-lifestyle.jpg`** — a real photo (red
   beret, warm indoor lighting), used on the homepage "Meet Angelica"
   section so it doesn't repeat the hero portrait.
 - **`src/assets/images/angelica-hiking.jpg`** — a real photo of Angelica

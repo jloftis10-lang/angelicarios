@@ -102,15 +102,41 @@ export const propertySearch = {
  * Refreshed periodically from a named public source. Any field left null
  * is hidden in the UI rather than rendered as a fabricated number.
  */
-export const marketData = {
+export type MarketPulse = {
+  medianSalePrice: number | null;
+  medianListPrice: number | null;
+  daysOnMarket: number | null;
+  inventory: number | null;
+  newListings: number | null;
+  saleToListRatio: number | null;
+  /** e.g. "+3.2%" — stored as a string because the sign and unit matter. */
+  yearOverYearChange: string | null;
+  /** e.g. "August 2026". Required for anything to render. */
+  dataAsOf: string | null;
+  /** Required for anything to render — a stat without a source is not publishable. */
+  sourceName: string | null;
+  sourceUrl: string | null;
+};
+
+/**
+ * Market statistics. Every field starts null and the UI renders NOTHING
+ * until `dataAsOf` and `sourceName` are both present — an unsourced or
+ * undated statistic on a real-estate site is worse than no statistic.
+ * Populate from a source you can name and cite, and update `dataAsOf`
+ * every time you refresh the numbers.
+ */
+export const marketData: { peachtreeCity: MarketPulse } = {
   peachtreeCity: {
-    medianListPrice: null as number | null,
-    medianSalePrice: null as number | null,
-    daysOnMarket: null as number | null,
-    inventory: null as number | null,
-    dataAsOf: null as string | null,
-    sourceName: null as string | null,
-    sourceUrl: null as string | null,
+    medianSalePrice: null,
+    medianListPrice: null,
+    daysOnMarket: null,
+    inventory: null,
+    newListings: null,
+    saleToListRatio: null,
+    yearOverYearChange: null,
+    dataAsOf: null,
+    sourceName: null,
+    sourceUrl: null,
   },
 };
 
