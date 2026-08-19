@@ -13,7 +13,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { serviceAreas, agent } from "@/config/site";
 import { villages } from "@/config/villages";
-import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
+import angelicaPortraitBlue from "@/assets/images/angelica-portrait-blue.jpg";
 import angelicaLifestyle from "@/assets/images/angelica-lifestyle.jpg";
 import ptcPathLake from "@/assets/images/ptc-path-lake.jpg";
 
@@ -52,7 +52,7 @@ export default function Home() {
             </p>
           </div>
           <PortraitImage
-            src={angelicaPortrait}
+            src={angelicaPortraitBlue}
             alt={`Angelica Rios, ${agent.title} in ${serviceAreas.primary}`}
             aspect="aspect-[4/5]"
             priority
