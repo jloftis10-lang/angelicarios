@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { SiteImage } from "@/components/ui/SiteImage";
+import angelicaHiking from "@/assets/images/angelica-hiking.jpg";
 import { villages } from "@/config/villages";
 
 export const metadata: Metadata = {
@@ -60,6 +62,31 @@ export default function GuidePage() {
             </p>
             <Link href="/relocate" className="mt-5 inline-block text-sm font-medium text-navy underline underline-offset-4">
               See how relocation help works
+            </Link>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-14">
+        <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+          <SiteImage
+            src={angelicaHiking}
+            alt="Angelica Rios hiking outdoors"
+            aspect="aspect-[4/3]"
+          />
+          <div>
+            <h2 className="font-display text-3xl font-semibold text-navy">Give yourself a weekend, not an afternoon.</h2>
+            <p className="mt-4 text-sm leading-relaxed text-slate">
+              The single most useful thing you can do before deciding is spend unstructured time here — drive the
+              roads at the hours you would really drive them, walk a stretch of path, see what a Saturday morning
+              actually looks like. Listings tell you about houses. Only time on the ground tells you about the place.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-slate">
+              If you are coming in from out of state, Angelica can help you plan that visit so it covers the ground
+              that matters instead of the ground that happens to be listed that week.
+            </p>
+            <Link href="/relocate" className="mt-5 inline-block text-sm font-medium text-navy underline underline-offset-4">
+              Plan a relocation visit
             </Link>
           </div>
         </Container>

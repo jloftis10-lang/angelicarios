@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
 import { agent, additionalLanguageList, serviceAreas } from "@/config/site";
 import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
-import angelicaHiking from "@/assets/images/angelica-hiking.jpg";
+import angelicaSonFalls from "@/assets/images/angelica-son-falls.jpg";
 
 export const metadata: Metadata = {
   title: "About Angelica",
@@ -84,9 +84,10 @@ export default function AboutPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">Beyond real estate</p>
             <h2 className="mt-2 font-display text-3xl font-semibold text-navy">At home in Georgia.</h2>
             <p className="mt-4 text-sm leading-relaxed text-slate">
-              Outside of work, Angelica treasures time with her son and enjoys exploring the outdoors with her
-              partner and their dog. Her appreciation for home, family, and community shapes the care she brings to
-              every relationship.
+              Outside of work, Angelica treasures time with her son Alexander and enjoys exploring the outdoors with
+              her partner and their dog — waterfalls, trails, and the parts of Georgia you only find by going
+              looking. Her appreciation for home, family, and community shapes the care she brings to every
+              relationship.
             </p>
             <ul className="mt-6 flex flex-col gap-3 text-sm text-ink">
               {[
@@ -102,7 +103,11 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
-          <PortraitImage src={angelicaHiking} alt="Angelica hiking with her partner" aspect="aspect-[4/5]" />
+          <PortraitImage
+            src={angelicaSonFalls}
+            alt="Angelica Rios and her son Alexander on a boardwalk in front of a waterfall"
+            aspect="aspect-[4/5]"
+          />
         </Container>
       </section>
 

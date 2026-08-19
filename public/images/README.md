@@ -17,8 +17,17 @@ className/aspect ratio.
   beret, warm indoor lighting), used on the homepage "Meet Angelica"
   section so it doesn't repeat the hero portrait.
 - **`src/assets/images/angelica-hiking.jpg`** — a real photo of Angelica
-  and her partner hiking, used in the About page's "Beyond real estate"
-  section (both confirmed by the user as real and approved for publication).
+  and her partner hiking (confirmed by the user as real and approved for
+  publication). Moved off the About page when the photo below took that
+  slot; now used on `/guide`.
+- **`src/assets/images/angelica-son-falls.jpg`** — a real photo of Angelica
+  with her son Alexander in front of a waterfall, used in the About page's
+  "Beyond real estate" section, where the copy already talks about her son
+  and the outdoors. Cropped to 4:5 from a 1320×1791 original.
+
+  Alexander is named in the alt text and body copy because the client
+  supplied his name for that purpose. The waterfall is **not** identified
+  — it isn't confirmed, so it isn't captioned as any particular place.
 - **`src/assets/images/angelica-portrait-blue.jpg`** — real photo, sharp
   and well-lit, used on the homepage hero. Originally arrived with the
   source app's crop-tool UI burned in; cropped to 4:5 below the chrome.
