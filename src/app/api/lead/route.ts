@@ -67,6 +67,10 @@ export async function POST(request: NextRequest) {
   ].filter(Boolean);
 
   const resendApiKey = process.env.RESEND_API_KEY;
+  // Leads go to `agent.email` (angelicarios@yahoo.com). `LEAD_NOTIFICATION_EMAIL`
+  // exists only so the destination can be redirected without a redeploy — if it
+  // is set in the hosting environment it WINS, so an unexpected value there is
+  // the first thing to check if mail stops arriving at the expected inbox.
   const leadToEmail = process.env.LEAD_NOTIFICATION_EMAIL ?? (agent.email.startsWith("[") ? null : agent.email);
 
   if (!resendApiKey || !leadToEmail) {
@@ -74,7 +78,7 @@ export async function POST(request: NextRequest) {
     // direct contact details instead so the lead isn't silently lost.
     console.error("[api/lead] delivery is not configured", {
       hasResendKey: Boolean(resendApiKey),
-      hasDestination: Boolean(leadToEmail),
+      destination: leadToEmail ?? "(none resolved)",
       intent: payload.intent,
     });
     return NextResponse.json(
@@ -107,7 +111,9 @@ export async function POST(request: NextRequest) {
     if (!response.ok) {
       // Log status/body for diagnosis but never the API key.
       const detail = await response.text();
-      console.error("[api/lead] Resend rejected delivery", response.status, detail);
+      console.error("[api/lead] Resend rejected delivery", response.status, detail, {
+        destination: leadToEmail,
+      });
       return NextResponse.json(
         { error: "We could not deliver your message. Please try again shortly." },
         { status: 502 },

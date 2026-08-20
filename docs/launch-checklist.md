@@ -61,6 +61,13 @@ need to change.
          `Angelica Rios Website <leads@angelicarios.com>` so mail comes
          from her own domain and lands in inboxes more reliably.
       4. Submit a test form on the live site and confirm it arrives.
+
+      **If mail ever stops arriving at angelicarios@yahoo.com**, check
+      Vercel for a `LEAD_NOTIFICATION_EMAIL` variable first. It exists so
+      the destination can be redirected without a redeploy, and when set
+      it overrides `agent.email`. Leave it unset to keep leads going to
+      angelicarios@yahoo.com. The resolved destination is also printed in
+      the Vercel function logs on any delivery failure.
 - [ ] Analytics IDs if desired — `NEXT_PUBLIC_GA4_ID`,
       `NEXT_PUBLIC_CLARITY_ID`
 - [ ] Google Search Console verification
