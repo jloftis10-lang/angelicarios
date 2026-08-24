@@ -52,25 +52,21 @@ export const agent = {
 };
 
 /**
- * Angelica's professional background beyond real estate itself — real,
- * confirmed facts, not marketing filler. Used on the homepage and About
- * page as concrete differentiators instead of generic adjectives.
+ * Resume-backed professional background used as concrete differentiators.
+ * Keep these facts tied to documented roles rather than broad marketing claims.
  */
 export const expertise = {
-  yearsInFinance: 15,
   background: [
-    { label: "15+ Years", detail: "In mortgage finance & underwriting" },
-    { label: "360° Perspective", detail: "Investor and transaction experience" },
-    { label: "Hands-On", detail: "Property renovation experience" },
-    { label: "Four Languages", detail: "English, Spanish, French & Italian" },
+    { label: "Top Producer", detail: "Mortgage sales, 2005–2007" },
+    { label: "Up to 85%", detail: "Above quota in mortgage sales" },
+    { label: "Investor Experience", detail: "Acquisition, renovation, staging & resale" },
+    { label: "Multilingual", detail: "Spanish, French & Italian communication" },
   ],
 };
 
 /**
- * Languages Angelica speaks fluently. `code` is the BCP-47 tag used for
- * `knowsLanguage` in the structured data; `name` is what the site
- * displays. Add one here and it carries into the schema and every
- * language line automatically — don't hardcode language names in copy.
+ * Language facts. Spanish and Italian verbal/written communication are
+ * documented in Angelica's resume; French is separately confirmed by Angelica/the user.
  */
 export const languages = [
   { name: "English", code: "en" },

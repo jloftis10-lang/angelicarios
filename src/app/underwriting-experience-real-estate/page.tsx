@@ -3,77 +3,67 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { AngelicasTake } from "@/components/sections/AngelicasTake";
 import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
 import { RelatedGuides } from "@/components/sections/RelatedGuides";
 import { siteUrl, brand } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Why Underwriting Experience Matters in a Home Purchase",
+  title: "How Mortgage Lending Experience Helps Home Buyers",
   description:
-    "How mortgage finance and underwriting experience changes what a real-estate agent notices — financing readiness, appraisal risk, contingencies, and closing timelines — and where that experience stops.",
+    "How Angelica Rios's mortgage lending and finance background helps buyers understand financing readiness, appraisal risk, lender communication, contingencies, and closing timelines.",
   alternates: { canonical: "/underwriting-experience-real-estate" },
 };
 
 const topics = [
   {
-    heading: "Financing readiness is not the same as pre-qualification",
+    heading: "Financing readiness starts before the offer",
     body: [
-      "A pre-qualification is a light-touch estimate. A pre-approval involves real documentation. The gap between them is where a lot of deals get into trouble, because a seller reading an offer cannot always tell which one they are looking at.",
-      "The practical question is what your lender has actually verified: income documentation, assets, credit, and employment. If those have not been reviewed by someone who can commit, your offer carries more risk than it appears to — and in a competitive situation, that difference matters.",
+      "Angelica's mortgage background included helping borrowers understand loan programs, qualification, and the financing process. That experience makes financing readiness part of the real-estate conversation from the beginning rather than something considered only after a contract is signed.",
+      "The practical question is not simply whether a buyer has spoken with a lender, but how far the lender has gone in reviewing the information needed to support the purchase.",
     ],
   },
   {
     heading: "Appraisal risk deserves attention before you write the offer",
     body: [
-      "An appraisal that comes in below the contract price forces a decision nobody enjoys: renegotiate, bring cash to close the gap, or walk. Thinking about this before you write is far more comfortable than reacting to it two weeks in.",
-      "Whether a specific price is likely to appraise depends on comparable sales, the condition of the home relative to those comparables, and how unusual the property is for its area. A distinctive home in a neighborhood of conventional ones carries more appraisal uncertainty, regardless of whether it is genuinely worth the money.",
+      "An appraisal that comes in below the contract price can force a buyer and seller to make difficult decisions. Thinking about that possibility before writing an offer is more useful than reacting to it after the transaction is underway.",
+      "Comparable sales, property condition, and how unusual a home is for its area can all affect the conversation around value and financing.",
     ],
   },
   {
-    heading: "Contingencies are the structure of your protection",
+    heading: "Contingencies should be understood, not rushed",
     body: [
-      "Financing, appraisal, and inspection-related contingencies each protect against a different failure. Waiving one to strengthen an offer is a legitimate strategy — but it should be a deliberate decision with a clear understanding of what you are giving up, not something agreed to in a hurry.",
-      "The right question is not whether waiving a contingency makes an offer stronger. It obviously does. The question is what happens to you specifically if the thing that contingency protects against actually occurs.",
+      "Financing, appraisal, and inspection-related contingencies protect against different risks. The right strategy depends on the buyer's circumstances and the specific transaction.",
+      "A stronger offer is not automatically a better decision if the buyer does not understand what protections are being reduced or removed.",
     ],
   },
   {
-    heading: "Timelines are commitments, not estimates",
+    heading: "Lender communication matters",
     body: [
-      "The dates in a purchase contract create real obligations. Underwriting, appraisal scheduling, and document turnaround all take time, and delays in any of them compound rather than absorb.",
-      "Knowing roughly how long each step tends to take makes it easier to agree to dates you can actually meet — and to recognize when a proposed timeline is optimistic before you sign up for it.",
-    ],
-  },
-  {
-    heading: "Lender communication is a real variable",
-    body: [
-      "How responsive your lender is, and how early they surface issues, meaningfully affects whether a transaction stays on schedule. This is worth weighing alongside rate when you choose who to work with.",
-      "Documentation requests during underwriting are normal, not a sign something is wrong. Answering them quickly is one of the few parts of the process a buyer directly controls.",
+      "Responsive communication and early identification of documentation issues can make a meaningful difference in keeping a transaction on schedule.",
+      "Angelica's years in mortgage sales taught her how many moving pieces sit behind a financing approval and why quick responses to lender requests matter.",
     ],
   },
   {
     heading: "Inspection issues and financing issues are different problems",
     body: [
-      "An inspection finding is a question about the property and what you want to do about it. A financing issue is a question about whether the transaction can close at all. They get discussed in the same conversations, but they carry different urgency and different remedies.",
-      "Some conditions sit in both categories — certain property issues can affect what a lender will finance. Recognizing which category something falls into changes how you respond to it.",
+      "An inspection finding is primarily a property-condition question. A financing issue is a question about whether the purchase can be funded on the agreed terms. The two can overlap, but they call for different conversations and different professionals.",
     ],
   },
   {
     heading: "Closing readiness starts well before closing week",
     body: [
-      "Funds properly sourced and seasoned, documentation current, and no unexpected changes to your credit or employment. Opening a new account or financing furniture before closing has derailed transactions that were otherwise finished.",
-      "The general rule for the period between contract and closing: change nothing about your financial picture without asking your lender first.",
+      "Documentation, assets, credit, employment, appraisal, and lender conditions can all affect the path to closing. Buyers should avoid major financial changes during a transaction without first speaking with their lender.",
     ],
   },
 ];
 
-export default function UnderwritingPage() {
+export default function MortgageExperiencePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Why Underwriting Experience Matters in a Home Purchase",
+    headline: "How Mortgage Lending Experience Helps Home Buyers",
     description:
-      "How mortgage finance and underwriting experience changes what a real-estate agent notices during a transaction — and where that experience stops.",
+      "How Angelica Rios's mortgage lending and finance experience informs the financing questions buyers encounter during a real-estate transaction.",
     author: { "@type": "Person", name: brand.name },
     url: `${siteUrl}/underwriting-experience-real-estate`,
   };
@@ -81,23 +71,25 @@ export default function UnderwritingPage() {
   return (
     <>
       <Breadcrumbs
-        items={[{ label: "Underwriting Experience", href: "/underwriting-experience-real-estate" }]}
+        items={[{ label: "Mortgage & Finance Experience", href: "/underwriting-experience-real-estate" }]}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <section className="py-14 md:py-20">
         <Container className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">Finance perspective</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">Mortgage & finance perspective</p>
           <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-navy md:text-5xl">
-            Why underwriting experience matters in a home purchase
+            How mortgage lending experience helps home buyers
           </h1>
           <p className="mt-5 text-base leading-relaxed text-slate">
-            Most agents see a transaction from the property side. Angelica spent more than 15 years in mortgage
-            finance and underwriting before real estate, which means she also sees the financing side — the
-            documentation, the risk factors, and the questions that surface once a file is in underwriting.
+            Before becoming a Georgia real-estate professional, Angelica worked in mortgage lending and sales. She
+            helped borrowers understand loan programs, qualification, and the financing process; she was a top producer
+            at Canyon Capital Funding in 2005, 2006, and 2007 and later exceeded quotas by as much as 85% in another
+            mortgage role.
           </p>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            Here is what that background actually changes, and — just as importantly — where it stops.
+            That background does not make her the buyer&apos;s lender. It does mean she understands how closely the home,
+            the offer, the financing, and the closing timeline interact.
           </p>
         </Container>
       </section>
@@ -119,26 +111,18 @@ export default function UnderwritingPage() {
         </Container>
       </section>
 
-      <section className="py-10">
-        <Container className="max-w-3xl">
-          <AngelicasTake>
-            My job is to help you ask better questions and prepare more thoroughly — not to replace your lender. When
-            a financing question comes up that belongs with them, I will tell you so rather than guess at it.
-          </AngelicasTake>
-        </Container>
-      </section>
-
       <section className="py-8">
         <Container className="max-w-3xl">
           <h2 className="font-display text-2xl font-semibold text-navy">Where this experience stops</h2>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            Angelica is a licensed real-estate salesperson. She is not acting as your lender, mortgage broker,
-            financial adviser, attorney, tax adviser, contractor, or inspector, and nothing on this page is financial,
-            legal, or tax advice. Loan decisions come from a lender. Legal questions go to an attorney. Property
-            condition questions go to a licensed inspector.
+            Angelica is acting as a real-estate professional, not as a lender, mortgage broker, financial adviser,
+            attorney, tax adviser, contractor, or inspector. Loan decisions and loan-specific advice come from the
+            buyer&apos;s lender. Legal questions belong with an attorney, and property-condition questions belong with the
+            appropriate licensed professionals.
           </p>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            What the background does is help you walk into those conversations knowing what to ask.
+            The value of her background is that she can help buyers recognize financing questions earlier and know when
+            to bring the right professional into the conversation.
           </p>
         </Container>
       </section>
@@ -150,11 +134,11 @@ export default function UnderwritingPage() {
       <section className="py-16 md:py-24">
         <Container className="flex flex-col items-start gap-6 rounded-3xl bg-sand/30 p-10 md:p-16">
           <h2 className="font-display text-3xl font-semibold text-navy md:text-4xl">
-            Questions about your own situation?
+            Questions about your own home search?
           </h2>
           <p className="max-w-xl text-base leading-relaxed text-slate">
-            Whether you&apos;re buying, selling, or evaluating an investment property, a conversation is a reasonable
-            place to start.
+            Whether you&apos;re buying, relocating, or evaluating an investment property, start with the goals and
+            constraints that matter to you.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button href="/contact">Talk With Angelica</Button>
