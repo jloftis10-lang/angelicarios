@@ -6,7 +6,7 @@ import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { TrackedLink } from "@/components/TrackedLink";
-import { propertySearch, expertise } from "@/config/site";
+import { propertySearch } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Buy a Home in Peachtree City",
@@ -81,9 +81,9 @@ export default function BuyPage() {
           <h2 className="mt-2 font-display text-2xl font-semibold text-navy">Sort out financing before you tour.</h2>
           <p className="mt-4 text-sm leading-relaxed text-slate">
             Most listing agents will ask for a lender letter with any offer, so the strength of yours affects how your
-            offer is received. Angelica can&apos;t prequalify you — only a licensed lender can — but after
-            {" "}{expertise.yearsInFinance}+ years in mortgage finance and underwriting, she knows exactly what stalls
-            a file and what to have ready before you start.
+            offer is received. Angelica can&apos;t prequalify you — only a licensed lender can — but her mortgage lending
+            and sales background gives her a practical understanding of the financing questions that can slow a
+            transaction and what buyers should have ready before they start.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button href="/get-prequalified">Get Prequalified — What It Takes</Button>
