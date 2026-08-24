@@ -52,38 +52,33 @@ export const agent = {
 };
 
 /**
- * Angelica's professional background beyond real estate itself — real,
- * confirmed facts, not marketing filler. Used on the homepage and About
- * page as concrete differentiators instead of generic adjectives.
+ * Resume-backed professional background used as concrete differentiators.
+ * Keep these facts tied to documented roles rather than broad marketing claims.
  */
 export const expertise = {
-  yearsInFinance: 15,
   background: [
-    { label: "15+ Years", detail: "In mortgage finance & underwriting" },
-    { label: "360° Perspective", detail: "Investor and transaction experience" },
-    { label: "Hands-On", detail: "Property renovation experience" },
-    { label: "Four Languages", detail: "English, Spanish, French & Italian" },
+    { label: "Top Producer", detail: "Mortgage sales, 2005–2007" },
+    { label: "Up to 85%", detail: "Above quota in mortgage sales" },
+    { label: "Investor Experience", detail: "Acquisition, renovation, staging & resale" },
+    { label: "Spanish + Italian", detail: "Verbal and written communication" },
   ],
 };
 
 /**
- * Languages Angelica speaks fluently. `code` is the BCP-47 tag used for
- * `knowsLanguage` in the structured data; `name` is what the site
- * displays. Add one here and it carries into the schema and every
- * language line automatically — don't hardcode language names in copy.
+ * Languages supported by Angelica's resume. The resume describes Spanish
+ * and Italian verbal/written communication; it does not characterize fluency.
  */
 export const languages = [
   { name: "English", code: "en" },
   { name: "Spanish", code: "es" },
-  { name: "French", code: "fr" },
   { name: "Italian", code: "it" },
 ] as const;
 
-/** "Spanish, French, and Italian" — the non-English list, ready for prose. */
+/** "Spanish and Italian" — the non-English list, ready for prose. */
 export const additionalLanguageList = (() => {
   const names = languages.filter((l) => l.code !== "en").map((l) => l.name);
   if (names.length <= 1) return names.join("");
-  return `${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`;
+  return `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}`;
 })();
 
 export const brokerage = {
