@@ -26,8 +26,8 @@ const capabilities = [
     copy: "Having managed renovations directly, Angelica reads a property for what the work would actually involve — not a rule-of-thumb per square foot.",
   },
   {
-    title: "Underwriting perspective",
-    copy: "Fifteen years in mortgage finance shapes the questions asked about financing structure, appraisal risk, and what a lender will scrutinize.",
+    title: "Lending perspective",
+    copy: "Time on the mortgage side of the table shapes the questions asked about financing structure, appraisal risk, and what a lender is likely to scrutinize.",
   },
   {
     title: "Value-add evaluation",

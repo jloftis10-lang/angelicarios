@@ -94,9 +94,9 @@ export default function SellPage() {
       <section className="py-8">
         <Container className="max-w-3xl">
           <AngelicasTake>
-            Fifteen years in mortgage finance and underwriting taught me what makes a deal fall apart after it is
-            under contract — appraisal gaps, condition surprises, financing that was never solid. I would rather raise
-            those with you before we list than manage them during due diligence.
+            Working on the mortgage side taught me what makes a deal fall apart after it is under contract — appraisal
+            gaps, condition surprises, financing that was never solid. I would rather raise those with you before we
+            list than manage them during due diligence.
           </AngelicasTake>
         </Container>
       </section>
