@@ -20,7 +20,7 @@ import ptcPathLake from "@/assets/images/ptc-path-lake.jpg";
 export const metadata: Metadata = {
   title: "Peachtree City Realtor & Relocation Guide",
   description:
-    "Personal real-estate guidance for buyers, sellers, investors, and people relocating to Peachtree City and South Metro Atlanta — backed by 15+ years in mortgage finance and underwriting.",
+    "Personal real-estate guidance for buyers, sellers, investors, and people relocating to Peachtree City and South Metro Atlanta — informed by mortgage lending, finance, and residential investment experience.",
   alternates: { canonical: "/" },
 };
 
@@ -47,8 +47,8 @@ export default function Home() {
               </Button>
             </div>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-slate">
-              Mortgage finance &amp; underwriting experience · Property investor perspective · Firsthand
-              California-to-Georgia relocation · Fluent in {additionalLanguageList}
+              Mortgage lending &amp; finance experience · Residential investor perspective · Firsthand
+              California-to-Georgia relocation · Communication in {additionalLanguageList}
             </p>
           </div>
           <PortraitImage
@@ -132,28 +132,31 @@ export default function Home() {
               Real estate is personal. Angelica treats it that way.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-slate">
-              Angelica brings more than 15 years in mortgage finance and underwriting to every transaction, along
-              with hands-on experience as a property investor and renovator — a view of a deal that goes beyond the
-              real-estate side of it alone.
+              Angelica&apos;s background includes mortgage lending and sales, finance consulting, residential property
+              acquisition, renovation, staging, and resale. She was a top mortgage producer in 2005, 2006, and 2007,
+              and in another mortgage role exceeded quotas by as much as 85%.
             </p>
             <p className="mt-4 text-base leading-relaxed text-slate">
-              That perspective is shaped by experience on both sides of the country, too. After previously working in
-              real estate in California and{" "}
+              That experience gives her a broader view of a transaction — not only the home itself, but also how
+              financing, presentation, property condition, and client goals come together.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-slate">
+              Her perspective is shaped by experience on both sides of the country, too. After{" "}
               <Link
                 href="/moving-from-california-to-georgia"
                 className="underline underline-offset-4 hover:text-navy"
               >
-                relocating from Newport Beach to Georgia
+                relocating from California to Georgia
               </Link>{" "}
-              herself, she understands that moving isn&apos;t simply about choosing a house — it&apos;s about
-              figuring out where life fits next.
+              herself, she understands that moving isn&apos;t simply about choosing a house — it&apos;s about figuring out
+              where life fits next.
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <Button href="/about" variant="ghost" className="px-0">
                 Meet Angelica →
               </Button>
               <Button href="/underwriting-experience-real-estate" variant="ghost" className="px-0">
-                Why underwriting experience matters →
+                Financing perspective for buyers →
               </Button>
             </div>
           </div>
