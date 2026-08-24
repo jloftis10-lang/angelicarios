@@ -22,7 +22,7 @@ const paths = [
   },
   {
     heading: "Evaluating an investment property?",
-    copy: "Hands-on acquisition and renovation experience, plus an underwriting background, applied to what a property would really take.",
+    copy: "Hands-on acquisition and renovation experience, plus a mortgage lending and finance background, applied to what a property would really take.",
     cta: "Send Your Buy Box",
     href: "/invest",
   },

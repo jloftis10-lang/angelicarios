@@ -52,12 +52,12 @@ export function Logo({ variant = "horizontal", className }: { variant?: "horizon
   }
 
   return (
-    <span className={`flex items-center gap-3 ${className ?? ""}`}>
-      <BrandMonogram className="h-11 w-auto shrink-0 md:h-12" />
-      <span className="flex flex-col leading-none">
-        <span className="font-display text-xl font-medium uppercase tracking-[0.055em] text-navy md:text-[1.35rem]">Angelica Rios</span>
-        <span className="mt-1.5 flex items-center gap-2 text-[0.52rem] font-semibold uppercase tracking-[0.21em] text-navy md:text-[0.58rem]">
-          <span className="h-px w-5 bg-champagne" aria-hidden="true" />
+    <span className={`flex items-center gap-2.5 sm:gap-3 ${className ?? ""}`}>
+      <BrandMonogram className="h-9 w-auto shrink-0 sm:h-10 md:h-12" />
+      <span className="flex min-w-0 flex-col leading-none">
+        <span className="whitespace-nowrap font-display text-[1.05rem] font-medium uppercase tracking-[0.045em] text-navy sm:text-lg md:text-[1.35rem] md:tracking-[0.055em]">Angelica Rios</span>
+        <span className="mt-1 flex items-center gap-1.5 whitespace-nowrap text-[0.43rem] font-semibold uppercase tracking-[0.16em] text-navy sm:mt-1.5 sm:gap-2 sm:text-[0.5rem] sm:tracking-[0.19em] md:text-[0.58rem] md:tracking-[0.21em]">
+          <span className="h-px w-3 bg-champagne sm:w-4 md:w-5" aria-hidden="true" />
           Peachtree City Real Estate
         </span>
       </span>
