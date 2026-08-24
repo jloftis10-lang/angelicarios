@@ -60,25 +60,26 @@ export const expertise = {
     { label: "Top Producer", detail: "Mortgage sales, 2005–2007" },
     { label: "Up to 85%", detail: "Above quota in mortgage sales" },
     { label: "Investor Experience", detail: "Acquisition, renovation, staging & resale" },
-    { label: "Spanish + Italian", detail: "Verbal and written communication" },
+    { label: "Multilingual", detail: "Spanish, French & Italian communication" },
   ],
 };
 
 /**
- * Languages supported by Angelica's resume. The resume describes Spanish
- * and Italian verbal/written communication; it does not characterize fluency.
+ * Language facts. Spanish and Italian verbal/written communication are
+ * documented in Angelica's resume; French is separately confirmed by Angelica/the user.
  */
 export const languages = [
   { name: "English", code: "en" },
   { name: "Spanish", code: "es" },
+  { name: "French", code: "fr" },
   { name: "Italian", code: "it" },
 ] as const;
 
-/** "Spanish and Italian" — the non-English list, ready for prose. */
+/** "Spanish, French, and Italian" — the non-English list, ready for prose. */
 export const additionalLanguageList = (() => {
   const names = languages.filter((l) => l.code !== "en").map((l) => l.name);
   if (names.length <= 1) return names.join("");
-  return `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}`;
+  return `${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`;
 })();
 
 export const brokerage = {
