@@ -6,12 +6,12 @@ import { PageHero } from "@/components/sections/PageHero";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { MortgageReadiness } from "@/components/MortgageReadiness";
 import { documentChecklist, keepItCleanRules } from "@/config/mortgageReadiness";
-import { siteUrl, brand, expertise } from "@/config/site";
+import { siteUrl, brand } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "How to Get Prequalified for a Mortgage in Georgia",
   description:
-    "What prequalification and preapproval actually mean, what documents to gather, what underwriters look at, and a short readiness check — from a Peachtree City Realtor with 15+ years in mortgage finance.",
+    "What prequalification and preapproval mean, what documents to gather, what lenders may review, and a short readiness check — from a Peachtree City Realtor with mortgage lending experience.",
   alternates: { canonical: "/get-prequalified" },
 };
 
@@ -24,27 +24,27 @@ const faqs = [
   {
     question: "Can Angelica prequalify me?",
     answer:
-      "No. Prequalification and preapproval come from a licensed mortgage lender, not from a real-estate agent. What Angelica can do is help you arrive at that conversation prepared, explain what the lender is likely to ask and why, and introduce you to lenders if you'd like an introduction.",
+      "No. Prequalification and preapproval come from a licensed mortgage lender, not from a real-estate agent. What Angelica can do is help you arrive at that conversation prepared, explain common financing questions, and introduce you to lenders if you'd like an introduction.",
   },
   {
     question: "Do I need to be prequalified before I start looking?",
     answer:
-      "You can look at any point, and plenty of people start browsing well before they talk to anyone. But before touring seriously — and certainly before writing an offer — a letter is close to essential. Many listing agents will ask for one with any offer, and without it your offer may not be presented on equal footing.",
+      "You can look at any point, and plenty of people start browsing well before they talk to anyone. But before touring seriously — and certainly before writing an offer — a lender letter is often important. Many listing agents will ask for one with an offer.",
   },
   {
     question: "Does getting prequalified hurt my credit?",
     answer:
-      "Ask the lender exactly what they're doing before they do it, since practices vary. Credit scoring models are generally designed so that shopping among mortgage lenders within a short window counts as a single inquiry rather than several. That is a question for your lender, not for a Realtor.",
+      "Ask the lender exactly what they're doing before they do it, since practices vary. Questions about credit pulls and scoring belong with your lender, not your real-estate agent.",
   },
   {
     question: "How long is a preapproval letter good for?",
     answer:
-      "They expire, and the window is typically measured in weeks or a few months rather than indefinitely. Ask your lender for the date on yours and what would cause it to change — a job change, a new debt, or a shift in your credit picture can all matter.",
+      "Preapproval letters expire. Ask your lender for the date on yours and what changes in employment, debt, assets, or credit could affect it.",
   },
   {
     question: "I'm self-employed. Is this going to be harder?",
     answer:
-      "Not harder so much as more documented. Self-employed borrowers get approved routinely; the difference is that income is established through returns and business records rather than a pay stub, and that takes longer to assemble. Starting earlier is the whole strategy.",
+      "Self-employed borrowers are approved every day, but the documentation can be different. Ask a lender early what tax returns, business records, and other documentation they will need so you have time to gather it.",
   },
 ];
 
@@ -78,8 +78,8 @@ export default function GetPrequalifiedPage() {
 
       <PageHero
         eyebrow="Financing"
-        title="Getting prequalified, explained properly."
-        copy="Most buyers are told to 'get prequalified' without being told what that means, what it takes, or why the order matters. Here's the whole picture — including the parts that trip people up."
+        title="Getting prequalified, explained clearly."
+        copy="Most buyers are told to 'get prequalified' without being told what that means, what to gather, or what happens next. This guide helps you prepare for the lender conversation."
       />
 
       <section className="py-12">
@@ -88,22 +88,21 @@ export default function GetPrequalifiedPage() {
             Prequalified, preapproved, and why the difference matters
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            <strong className="font-semibold text-ink">Prequalification</strong> is a lender&apos;s read on what you
-            told them. It&apos;s quick, it&apos;s useful for setting expectations, and it isn&apos;t verified.
+            <strong className="font-semibold text-ink">Prequalification</strong> is generally an early lender estimate
+            based on information you provide. It can help set expectations, but it is not the same as a fully reviewed
+            loan file.
           </p>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            <strong className="font-semibold text-ink">Preapproval</strong> means the lender has looked at your
-            documents — income, assets, credit — and issued a letter on that basis. It takes longer to get and it is
-            worth considerably more when an offer is on the table.
+            <strong className="font-semibold text-ink">Preapproval</strong> typically means the lender has reviewed more
+            documentation before issuing a letter. The exact process varies by lender and program.
           </p>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            Neither one is a loan commitment. The final decision comes after a full underwriting review of both you and
-            the property, which is a different step again. Anyone who tells you a preapproval letter guarantees a
-            closing is overstating it.
+            Neither one guarantees a closing. Final approval depends on the lender, the borrower&apos;s documentation, the
+            property, and the loan program.
           </p>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            The practical consequence is simple: if you intend to write an offer, get the strongest letter you can
-            before you fall for a house, not after.
+            The practical takeaway: if you intend to write an offer, talk with a lender early enough that financing is
+            not the last piece you are trying to solve.
           </p>
         </Container>
       </section>
@@ -112,22 +111,22 @@ export default function GetPrequalifiedPage() {
         <Container className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sage">Why this page exists</p>
           <h2 className="mt-2 font-display text-2xl font-semibold text-navy">
-            Angelica spent {expertise.yearsInFinance}+ years on the other side of this.
+            Angelica has worked on the mortgage side of the home-buying process.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            Before real estate, Angelica worked in mortgage finance and underwriting — the side of the transaction that
-            reads the file and decides what it actually supports. That doesn&apos;t make her your lender, and it
-            doesn&apos;t let her approve anything. What it means is that she has seen what stalls a loan, and most of
-            it is preventable with preparation rather than luck.
+            Before becoming a Georgia real-estate professional, Angelica worked in mortgage lending and sales. Her
+            experience included helping clients understand loan programs, developing leads, supporting borrowers through
+            the financing process, and managing mortgage-sales activity. She was a top producer at Canyon Capital Funding
+            in 2005, 2006, and 2007.
           </p>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            Nearly every avoidable delay traces back to the same handful of things: a deposit nobody can explain, an
-            income structure documented too late, a gap in employment history that surfaces at the worst moment, or a
-            new line of credit opened between preapproval and closing.
+            That does not make her your lender and does not give her authority to approve a loan. It gives her useful
+            context for recognizing when a financing question belongs in the conversation and when the lender needs to
+            answer it directly.
           </p>
           <div className="mt-6">
             <Button href="/underwriting-experience-real-estate" variant="ghost" className="px-0">
-              Why underwriting experience matters →
+              How mortgage lending experience helps buyers →
             </Button>
           </div>
         </Container>
@@ -139,8 +138,8 @@ export default function GetPrequalifiedPage() {
         <Container className="max-w-3xl">
           <h2 className="font-display text-2xl font-semibold text-navy">What to gather before you apply</h2>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            Lenders differ, and yours will give you their own list — this is the documentation that comes up almost
-            every time. Assembling it in advance is the single biggest thing you control about how fast this goes.
+            Lenders differ, and yours will give you their own list. The checklist below is a planning aid so you can
+            start organizing common categories of documents before the conversation.
           </p>
           <div className="mt-8 flex flex-col gap-6">
             {documentChecklist.map((group) => (
@@ -158,8 +157,8 @@ export default function GetPrequalifiedPage() {
             ))}
           </div>
           <p className="mt-6 text-sm leading-relaxed text-slate">
-            Send documents only to your lender, through whatever secure method they provide — never by ordinary email,
-            and never to a real-estate agent. Angelica does not need and will not ask for your financial documents.
+            Send financial documents only to your lender through the secure method they provide. Angelica does not
+            need and will not ask you to send her sensitive mortgage documentation.
           </p>
         </Container>
       </section>
@@ -167,11 +166,11 @@ export default function GetPrequalifiedPage() {
       <section className="bg-canvas py-12 md:py-16">
         <Container className="max-w-3xl">
           <h2 className="font-display text-2xl font-semibold text-navy">
-            After you have a letter: don&apos;t disturb the file
+            After you have a letter: protect your financial picture
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            A preapproval describes you at a moment in time. Lenders re-check before closing, and deals fall apart at
-            the last minute over things that felt harmless when they happened.
+            A preapproval describes your circumstances at a point in time. Before making significant financial changes
+            during a transaction, ask your lender whether they could affect the loan.
           </p>
           <ul className="mt-6 flex flex-col gap-3">
             {keepItCleanRules.map((rule) => (
@@ -216,11 +215,11 @@ export default function GetPrequalifiedPage() {
           <div className="rounded-2xl border border-sand/60 bg-canvas p-6 md:p-8">
             <h2 className="font-display text-lg font-semibold text-navy">An important distinction</h2>
             <p className="mt-3 text-sm leading-relaxed text-slate">
-              Angelica Rios is a licensed real-estate agent, not a mortgage lender, loan originator, credit counselor,
-              or tax adviser. Nothing on this page is a loan offer, a commitment to lend, an assessment of whether you
-              qualify, or advice about a specific loan product. Prequalification, preapproval, rates, terms, and
-              approval decisions come from licensed lenders, and the details vary by lender, program, and your own
-              circumstances. Use this page to prepare — then take the actual questions to a lender.
+              Angelica Rios is a licensed real-estate professional, not a mortgage lender, loan originator, credit
+              counselor, or tax adviser. Nothing on this page is a loan offer, a commitment to lend, an assessment of
+              whether you qualify, or advice about a specific loan product. Prequalification, preapproval, rates, terms,
+              and approval decisions come from licensed lenders, and the details vary by lender, program, and your own
+              circumstances. Use this page to prepare — then take loan-specific questions to a lender.
             </p>
           </div>
         </Container>
