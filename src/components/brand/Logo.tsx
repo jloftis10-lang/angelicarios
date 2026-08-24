@@ -77,10 +77,10 @@ export function BrandMonogram({ className }: { className?: string }) {
 }
 
 /** The small peach that sits in the divider rule of the stacked lockup. */
-function PeachOrnament({ className }: { className?: string }) {
+export function PeachOrnament({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 28 26" className={className} role="presentation" aria-hidden="true">
-      <g fill="none" stroke="#d79a72" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+      <g fill="none" stroke="var(--color-peach)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 22.5c-5 0-9-3.4-9-7.9 0-4.2 3.2-7.4 7.1-7.4 .7 0 1.3.1 1.9.3.6-.2 1.2-.3 1.9-.3 3.9 0 7.1 3.2 7.1 7.4 0 4.5-4 7.9-9 7.9Z" />
         <path d="M14 7.5v14.9" />
         <path d="M14.3 7.2c.5-2.3 2.3-4 4.5-4.4" />

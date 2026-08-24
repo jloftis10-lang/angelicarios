@@ -3,8 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { SiteImage } from "@/components/ui/SiteImage";
-import angelicaHiking from "@/assets/images/angelica-hiking.jpg";
+import { BrandRule } from "@/components/brand/BrandRule";
 import { villages } from "@/config/villages";
 
 export const metadata: Metadata = {
@@ -67,30 +66,30 @@ export default function GuidePage() {
         </Container>
       </section>
 
-      <section className="py-14">
-        <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-          <SiteImage
-            src={angelicaHiking}
-            alt="Angelica Rios hiking outdoors"
-            aspect="aspect-[4/3]"
-          />
-          <div>
-            <h2 className="font-display text-3xl font-semibold text-navy">Give yourself a weekend, not an afternoon.</h2>
-            <p className="mt-4 text-sm leading-relaxed text-slate">
-              The single most useful thing you can do before deciding is spend unstructured time here — drive the
-              roads at the hours you would really drive them, walk a stretch of path, see what a Saturday morning
-              actually looks like. Listings tell you about houses. Only time on the ground tells you about the place.
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-slate">
-              If you are coming in from out of state, Angelica can help you plan that visit so it covers the ground
-              that matters instead of the ground that happens to be listed that week.
-            </p>
-            <Link href="/relocate" className="mt-5 inline-block text-sm font-medium text-navy underline underline-offset-4">
-              Plan a relocation visit
-            </Link>
-          </div>
+      <section className="py-16 md:py-20">
+        <Container className="max-w-2xl text-center">
+          <h2 className="font-display text-3xl font-semibold text-navy md:text-4xl">
+            Give yourself a weekend, not an afternoon.
+          </h2>
+          <p className="mt-5 text-base leading-relaxed text-slate">
+            The most useful thing you can do before deciding is spend unstructured time here — drive the roads at the
+            hours you would really drive them, walk a stretch of path, see what a Saturday morning actually looks
+            like. Listings tell you about houses. Only time on the ground tells you about the place.
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-slate">
+            If you are coming in from out of state, Angelica can help you plan that visit so it covers the ground that
+            matters instead of the ground that happens to be listed that week.
+          </p>
+          <Link
+            href="/relocate"
+            className="mt-6 inline-block text-sm font-medium text-navy underline underline-offset-4"
+          >
+            Plan a relocation visit
+          </Link>
         </Container>
       </section>
+
+      <BrandRule className="py-2" />
 
       <section className="py-14">
         <Container>
@@ -144,23 +143,27 @@ export default function GuidePage() {
       </section>
 
       <section className="py-16 md:py-24">
-        <Container className="grid gap-10 rounded-3xl bg-canvas p-8 md:grid-cols-2 md:p-12">
-          <div>
-            <h2 className="font-display text-3xl font-semibold text-navy">Want help applying the guide to your move?</h2>
-            <p className="mt-3 text-sm leading-relaxed text-slate">
-              Share your name and email and Angelica can follow up personally about your relocation questions and next
-              steps.
-            </p>
+        <Container>
+          <div className="grid gap-10 rounded-3xl border border-peach/40 bg-peach-soft/60 p-8 md:grid-cols-2 md:p-12">
+            <div>
+              <h2 className="font-display text-3xl font-semibold text-navy">
+                Want help applying the guide to your move?
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-slate">
+                Share your name and email and Angelica can follow up personally about your relocation questions and
+                next steps.
+              </p>
+            </div>
+            <LeadForm
+              intent="guide"
+              submitLabel="Send to Angelica"
+              successMessage="Thanks — Angelica will follow up personally."
+              fields={[
+                { name: "name", label: "Name", type: "text", required: true },
+                { name: "email", label: "Email", type: "email", required: true },
+              ]}
+            />
           </div>
-          <LeadForm
-            intent="guide"
-            submitLabel="Send to Angelica"
-            successMessage="Thanks — Angelica will follow up personally."
-            fields={[
-              { name: "name", label: "Name", type: "text", required: true },
-              { name: "email", label: "Email", type: "email", required: true },
-            ]}
-          />
         </Container>
       </section>
     </>

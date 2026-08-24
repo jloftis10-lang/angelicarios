@@ -100,15 +100,19 @@ export default function RelocatePage() {
       </section>
 
       <section className="py-4">
-        <Container className="rounded-3xl bg-canvas p-8 md:p-10">
-          <h2 className="font-display text-2xl font-semibold text-navy">Start researching before you start packing.</h2>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate">
-            The Peachtree City Starter Guide covers the five villages, path system, nearby communities, questions to
-            ask before touring, and practical relocation planning.
-          </p>
-          <Button href="/guide" variant="ghost" className="mt-5 px-0">
-            Read the relocation guide →
-          </Button>
+        <Container>
+          <div className="rounded-3xl border border-peach/40 bg-peach-soft/60 p-8 md:p-10">
+            <h2 className="font-display text-2xl font-semibold text-navy">
+              Start researching before you start packing.
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate">
+              The Peachtree City Starter Guide covers the five villages, path system, nearby communities, questions to
+              ask before touring, and practical relocation planning.
+            </p>
+            <Button href="/guide" variant="ghost" className="mt-5 px-0">
+              Read the relocation guide →
+            </Button>
+          </div>
         </Container>
       </section>
 

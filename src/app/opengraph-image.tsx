@@ -21,8 +21,9 @@ export default function Image() {
           fontFamily: "sans-serif",
         }}
       >
-        <img src={BRAND_MARK_PNG} width={148} height={122} alt="" style={{ marginBottom: 28 }} />
-        <div style={{ fontSize: 28, letterSpacing: 4, textTransform: "uppercase", color: "#8fa194", display: "flex" }}>
+        <img src={BRAND_MARK_PNG} width={148} height={122} alt="" style={{ marginBottom: 24 }} />
+        <div style={{ display: "flex", width: 96, height: 2, backgroundColor: "#bfa870", marginBottom: 28 }} />
+        <div style={{ fontSize: 28, letterSpacing: 4, textTransform: "uppercase", color: "#d79a72", display: "flex" }}>
           {`${serviceAreas.primary} • ${serviceAreas.secondary}`}
         </div>
         <div style={{ fontSize: 64, fontWeight: 600, marginTop: 24, maxWidth: 900, display: "flex" }}>

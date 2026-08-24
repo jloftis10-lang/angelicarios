@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { PortraitImage } from "@/components/ui/PortraitImage";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrandRule } from "@/components/brand/BrandRule";
 import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
 import { agent, additionalLanguageList, serviceAreas } from "@/config/site";
 import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
@@ -75,6 +76,8 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+
+      <BrandRule className="py-4" />
 
       <AdvisoryDisclaimer />
 

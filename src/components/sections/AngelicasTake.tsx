@@ -9,7 +9,7 @@ import { agent } from "@/config/site";
  */
 export function AngelicasTake({ children }: { children: React.ReactNode }) {
   return (
-    <aside className="rounded-2xl border-l-4 border-sage bg-canvas p-6">
+    <aside className="rounded-2xl border-l-4 border-peach bg-peach-soft/50 p-6">
       <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sage">
         {agent.firstName}&apos;s take
       </p>

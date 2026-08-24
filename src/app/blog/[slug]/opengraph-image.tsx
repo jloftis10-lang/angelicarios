@@ -26,7 +26,8 @@ export default async function Image({ params }: { params: Promise<{ slug: string
         }}
       >
         <img src={BRAND_MARK_PNG} width={122} height={100} alt="" style={{ marginBottom: 24 }} />
-        <div style={{ fontSize: 26, letterSpacing: 4, textTransform: "uppercase", color: "#8fa194", display: "flex" }}>
+        <div style={{ display: "flex", width: 96, height: 2, backgroundColor: "#bfa870", marginBottom: 28 }} />
+        <div style={{ fontSize: 26, letterSpacing: 4, textTransform: "uppercase", color: "#d79a72", display: "flex" }}>
           {`${brand.name} · Blog`}
         </div>
         <div style={{ fontSize: 56, fontWeight: 600, marginTop: 24, maxWidth: 950, display: "flex" }}>

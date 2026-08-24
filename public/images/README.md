@@ -18,8 +18,12 @@ className/aspect ratio.
   section so it doesn't repeat the hero portrait.
 - **`src/assets/images/angelica-hiking.jpg`** — a real photo of Angelica
   and her partner hiking (confirmed by the user as real and approved for
-  publication). Moved off the About page when the photo below took that
-  slot; now used on `/guide`.
+  publication). **Currently unplaced.** It came off the About page when the
+  photo below took that slot. It was briefly tried on `/guide` and pulled
+  back off: it reads as a personal snapshot — tight selfie, sunglasses,
+  novelty logos — which suited About's "beyond real estate" section but
+  undercut a lead-generation page. Kept because it is real and approved;
+  use it only where the personal register is the point.
 - **`src/assets/images/angelica-son-falls.jpg`** — a real photo of Angelica
   with her son Alexander in front of a waterfall, used in the About page's
   "Beyond real estate" section, where the copy already talks about her son
