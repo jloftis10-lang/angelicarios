@@ -1,35 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-warm-white: #faf8f4;
-  --color-navy: #193247;
-  --color-navy-dark: #10212f;
-  /* Darkened from the original palette pick (#5f7180 / #8fa194) — those
-     read below WCAG AA's 4.5:1 for normal-size text against warm-white/
-     canvas/sand backgrounds (as low as 2.57:1 for sage). These clear 4.5:1
-     with margin against every background token in use; don't lighten back
-     without rechecking contrast. */
+  --color-warm-white: #fbf8f2;
+  --color-navy: #0b2a4a;
+  --color-navy-dark: #061a2e;
   --color-slate: #465560;
-  --color-sage: #54695d;
-  --color-sand: #d8c9b8;
-  --color-canvas: #f4f2ed;
+  --color-sage: #688f72;
+  --color-sand: #dccbb9;
+  --color-canvas: #f8f4ec;
   --color-ink: #17242d;
 
-  /* Brand accents — peach and champagne. THE RULE, measured not guessed:
-
-       on cream/canvas   peach 2.26:1   champagne 2.19:1  → DECORATIVE ONLY
-       on navy           peach 5.51:1   champagne 5.70:1  → safe as TEXT
-
-     On a light background these may only be rules, borders, ornaments and
-     background washes — never text, and never the only way something is
-     communicated. On a navy surface they clear AA and can carry small text
-     such as an eyebrow. Text on light stays ink/slate/sage/navy.
-
-     `peach-soft` is the pale wash behind callouts; every text token above
-     still clears AA on it (sage is tightest at 4.82:1). */
-  --color-peach: #d79a72;
-  --color-peach-soft: #f6e5da;
-  --color-champagne: #bfa870;
+  /* Signature Angelica Rios brand accents. Peach and champagne are decorative
+     on light backgrounds; use navy/ink/sage for text to preserve contrast. */
+  --color-peach: #f7a17a;
+  --color-peach-soft: #fbe7dc;
+  --color-champagne: #d4af37;
 
   --font-display: var(--font-newsreader), Georgia, serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
@@ -46,21 +31,22 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--color-warm-white);
   color: var(--color-ink);
   font-family: var(--font-body);
+  background-image:
+    radial-gradient(circle at 90% 4%, color-mix(in srgb, var(--color-peach-soft) 38%, transparent), transparent 25rem),
+    linear-gradient(to bottom, var(--color-warm-white), var(--color-warm-white));
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-display);
+h1, h2, h3, h4 { font-family: var(--font-display); }
+
+::selection {
+  background: var(--color-peach-soft);
+  color: var(--color-navy-dark);
 }
 
 :focus-visible {
