@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandRule } from "@/components/brand/BrandRule";
 import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
 import { agent, additionalLanguageList, serviceAreas } from "@/config/site";
-import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
+import angelicaPatio from "@/assets/images/angelica-patio.webp";
 import angelicaSonFalls from "@/assets/images/angelica-son-falls.jpg";
 
 export const metadata: Metadata = {
@@ -46,7 +46,7 @@ export default function AboutPage() {
 
       <section className="py-14 md:py-20">
         <Container className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">About Angelica Rios</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">Meet Angelica Rios</p>
           <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-navy md:text-5xl">
             Real-estate guidance shaped by financing, investing, renovation, and real life.
           </h1>
@@ -61,11 +61,16 @@ export default function AboutPage() {
 
       <section className="pb-16">
         <Container className="grid items-start gap-10 md:grid-cols-2 md:gap-16">
-          <PortraitImage
-            src={angelicaPortrait}
-            alt={`Angelica Rios, ${agent.title} in ${serviceAreas.primary}`}
-            aspect="aspect-[4/5]"
-          />
+          <div>
+            <PortraitImage
+              src={angelicaPatio}
+              alt={`Angelica Rios, ${agent.title} serving ${serviceAreas.primary}`}
+              aspect="aspect-[4/5]"
+            />
+            <p className="mt-3 text-xs leading-relaxed text-slate">
+              Angelica Rios — personal, direct real-estate guidance in Peachtree City and South Metro Atlanta.
+            </p>
+          </div>
           <div className="flex flex-col gap-4 text-base leading-relaxed text-slate">
             <p>
               In mortgage sales, Angelica developed leads, helped borrowers understand available loan programs, and
