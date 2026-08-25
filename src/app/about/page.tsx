@@ -6,8 +6,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandRule } from "@/components/brand/BrandRule";
 import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
 import { agent, additionalLanguageList, serviceAreas } from "@/config/site";
-import angelicaPatio from "@/assets/images/angelica-patio.webp";
-import angelicaGraduation from "@/assets/images/angelica-graduation.webp";
+import angelicaPatio from "@/assets/images/angelica-patio.jpg";
+import angelicaGraduation from "@/assets/images/angelica-graduation.jpg";
 
 export const metadata: Metadata = {
   title: "About Angelica Rios",
