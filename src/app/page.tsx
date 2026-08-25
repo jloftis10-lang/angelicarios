@@ -42,9 +42,14 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href="/contact">Talk With Angelica</Button>
-              <Button href="/guide" variant="secondary">
-                Get the Peachtree City Guide
+              <Button href="/sell" variant="secondary">
+                What Is My Home Worth?
               </Button>
+            </div>
+            <div className="mt-4">
+              <Link href="/guide" className="text-sm font-medium text-navy underline underline-offset-4 hover:text-navy-dark">
+                Moving to Peachtree City? Get the relocation guide →
+              </Link>
             </div>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-slate">
               Mortgage lending &amp; finance experience · Residential investor perspective · Firsthand
@@ -61,6 +66,43 @@ export default function Home() {
       </section>
 
       <ExpertiseBadges />
+
+      <section className="py-14 md:py-20">
+        <Container>
+          <div className="grid overflow-hidden rounded-3xl border border-sand/70 bg-white shadow-sm md:grid-cols-[1.2fr_0.8fr]">
+            <div className="p-8 sm:p-10 md:p-12">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sage">For Peachtree City homeowners</p>
+              <h2 className="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight text-navy md:text-4xl">
+                Thinking about selling? Start with a real local value review.
+              </h2>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate">
+                Online estimates can&apos;t see your renovation quality, lot, path access, floor plan, condition, or
+                current competition. Angelica reviews the details that actually change how a buyer sees your home —
+                then gives you a personal assessment instead of an instant guess.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Button href="/sell">Request My Home Value Review</Button>
+                <Button href="/sell#seller-form" variant="secondary">
+                  Start With My Address
+                </Button>
+              </div>
+              <p className="mt-4 text-xs leading-relaxed text-slate">
+                No automated valuation. No obligation. The first review is about understanding the property and your
+                timing.
+              </p>
+            </div>
+            <div className="flex min-h-64 items-center justify-center bg-navy p-8 text-warm-white sm:p-10 md:p-12">
+              <div className="max-w-xs">
+                <p className="font-display text-5xl font-semibold text-peach">Local first.</p>
+                <p className="mt-4 text-sm leading-relaxed text-warm-white/80">
+                  Condition. Improvements. Lot. Micro-location. Comparable sales. Current competition. Buyer behavior.
+                  The things an algorithm cannot fully see.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
 
       <ThreePaths />
 
