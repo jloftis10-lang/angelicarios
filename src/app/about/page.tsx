@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandRule } from "@/components/brand/BrandRule";
 import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
 import { agent, additionalLanguageList, serviceAreas } from "@/config/site";
-import angelicaPortrait from "@/assets/images/angelica-portrait.jpg";
+import angelicaPatio from "@/assets/images/angelica-patio.jpg";
 import angelicaSonFalls from "@/assets/images/angelica-son-falls.jpg";
 
 export const metadata: Metadata = {
@@ -46,7 +46,7 @@ export default function AboutPage() {
 
       <section className="py-14 md:py-20">
         <Container className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">About Angelica Rios</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">Meet Angelica Rios</p>
           <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-navy md:text-5xl">
             Real-estate guidance shaped by financing, investing, renovation, and real life.
           </h1>
@@ -61,11 +61,16 @@ export default function AboutPage() {
 
       <section className="pb-16">
         <Container className="grid items-start gap-10 md:grid-cols-2 md:gap-16">
-          <PortraitImage
-            src={angelicaPortrait}
-            alt={`Angelica Rios, ${agent.title} in ${serviceAreas.primary}`}
-            aspect="aspect-[4/5]"
-          />
+          <div>
+            <PortraitImage
+              src={angelicaPatio}
+              alt={`Angelica Rios, ${agent.title} serving ${serviceAreas.primary}`}
+              aspect="aspect-[4/5]"
+            />
+            <p className="mt-3 text-xs leading-relaxed text-slate">
+              Angelica Rios — personal, direct real-estate guidance in Peachtree City and South Metro Atlanta.
+            </p>
+          </div>
           <div className="flex flex-col gap-4 text-base leading-relaxed text-slate">
             <p>
               In mortgage sales, Angelica developed leads, helped borrowers understand available loan programs, and
@@ -141,11 +146,12 @@ export default function AboutPage() {
         <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">Beyond real estate</p>
-            <h2 className="mt-2 font-display text-3xl font-semibold text-navy">At home in Georgia.</h2>
+            <h2 className="mt-2 font-display text-3xl font-semibold text-navy">Family, community, and a life in Georgia.</h2>
             <p className="mt-4 text-sm leading-relaxed text-slate">
-              Outside of work, Angelica treasures time with her son Alexander and enjoys exploring the outdoors with
-              her partner and their dog — waterfalls, trails, and the parts of Georgia you only find by going looking.
-              Her appreciation for home, family, and community shapes the care she brings to every relationship.
+              Outside of work, family is a central part of Angelica&apos;s life. She treasures time with her son Alexander
+              and enjoys exploring Georgia, getting outside, and continuing to learn the communities she now serves.
+              That personal side matters to the way she works: a move is not just a transaction, it is often tied to a
+              family milestone, a new chapter, or a major life decision.
             </p>
             <ul className="mt-6 flex flex-col gap-3 text-sm text-ink">
               {[
@@ -162,11 +168,16 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
-          <PortraitImage
-            src={angelicaSonFalls}
-            alt="Angelica Rios and her son Alexander on a boardwalk in front of a waterfall"
-            aspect="aspect-[4/5]"
-          />
+          <div>
+            <PortraitImage
+              src={angelicaSonFalls}
+              alt="Angelica Rios and her son on a boardwalk in front of a waterfall"
+              aspect="aspect-[4/5]"
+            />
+            <p className="mt-3 text-xs leading-relaxed text-slate">
+              Family and time spent exploring Georgia are an important part of Angelica&apos;s life outside real estate.
+            </p>
+          </div>
         </Container>
       </section>
 
