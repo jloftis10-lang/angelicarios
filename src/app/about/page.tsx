@@ -7,7 +7,6 @@ import { BrandRule } from "@/components/brand/BrandRule";
 import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
 import { agent, additionalLanguageList, serviceAreas } from "@/config/site";
 import angelicaPatio from "@/assets/images/angelica-patio.jpg";
-import angelicaSonFalls from "@/assets/images/angelica-son-falls.jpg";
 
 export const metadata: Metadata = {
   title: "About Angelica Rios",
@@ -102,7 +101,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-16 bg-canvas">
+      <section className="bg-canvas py-16">
         <Container>
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">Professional background</p>
@@ -169,13 +168,17 @@ export default function AboutPage() {
             </ul>
           </div>
           <div>
-            <PortraitImage
-              src={angelicaSonFalls}
-              alt="Angelica Rios and her son on a boardwalk in front of a waterfall"
-              aspect="aspect-[4/5]"
-            />
+            <div className="aspect-[4/5] overflow-hidden rounded-2xl">
+              {/* This endpoint decodes the repaired JPEG from a text-safe payload so Vercel never processes the corrupt source file. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/api/graduation-photo"
+                alt="Angelica Rios celebrating her son&apos;s graduation"
+                className="h-full w-full object-cover"
+              />
+            </div>
             <p className="mt-3 text-xs leading-relaxed text-slate">
-              Family and time spent exploring Georgia are an important part of Angelica&apos;s life outside real estate.
+              Celebrating her son&apos;s graduation — a family milestone and a reminder that home is ultimately about the life happening around it.
             </p>
           </div>
         </Container>
