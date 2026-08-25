@@ -7,7 +7,7 @@ import { BrandRule } from "@/components/brand/BrandRule";
 import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
 import { agent, additionalLanguageList, serviceAreas } from "@/config/site";
 import angelicaPatio from "@/assets/images/angelica-patio.webp";
-import angelicaSonFalls from "@/assets/images/angelica-son-falls.jpg";
+import angelicaGraduation from "@/assets/images/angelica-graduation.webp";
 
 export const metadata: Metadata = {
   title: "About Angelica Rios",
@@ -146,11 +146,12 @@ export default function AboutPage() {
         <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">Beyond real estate</p>
-            <h2 className="mt-2 font-display text-3xl font-semibold text-navy">At home in Georgia.</h2>
+            <h2 className="mt-2 font-display text-3xl font-semibold text-navy">Family, community, and a life in Georgia.</h2>
             <p className="mt-4 text-sm leading-relaxed text-slate">
-              Outside of work, Angelica treasures time with her son Alexander and enjoys exploring the outdoors with
-              her partner and their dog — waterfalls, trails, and the parts of Georgia you only find by going looking.
-              Her appreciation for home, family, and community shapes the care she brings to every relationship.
+              Outside of work, family is a central part of Angelica&apos;s life. She treasures time with her son Alexander
+              and enjoys exploring Georgia, getting outside, and continuing to learn the communities she now serves.
+              That personal side matters to the way she works: a move is not just a transaction, it is often tied to a
+              family milestone, a new chapter, or a major life decision.
             </p>
             <ul className="mt-6 flex flex-col gap-3 text-sm text-ink">
               {[
@@ -167,11 +168,16 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
-          <PortraitImage
-            src={angelicaSonFalls}
-            alt="Angelica Rios and her son Alexander on a boardwalk in front of a waterfall"
-            aspect="aspect-[4/5]"
-          />
+          <div>
+            <PortraitImage
+              src={angelicaGraduation}
+              alt="Angelica Rios celebrating a family graduation"
+              aspect="aspect-[4/5]"
+            />
+            <p className="mt-3 text-xs leading-relaxed text-slate">
+              A family milestone — one of the reminders that a home is ultimately about the life happening around it.
+            </p>
+          </div>
         </Container>
       </section>
 
