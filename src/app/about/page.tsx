@@ -7,7 +7,7 @@ import { BrandRule } from "@/components/brand/BrandRule";
 import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
 import { agent, additionalLanguageList, serviceAreas } from "@/config/site";
 import angelicaPatio from "@/assets/images/angelica-patio.jpg";
-import angelicaGraduation from "@/assets/images/angelica-graduation.jpg";
+import angelicaSonFalls from "@/assets/images/angelica-son-falls.jpg";
 
 export const metadata: Metadata = {
   title: "About Angelica Rios",
@@ -170,12 +170,12 @@ export default function AboutPage() {
           </div>
           <div>
             <PortraitImage
-              src={angelicaGraduation}
-              alt="Angelica Rios celebrating a family graduation"
+              src={angelicaSonFalls}
+              alt="Angelica Rios and her son on a boardwalk in front of a waterfall"
               aspect="aspect-[4/5]"
             />
             <p className="mt-3 text-xs leading-relaxed text-slate">
-              A family milestone — one of the reminders that a home is ultimately about the life happening around it.
+              Family and time spent exploring Georgia are an important part of Angelica&apos;s life outside real estate.
             </p>
           </div>
         </Container>
