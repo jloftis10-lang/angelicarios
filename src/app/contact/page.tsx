@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { TrackedLink } from "@/components/TrackedLink";
 import { PortraitImage } from "@/components/ui/PortraitImage";
 import { agent, additionalLanguageList, contact } from "@/config/site";
-import angelicaCandid from "@/assets/images/angelica-candid.jpg";
+import angelicaContact from "@/assets/images/angelica-contact.jpg";
 
 export const metadata: Metadata = {
   title: "Contact Angelica",
@@ -61,7 +61,7 @@ export default function ContactPage() {
             </div>
           )}
           </div>
-          <PortraitImage src={angelicaCandid} alt="Angelica Rios" aspect="aspect-[4/5]" />
+          <PortraitImage src={angelicaContact} alt="Angelica Rios smiling" aspect="aspect-[4/5]" />
         </Container>
       </section>
 

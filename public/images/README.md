@@ -49,9 +49,13 @@ className/aspect ratio.
   summit, so neither is captioned as one. If the locations are confirmed,
   the alt text is worth making specific; do not guess.
 - **`src/assets/images/angelica-candid.jpg`** — real photo, used on the
-  Contact page. Same crop treatment. **Noticeably soft/out of focus and
-  very tightly zoomed** — it's real and it works, but it's the weakest
-  image on the site. Replace it first when better photography exists.
+  Contact page before September 2026. **Currently unplaced.** Noticeably
+  soft/out of focus and very tightly zoomed; retained only as an approved
+  real-photo fallback.
+- **`src/assets/images/angelica-contact.jpg`** — real photo supplied in
+  September 2026, now used on the Contact page. Cropped from the top to a
+  4:5 portrait so Angelica's hair and face remain intact, then optimized
+  for web delivery.
 - A separate photo ("angelicaJim", a sports-bar selfie) was reviewed
   earlier and intentionally **not** used — different setting/context from
   what's since been confirmed appropriate; the hiking photo replaced the
