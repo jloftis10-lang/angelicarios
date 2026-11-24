@@ -11,7 +11,12 @@ need to change.
 - [x] Angelica's last name — Rios
 - [x] Angelica's Georgia real-estate license number — #455962
 - [x] Angelica's phone number — 714-785-2859
-- [x] Angelica's email address — angelicarios@yahoo.com
+- [x] Angelica's public email — angelica@degolianhomes.com (work address).
+      Lead-form submissions still go to angelicarios@yahoo.com via
+      `leadEmail` in site config; change that one line to move them to the
+      work address.
+- [x] Angelica's phone — 404-716-5450 (cell). Replaced the previous 714
+      California number.
 
 ## Brokerage / compliance (`src/config/site.ts` → `brokerage`)
 
@@ -23,13 +28,14 @@ the rest of the disclosure is still outstanding.
       trades as "DeGolian Realty, LLC" or similar, that suffix belongs in
       `brokerage.legalName`, because that string is what the Georgia
       advertising disclosure renders.
-- [ ] **Brokerage office phone — REQUIRED TO BE COMPLIANT.** Georgia Real
-      Estate Commission advertising rules require the brokerage's licensed
-      name *and* telephone number to accompany agent advertising. The name is
-      there; without the phone the footer disclosure is still incomplete.
+- [x] Brokerage office phone — 678-519-5563. **Confirm whose line this is**:
+      it was supplied alongside the company URL so it is recorded as
+      DeGolian's office number, which is what the Georgia advertising
+      disclosure prints. If it is actually Angelica's direct work line,
+      move it and get the real office number.
 - [ ] Brokerage license number
 - [ ] Brokerage office address
-- [ ] Brokerage website
+- [x] Brokerage website — https://www.degolianrealty.com
 - [ ] **Broker marketing/advertising approval** for this site's copy and
       layout, and specifically for the use of the DeGolian Realty logo in the
       footer. Most brokerages have brand guidelines governing logo use; the

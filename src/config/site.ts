@@ -46,10 +46,23 @@ export const agent = {
   lastName: "Rios",
   fullName: "Angelica Rios",
   title: "Realtor",
-  phone: "714-785-2859",
-  email: "angelicarios@yahoo.com",
+  // Georgia cell — this is the number clients call and text, and it
+  // replaces the previous 714 (California) number.
+  phone: "404-716-5450",
+  // Public-facing work address at the brokerage. NOTE: this is NOT where
+  // lead-form submissions are delivered — see `leadEmail` below.
+  email: "angelica@degolianhomes.com",
   licenseNumber: "455962",
 };
+
+/**
+ * Where lead-form submissions are emailed. Deliberately separate from
+ * `agent.email`: the public contact address moved to the brokerage domain,
+ * but leads were explicitly asked to keep going to the Yahoo inbox, and
+ * folding the two together would have silently redirected them. Change
+ * this line to route leads to the work address instead.
+ */
+export const leadEmail = "angelicarios@yahoo.com";
 
 /**
  * Resume-backed professional background used as concrete differentiators.
@@ -98,9 +111,12 @@ export const additionalLanguageList = (() => {
 export const brokerage = {
   legalName: "DeGolian Realty",
   licenseNumber: PLACEHOLDER.brokerageLicense,
-  officePhone: PLACEHOLDER.brokeragePhone,
+  // Read as DeGolian's office line because it was given alongside the
+  // company URL. If it is actually Angelica's direct work line, move it —
+  // this number is what the Georgia advertising disclosure prints.
+  officePhone: "678-519-5563",
   address: PLACEHOLDER.brokerageAddress,
-  website: PLACEHOLDER.brokerageWebsite,
+  website: "https://www.degolianrealty.com",
 };
 
 export const contact = {

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { agent } from "@/config/site";
+import { leadEmail } from "@/config/site";
 import type { LeadPayload } from "@/lib/leadTypes";
 
 const INTENT_LABEL: Record<string, string> = {
@@ -67,11 +67,12 @@ export async function POST(request: NextRequest) {
   ].filter(Boolean);
 
   const resendApiKey = process.env.RESEND_API_KEY;
-  // Leads go to `agent.email` (angelicarios@yahoo.com). `LEAD_NOTIFICATION_EMAIL`
+  // Leads go to `leadEmail` (angelicarios@yahoo.com), which is deliberately
+  // separate from the public `agent.email` on the brokerage domain. `LEAD_NOTIFICATION_EMAIL`
   // exists only so the destination can be redirected without a redeploy — if it
   // is set in the hosting environment it WINS, so an unexpected value there is
   // the first thing to check if mail stops arriving at the expected inbox.
-  const leadToEmail = process.env.LEAD_NOTIFICATION_EMAIL ?? (agent.email.startsWith("[") ? null : agent.email);
+  const leadToEmail = process.env.LEAD_NOTIFICATION_EMAIL ?? (leadEmail.startsWith("[") ? null : leadEmail);
 
   if (!resendApiKey || !leadToEmail) {
     // Never report success we can't back up — the form surfaces Angelica's

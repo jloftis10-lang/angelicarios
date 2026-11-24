@@ -10,6 +10,18 @@ className/aspect ratio.
 
 ## In place
 
+- **`src/assets/images/angelica-hero.jpg`** — the homepage hero portrait.
+  **This is a generated portrait, not a photograph.** It arrived with no
+  camera metadata and a descriptive, prompt-style filename
+  ("Confident_Office_Portrait_with_Warm_Details.png") where every genuine
+  photo on this site came off a phone as `IMG_####`, and it does not match
+  the woman in the real photos. It was raised with the client and used at
+  their explicit direction; it is recorded here so nobody downstream
+  mistakes it for a photograph of Angelica. Replace it with a real
+  photoshoot headshot when one exists — that remains the single highest-
+  value photo upgrade on the site.
+
+
 - **`src/assets/images/angelica-portrait.jpg`** — a real, current photo of
   Angelica (candid, warm restaurant lighting), used on the homepage hero
   and the About page.
