@@ -15,7 +15,7 @@ need to change.
       Lead-form submissions still go to angelicarios@yahoo.com via
       `leadEmail` in site config; change that one line to move them to the
       work address.
-- [x] Angelica's phone — 404-716-5450 (cell). Replaced the previous 714
+- [x] Angelica's direct phone — 678-519-5563. Replaced the previous 714
       California number.
 
 ## Brokerage / compliance (`src/config/site.ts` → `brokerage`)
@@ -28,11 +28,9 @@ the rest of the disclosure is still outstanding.
       trades as "DeGolian Realty, LLC" or similar, that suffix belongs in
       `brokerage.legalName`, because that string is what the Georgia
       advertising disclosure renders.
-- [x] Brokerage office phone — 678-519-5563. **Confirm whose line this is**:
-      it was supplied alongside the company URL so it is recorded as
-      DeGolian's office number, which is what the Georgia advertising
-      disclosure prints. If it is actually Angelica's direct work line,
-      move it and get the real office number.
+- [x] Brokerage office phone — 404-716-5450, confirmed by the client as
+      DeGolian's office line. This is the number the Georgia advertising
+      disclosure prints.
 - [ ] Brokerage license number
 - [ ] Brokerage office address
 - [x] Brokerage website — https://www.degolianrealty.com
