@@ -5,7 +5,7 @@ import { PortraitImage } from "@/components/ui/PortraitImage";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandRule } from "@/components/brand/BrandRule";
 import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
-import { additionalLanguageList, agent, brokerage, serviceAreas } from "@/config/site";
+import { additionalLanguageList, agent, brokerage, memberships, serviceAreas } from "@/config/site";
 import angelicaPatio from "@/assets/images/angelica-patio.jpg";
 
 export const metadata: Metadata = {
@@ -156,6 +156,7 @@ export default function AboutPage() {
             <ul className="mt-6 flex flex-col gap-3 text-sm text-ink">
               {[
                 "Georgia real-estate license obtained August 2026",
+                ...memberships.map((m) => `${m.role}, ${m.name}`),
                 "Top mortgage producer in 2005, 2006, and 2007",
                 "Residential acquisition, renovation, staging, and resale experience",
                 "Business owner who managed approximately 10–15 employees",

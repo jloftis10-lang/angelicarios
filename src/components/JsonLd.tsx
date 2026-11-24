@@ -1,4 +1,4 @@
-import { agent, brand, brokerage, languages, serviceAreas, siteUrl, social } from "@/config/site";
+import { agent, brand, brokerage, languages, memberships, serviceAreas, siteUrl, social } from "@/config/site";
 
 export function JsonLd() {
   const isPlaceholder = (value: string) => value.startsWith("[");
@@ -18,6 +18,7 @@ export function JsonLd() {
     givenName: agent.firstName,
     jobTitle: agent.title,
     knowsLanguage,
+    memberOf: memberships.map((m) => ({ "@type": "Organization", name: m.name })),
     url: siteUrl,
     sameAs: sameAs.length > 0 ? sameAs : undefined,
     worksFor: isPlaceholder(brokerage.legalName)

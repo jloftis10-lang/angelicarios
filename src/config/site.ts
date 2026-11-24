@@ -117,6 +117,20 @@ export const additionalLanguageList = (() => {
  * disclosure remains incomplete until the phone arrives. Each field is
  * rendered only once it stops being a placeholder — nothing here is invented.
  */
+/**
+ * Professional memberships. Worded as membership, not office: Angelica is
+ * a MEMBER of the Fayette County Board of REALTORS® — the local
+ * association — and does not sit on its board of directors. Saying she
+ * served on the board would be a false credential, so keep the wording
+ * exact unless she is actually elected to a post.
+ */
+export const memberships = [
+  {
+    name: "Fayette County Board of REALTORS\u00AE",
+    role: "Member",
+  },
+] as const;
+
 export const brokerage = {
   legalName: "DeGolian Realty",
   licenseNumber: PLACEHOLDER.brokerageLicense,
