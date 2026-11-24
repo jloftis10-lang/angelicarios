@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { footerNav, primaryNav } from "@/config/navigation";
-import { agent, brand, brokerage, contact, serviceAreas, social } from "@/config/site";
+import { agent, brand, brokerage, brokerageWebsiteLabel, contact, serviceAreas, social } from "@/config/site";
 import { Container } from "@/components/ui/Container";
 import { TrackedLink } from "@/components/TrackedLink";
 import { Logo } from "@/components/brand/Logo";
@@ -18,12 +18,23 @@ export function Footer() {
   const hasBrokerage = !brokerage.legalName.startsWith("[");
   const hasBrokerageLicense = !brokerage.licenseNumber.startsWith("[");
   const hasBrokeragePhone = !brokerage.officePhone.startsWith("[");
+  const hasBrokerageSite = !brokerage.website.startsWith("[");
 
   return (
     <footer className="mt-24 border-t border-sand/60 bg-canvas">
       <Container className="grid gap-10 py-12 md:grid-cols-4">
         <div className="md:col-span-2">
           <Logo variant="stacked" className="items-start text-left" />
+          {hasBrokerageSite && (
+            <a
+              href={brokerage.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-block text-sm font-medium text-navy underline underline-offset-4 hover:text-navy-dark"
+            >
+              {brokerageWebsiteLabel}
+            </a>
+          )}
           <p className="mt-4 max-w-sm text-sm text-slate">
             Serving {serviceAreas.primary} and {serviceAreas.secondary}.
           </p>

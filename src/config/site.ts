@@ -120,6 +120,16 @@ export const brokerage = {
   website: "https://www.degolianrealty.com",
 };
 
+/**
+ * "degolianrealty.com" — the brokerage URL stripped of scheme, www and any
+ * trailing slash, for display. A placeholder passes through unchanged and
+ * still starts with "[", so the usual gating keeps working.
+ */
+export const brokerageWebsiteLabel = brokerage.website
+  .replace(/^https?:\/\//, "")
+  .replace(/^www\./, "")
+  .replace(/\/$/, "");
+
 export const contact = {
   phoneHref: `tel:${agent.phone}`,
   smsHref: `sms:${agent.phone}`,
