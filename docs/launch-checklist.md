@@ -54,7 +54,8 @@ the rest of the disclosure is still outstanding.
 - [ ] Approved service areas confirmed (currently Peachtree City +
       South Metro Atlanta, per `src/config/site.ts` → `serviceAreas`)
 - [ ] Brokerage-approved property search / IDX URL (`propertySearch.url`)
-- [ ] Social profile URLs (Instagram / Facebook / LinkedIn)
+- [x] Instagram — https://www.instagram.com/angelica_mygaagent
+- [ ] Facebook / LinkedIn URLs, if she wants them linked
 
 ## Site infrastructure
 

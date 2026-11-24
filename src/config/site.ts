@@ -160,8 +160,16 @@ export const serviceAreas = {
   ],
 };
 
+/**
+ * Profiles that are actually hers. Each one set here does two things at
+ * once: it appears in the footer, and it is emitted as `sameAs` in the
+ * Person and RealEstateAgent structured data, which is how search engines
+ * tie the site to the profile. Leave the rest as placeholders — a dead
+ * social link is worse than none, and a wrong `sameAs` claims an identity
+ * that isn't hers.
+ */
 export const social = {
-  instagram: PLACEHOLDER.instagramUrl,
+  instagram: "https://www.instagram.com/angelica_mygaagent",
   facebook: PLACEHOLDER.facebookUrl,
   linkedin: PLACEHOLDER.linkedinUrl,
 };
