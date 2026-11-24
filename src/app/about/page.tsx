@@ -5,7 +5,7 @@ import { PortraitImage } from "@/components/ui/PortraitImage";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandRule } from "@/components/brand/BrandRule";
 import { AdvisoryDisclaimer } from "@/components/sections/AdvisoryDisclaimer";
-import { agent, additionalLanguageList, serviceAreas } from "@/config/site";
+import { additionalLanguageList, agent, brokerage, serviceAreas } from "@/config/site";
 import angelicaPatio from "@/assets/images/angelica-patio.jpg";
 
 export const metadata: Metadata = {
@@ -89,9 +89,10 @@ export default function AboutPage() {
               and staying engaged throughout a process.
             </p>
             <p>
-              Angelica is a Georgia-licensed real-estate professional, licensed in August 2026, and works with buyers,
-              sellers, investors, and relocating clients in Peachtree City and South Metro Atlanta. Every client works
-              directly with her — not a rotating team of handoffs.
+              Angelica is a Georgia-licensed real-estate professional, licensed in August 2026, affiliated with
+              {" "}{brokerage.legalName}, and works with buyers, sellers, investors, and relocating clients in
+              Peachtree City and South Metro Atlanta. Every client works directly with her — not a rotating team of
+              handoffs.
             </p>
             <p>
               She communicates in English, Spanish, French, and Italian. Spanish and Italian are part of her documented

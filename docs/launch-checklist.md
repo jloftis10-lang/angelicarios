@@ -15,12 +15,26 @@ need to change.
 
 ## Brokerage / compliance (`src/config/site.ts` → `brokerage`)
 
-- [ ] Brokerage legal name
+Angelica's brokerage is **DeGolian Realty**. Its name and logo are in place;
+the rest of the disclosure is still outstanding.
+
+- [x] Brokerage name — "DeGolian Realty", transcribed from the brokerage's
+      own logo artwork. **Confirm the registered entity name**: if it legally
+      trades as "DeGolian Realty, LLC" or similar, that suffix belongs in
+      `brokerage.legalName`, because that string is what the Georgia
+      advertising disclosure renders.
+- [ ] **Brokerage office phone — REQUIRED TO BE COMPLIANT.** Georgia Real
+      Estate Commission advertising rules require the brokerage's licensed
+      name *and* telephone number to accompany agent advertising. The name is
+      there; without the phone the footer disclosure is still incomplete.
 - [ ] Brokerage license number
-- [ ] Brokerage office phone
 - [ ] Brokerage office address
 - [ ] Brokerage website
-- [ ] Broker marketing/advertising approval for this site's copy and layout
+- [ ] **Broker marketing/advertising approval** for this site's copy and
+      layout, and specifically for the use of the DeGolian Realty logo in the
+      footer. Most brokerages have brand guidelines governing logo use; the
+      file supplied is rendered unaltered and un-recolored, which is the
+      normal requirement, but sign-off should still be on record.
 - [ ] Confirm footer disclosure satisfies current Georgia Real Estate
       Commission advertising rules
 

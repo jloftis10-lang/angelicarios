@@ -82,8 +82,21 @@ export const additionalLanguageList = (() => {
   return `${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`;
 })();
 
+/**
+ * Angelica's brokerage. `legalName` is transcribed verbatim from the
+ * brokerage's own logo artwork — it is the name they trade under, not a
+ * guess. If the registered entity name carries a suffix ("LLC", "Inc.",
+ * "Group"), confirm it with the broker and use that here, because this
+ * string is what the Georgia advertising disclosure renders.
+ *
+ * License number, office phone and address are still placeholders. Georgia
+ * Real Estate Commission advertising rules require the brokerage's licensed
+ * name AND telephone number to accompany agent advertising, so the footer
+ * disclosure remains incomplete until the phone arrives. Each field is
+ * rendered only once it stops being a placeholder — nothing here is invented.
+ */
 export const brokerage = {
-  legalName: PLACEHOLDER.brokerageLegalName,
+  legalName: "DeGolian Realty",
   licenseNumber: PLACEHOLDER.brokerageLicense,
   officePhone: PLACEHOLDER.brokeragePhone,
   address: PLACEHOLDER.brokerageAddress,

@@ -4,6 +4,8 @@ import { agent, brand, brokerage, contact, serviceAreas, social } from "@/config
 import { Container } from "@/components/ui/Container";
 import { TrackedLink } from "@/components/TrackedLink";
 import { Logo } from "@/components/brand/Logo";
+import Image from "next/image";
+import degolianRealty from "@/assets/images/degolian-realty.png";
 
 const socialLinks = [
   { label: "Instagram", href: social.instagram },
@@ -86,13 +88,36 @@ export function Footer() {
             {hasLicense ? ` — License ${agent.licenseNumber}` : ""}
           </p>
           {hasBrokerage && (
-            <p>
-              {brokerage.legalName}
-              {hasBrokerageLicense ? ` — License ${brokerage.licenseNumber}` : ""}
-              {hasBrokeragePhone ? ` — ${brokerage.officePhone}` : ""}
-            </p>
+            <div className="mt-2 flex items-center gap-4">
+              {/* The brokerage's own mark, used unaltered. Do not recolor it to
+                  match this site's palette — a broker's logo is their asset and
+                  their brand guidelines normally forbid changing it. */}
+              <Image
+                src={degolianRealty}
+                alt={`${brokerage.legalName} logo`}
+                width={148}
+                height={110}
+                sizes="88px"
+                className="h-auto w-[88px] shrink-0"
+              />
+              <div className="flex flex-col gap-1">
+                <p>
+                  Angelica Rios is a licensed real-estate professional with {brokerage.legalName}.
+                </p>
+                {/* Only render the detail line once there is a licence or
+                    phone to attach — otherwise it repeats the brokerage name
+                    that the sentence above already carries. */}
+                {(hasBrokerageLicense || hasBrokeragePhone) && (
+                  <p>
+                    {brokerage.legalName}
+                    {hasBrokerageLicense ? ` — License ${brokerage.licenseNumber}` : ""}
+                    {hasBrokeragePhone ? ` — ${brokerage.officePhone}` : ""}
+                  </p>
+                )}
+                {!brokerage.address.startsWith("[") && <p>{brokerage.address}</p>}
+              </div>
+            </div>
           )}
-          {hasBrokerage && !brokerage.address.startsWith("[") && <p>{brokerage.address}</p>}
           <p className="text-slate">
             Equal Housing Opportunity. Information deemed reliable but not guaranteed. © {new Date().getFullYear()} {brand.name}.
           </p>
