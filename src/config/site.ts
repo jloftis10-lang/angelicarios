@@ -121,13 +121,13 @@ export const brokerage = {
 };
 
 /**
- * "degolianrealty.com" — the brokerage URL stripped of scheme, www and any
- * trailing slash, for display. A placeholder passes through unchanged and
- * still starts with "[", so the usual gating keeps working.
+ * "www.degolianrealty.com" — the brokerage URL stripped of scheme and any
+ * trailing slash, for display. The www. is kept deliberately: that is how
+ * the brokerage writes its own address. A placeholder passes through
+ * unchanged and still starts with "[", so the usual gating keeps working.
  */
 export const brokerageWebsiteLabel = brokerage.website
   .replace(/^https?:\/\//, "")
-  .replace(/^www\./, "")
   .replace(/\/$/, "");
 
 export const contact = {

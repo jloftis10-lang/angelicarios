@@ -25,15 +25,29 @@ export function Footer() {
       <Container className="grid gap-10 py-12 md:grid-cols-4">
         <div className="md:col-span-2">
           <Logo variant="stacked" className="items-start text-left" />
-          {hasBrokerageSite && (
-            <a
-              href={brokerage.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-block text-sm font-medium text-navy underline underline-offset-4 hover:text-navy-dark"
-            >
-              {brokerageWebsiteLabel}
-            </a>
+          {(hasBrokerageSite || hasBrokeragePhone) && (
+            <div className="mt-2 flex flex-col items-start gap-1 text-sm">
+              {hasBrokerageSite && (
+                <a
+                  href={brokerage.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-navy underline underline-offset-4 hover:text-navy-dark"
+                >
+                  {brokerageWebsiteLabel}
+                </a>
+              )}
+              {/* Labelled "Office" because Angelica's own line appears further
+                  down this same column — two bare numbers would be ambiguous. */}
+              {hasBrokeragePhone && (
+                <p className="text-ink">
+                  Office{" "}
+                  <a href={`tel:${brokerage.officePhone}`} className="hover:text-navy">
+                    {brokerage.officePhone}
+                  </a>
+                </p>
+              )}
+            </div>
           )}
           <p className="mt-4 max-w-sm text-sm text-slate">
             Serving {serviceAreas.primary} and {serviceAreas.secondary}.
@@ -41,9 +55,12 @@ export function Footer() {
           {(hasPhone || hasEmail) && (
             <div className="mt-4 flex flex-col gap-1 text-sm text-ink">
               {hasPhone && (
-                <TrackedLink href={contact.phoneHref} event="phone_click" params={{ location: "footer" }} className="hover:text-navy">
-                  {agent.phone}
-                </TrackedLink>
+                <p>
+                  Cell{" "}
+                  <TrackedLink href={contact.phoneHref} event="phone_click" params={{ location: "footer" }} className="hover:text-navy">
+                    {agent.phone}
+                  </TrackedLink>
+                </p>
               )}
               {hasEmail && (
                 <a href={contact.emailHref} className="hover:text-navy">
