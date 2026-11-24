@@ -14,7 +14,6 @@ const socialLinks = [
 export function Footer() {
   const hasPhone = !agent.phone.startsWith("[");
   const hasEmail = !agent.email.startsWith("[");
-  const hasLicense = !agent.licenseNumber.startsWith("[");
   const hasBrokerage = !brokerage.legalName.startsWith("[");
   const hasBrokerageLicense = !brokerage.licenseNumber.startsWith("[");
   const hasBrokeragePhone = !brokerage.officePhone.startsWith("[");
@@ -109,25 +108,25 @@ export function Footer() {
 
       <div className="border-t border-sand/60">
         <Container className="flex flex-col gap-2 py-6 text-xs text-slate">
+          {/* Line 1 carries the part Georgia actually requires of an
+              affiliated licensee's advertising: the firm's name and its
+              telephone number. The brokerage mark is not repeated here —
+              the stacked lockup at the top of this footer already has it. */}
           <p>
             {agent.fullName}, {agent.title}
-            {hasLicense ? ` — License ${agent.licenseNumber}` : ""}
+            {hasBrokerage ? ` · ${brokerage.legalName}` : ""}
+            {hasBrokerageLicense ? ` · License ${brokerage.licenseNumber}` : ""}
+            {hasBrokeragePhone ? ` · ${brokerage.officePhone}` : ""}
           </p>
-          {/* Text-only disclosure — the brokerage mark already sits at the
-              top of this footer in the stacked lockup, so repeating it here
-              would just be the same logo twice. */}
-          {hasBrokerage && (
-            <>
-              <p>
-                Angelica Rios is a licensed real-estate professional with {brokerage.legalName}
-                {hasBrokerageLicense ? ` — License ${brokerage.licenseNumber}` : ""}
-                {hasBrokeragePhone ? ` — ${brokerage.officePhone}` : ""}.
-              </p>
-              {!brokerage.address.startsWith("[") && <p>{brokerage.address}</p>}
-            </>
-          )}
+          {hasBrokerage && !brokerage.address.startsWith("[") && <p>{brokerage.address}</p>}
+          {/* "Information deemed reliable but not guaranteed" used to sit
+              here. It is MLS/IDX language for disclaiming listing data, and
+              this site displays none — no IDX search, no listings, and the
+              market-stats block renders nothing while its data is null. It
+              disclaimed nothing, so it was removed. Put it back if and when
+              real listing or market data appears on the site. */}
           <p className="text-slate">
-            Equal Housing Opportunity. Information deemed reliable but not guaranteed. © {new Date().getFullYear()} {brand.name}.
+            Equal Housing Opportunity · © {new Date().getFullYear()} {brand.name}
           </p>
         </Container>
       </div>
