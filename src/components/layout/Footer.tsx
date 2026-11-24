@@ -3,7 +3,7 @@ import { footerNav, primaryNav } from "@/config/navigation";
 import { agent, brand, brokerage, brokerageWebsiteLabel, contact, serviceAreas, social } from "@/config/site";
 import { Container } from "@/components/ui/Container";
 import { TrackedLink } from "@/components/TrackedLink";
-import { Logo } from "@/components/brand/Logo";
+import { Logo, BrokerageMark } from "@/components/brand/Logo";
 
 const socialLinks = [
   { label: "Instagram", href: social.instagram },
@@ -24,28 +24,34 @@ export function Footer() {
       <Container className="grid gap-10 py-12 md:grid-cols-4">
         <div className="md:col-span-2">
           <Logo variant="stacked" className="items-start text-left" />
+          {/* Angelica's own mark leads this footer; DeGolian's sits here with
+              their website and office line so the brokerage is still clearly
+              represented. */}
           {(hasBrokerageSite || hasBrokeragePhone) && (
-            <div className="mt-2 flex flex-col items-start gap-1 text-sm">
-              {hasBrokerageSite && (
-                <a
-                  href={brokerage.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-navy underline underline-offset-4 hover:text-navy-dark"
-                >
-                  {brokerageWebsiteLabel}
-                </a>
-              )}
+            <div className="mt-4 flex items-center gap-4">
+              <BrokerageMark className="h-auto w-[72px] shrink-0" sizes="72px" />
+              <div className="flex flex-col items-start gap-1 text-sm">
+                {hasBrokerageSite && (
+                  <a
+                    href={brokerage.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-navy underline underline-offset-4 hover:text-navy-dark"
+                  >
+                    {brokerageWebsiteLabel}
+                  </a>
+                )}
               {/* Labelled "Office" because Angelica's own line appears further
                   down this same column — two bare numbers would be ambiguous. */}
-              {hasBrokeragePhone && (
-                <p className="text-ink">
-                  Office{" "}
-                  <a href={`tel:${brokerage.officePhone}`} className="hover:text-navy">
-                    {brokerage.officePhone}
-                  </a>
-                </p>
-              )}
+                {hasBrokeragePhone && (
+                  <p className="text-ink">
+                    Office{" "}
+                    <a href={`tel:${brokerage.officePhone}`} className="hover:text-navy">
+                      {brokerage.officePhone}
+                    </a>
+                  </p>
+                )}
+              </div>
             </div>
           )}
           <p className="mt-4 max-w-sm text-sm text-slate">

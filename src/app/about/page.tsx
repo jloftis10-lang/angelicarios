@@ -63,7 +63,7 @@ export default function AboutPage() {
           <div>
             <PortraitImage
               src={angelicaPatio}
-              alt={`Angelica Rios, ${agent.title} serving ${serviceAreas.primary}`}
+              alt={`Angelica Rios, real-estate agent serving ${serviceAreas.primary}`}
               aspect="aspect-[4/5]"
             />
             <p className="mt-3 text-xs leading-relaxed text-slate">

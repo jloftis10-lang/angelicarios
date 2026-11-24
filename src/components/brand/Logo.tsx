@@ -44,6 +44,24 @@ export function PeachMark({ className }: { className?: string }) {
   );
 }
 
+/**
+ * Angelica's own mark: an AR monogram with the peach. Restored at the
+ * client's request after a spell using the brokerage logo as the primary
+ * mark. DeGolian's logo still appears in the footer alongside the
+ * brokerage website and office line, so the brokerage is still represented
+ * — confirm with the broker that they're happy with an agent mark leading.
+ */
+export function BrandMonogram({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 180 150" className={className} role="presentation" aria-hidden="true">
+      <text x="57" y="126" textAnchor="middle" fill="var(--color-navy)" fontFamily="var(--font-display)" fontSize="136" fontWeight="500">A</text>
+      <text x="120" y="126" textAnchor="middle" fill="var(--color-navy)" fontFamily="var(--font-display)" fontSize="136" fontWeight="500">R</text>
+      <path d="M39 109C63 77 87 57 129 34" fill="none" stroke="var(--color-navy)" strokeWidth="2.6" strokeLinecap="round" />
+      <g transform="translate(54 69) scale(.58)"><PeachMark /></g>
+    </svg>
+  );
+}
+
 export function PeachOrnament({ className }: { className?: string }) {
   return <PeachMark className={className} />;
 }
@@ -73,7 +91,7 @@ export function Logo({
   if (variant === "stacked") {
     return (
       <span className={`flex flex-col items-center text-center ${className ?? ""}`}>
-        <BrokerageMark className="h-auto w-[116px]" sizes="116px" />
+        <BrandMonogram className="h-20 w-auto" />
         <span className="mt-3 font-display text-2xl font-medium uppercase tracking-[0.08em] text-navy">
           Angelica Rios
         </span>
@@ -83,7 +101,7 @@ export function Logo({
           <span className="h-px flex-1 bg-champagne" />
         </span>
         <span className="mt-2 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-navy">
-          Realtor · {brokerage.legalName}
+          REALTOR® · {brokerage.legalName}
         </span>
       </span>
     );
@@ -91,14 +109,13 @@ export function Logo({
 
   return (
     <span className={`flex items-center gap-3 sm:gap-3.5 ${className ?? ""}`}>
-      <BrokerageMark className="h-auto w-[52px] shrink-0 sm:w-[58px] md:w-[66px]" sizes="66px" />
-      <span className="h-8 w-px shrink-0 bg-champagne/60 sm:h-9 md:h-10" aria-hidden="true" />
+      <BrandMonogram className="h-9 w-auto shrink-0 sm:h-10 md:h-12" />
       <span className="flex min-w-0 flex-col leading-none">
         <span className="whitespace-nowrap font-display text-[1.05rem] font-medium uppercase tracking-[0.045em] text-navy sm:text-lg md:text-[1.3rem] md:tracking-[0.055em]">
           Angelica Rios
         </span>
         <span className="mt-1.5 whitespace-nowrap text-[0.43rem] font-semibold uppercase tracking-[0.16em] text-navy sm:mt-2 sm:text-[0.5rem] sm:tracking-[0.19em] md:text-[0.56rem] md:tracking-[0.2em]">
-          Realtor · {brokerage.legalName}
+          REALTOR® · {brokerage.legalName}
         </span>
       </span>
     </span>

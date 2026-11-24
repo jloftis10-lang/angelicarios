@@ -11,7 +11,7 @@ import { siteUrl, brand } from "@/config/site";
 export const metadata: Metadata = {
   title: "How to Get Prequalified for a Mortgage in Georgia",
   description:
-    "What prequalification and preapproval mean, what documents to gather, what lenders may review, and a short readiness check — from a Peachtree City Realtor with mortgage lending experience.",
+    "What prequalification and preapproval mean, what documents to gather, what lenders may review, and a short readiness check — from a Peachtree City REALTOR® with mortgage lending experience.",
   alternates: { canonical: "/get-prequalified" },
 };
 

@@ -45,7 +45,15 @@ export const agent = {
   firstName: "Angelica",
   lastName: "Rios",
   fullName: "Angelica Rios",
-  title: "Realtor",
+  /**
+   * REALTOR® is a registered collective-membership mark of the National
+   * Association of REALTORS®, restricted to members. Angelica is a member
+   * and sits on the board, so the term is used — always in capitals and
+   * always with the ®, and only to identify her, never as a generic
+   * synonym for "real estate agent". If her membership ever lapses this
+   * must revert to "Real Estate Agent".
+   */
+  title: "REALTOR\u00AE",
   // Angelica's direct line — the number clients call and text, and the one
   // the sticky mobile call/text bar dials. Replaced the previous 714
   // (California) number. NOT the brokerage line: see brokerage.officePhone.

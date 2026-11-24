@@ -81,7 +81,7 @@ export function MortgageReadiness() {
 
           <p className="mt-8 rounded-2xl bg-canvas p-5 text-sm leading-relaxed text-slate">
             This is preparation guidance, not a lending decision. Only a licensed lender can prequalify or preapprove
-            you, and only they can tell you what you qualify for. Angelica is a Realtor — what she can do is make sure
+            you, and only they can tell you what you qualify for. Angelica is a REALTOR® — what she can do is make sure
             you walk into that conversation with everything in hand.
           </p>
 

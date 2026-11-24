@@ -25,7 +25,7 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `Peachtree City GA Realtor | ${brand.name}`,
+    default: `Peachtree City GA REALTOR\u00AE | ${brand.name}`,
     template: `%s | ${brand.name}`,
   },
   description:

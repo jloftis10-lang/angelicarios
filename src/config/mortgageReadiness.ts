@@ -3,7 +3,7 @@
  *
  * WHAT THIS IS NOT — read before editing:
  *
- * Angelica is a Realtor, not a mortgage loan originator. This tool does not
+ * Angelica is a REALTOR®, not a mortgage loan originator. This tool does not
  * prequalify anyone, does not approve anyone, and must never behave as if
  * it does. Specifically it must never:
  *
@@ -14,7 +14,7 @@
  *
  * What it DOES is tell a buyer how prepared they are to walk into a
  * lender conversation, and exactly what to gather first. That is genuinely
- * useful, it is squarely within what a Realtor can speak to, and it plays
+ * useful, it is squarely within what a real estate agent can speak to, and it plays
  * to real underwriting experience rather than pretending to lend.
  *
  * Every piece of guidance below should survive the question "could a
@@ -313,7 +313,7 @@ export const documentChecklist: { title: string; items: string[] }[] = [
 
 /**
  * Things that routinely derail a loan *after* preapproval. This is process
- * guidance a Realtor can absolutely give — it is about not disturbing a
+ * guidance a real estate agent can absolutely give — it is about not disturbing a
  * file mid-transaction, not about eligibility.
  */
 export const keepItCleanRules: string[] = [

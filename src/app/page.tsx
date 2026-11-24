@@ -11,14 +11,14 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { RecentPosts } from "@/components/sections/RecentPosts";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FinalCta } from "@/components/sections/FinalCta";
-import { serviceAreas, agent, additionalLanguageList } from "@/config/site";
+import { serviceAreas, additionalLanguageList } from "@/config/site";
 import { villages } from "@/config/villages";
 import angelicaHero from "@/assets/images/angelica-hero.jpg";
 import angelicaLifestyle from "@/assets/images/angelica-lifestyle.jpg";
 import ptcPathLake from "@/assets/images/ptc-path-lake.jpg";
 
 export const metadata: Metadata = {
-  title: "Peachtree City Realtor & Relocation Guide",
+  title: "Peachtree City REALTOR\u00AE & Relocation Guide",
   description:
     "Personal real-estate guidance for buyers, sellers, investors, and people relocating to Peachtree City and South Metro Atlanta — informed by mortgage lending, finance, and residential investment experience.",
   alternates: { canonical: "/" },
@@ -58,7 +58,7 @@ export default function Home() {
           </div>
           <PortraitImage
             src={angelicaHero}
-            alt={`Angelica Rios, ${agent.title} in ${serviceAreas.primary}`}
+            alt={`Angelica Rios, real-estate agent in ${serviceAreas.primary}`}
             aspect="aspect-[4/5]"
             priority
           />
