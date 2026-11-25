@@ -10,6 +10,11 @@ className/aspect ratio.
 
 ## In place
 
+- **`src/assets/images/angelica-patio.jpg`** — the About page bio portrait.
+  Replaced a 200x250 thumbnail that rendered visibly soft in a slot about
+  500px wide; this one is cropped to 4:5 from a 1932x2576 original.
+
+
 - **`src/assets/images/angelica-hero.jpg`** — the homepage hero portrait.
   **This is a generated portrait, not a photograph.** It arrived with no
   camera metadata and a descriptive, prompt-style filename
