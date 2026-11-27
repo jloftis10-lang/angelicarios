@@ -22,16 +22,19 @@ className/aspect ratio.
   it may want swapping outside the holidays.
 
 
-- **`src/assets/images/angelica-hero.jpg`** — the homepage hero portrait.
-  **This is a generated portrait, not a photograph.** It arrived with no
-  camera metadata and a descriptive, prompt-style filename
-  ("Confident_Office_Portrait_with_Warm_Details.png") where every genuine
-  photo on this site came off a phone as `IMG_####`, and it does not match
-  the woman in the real photos. It was raised with the client and used at
-  their explicit direction; it is recorded here so nobody downstream
-  mistakes it for a photograph of Angelica. Replace it with a real
-  photoshoot headshot when one exists — that remains the single highest-
-  value photo upgrade on the site.
+- **`src/assets/images/angelica-professional.jpg`** — the homepage hero.
+  A real photograph of Angelica, in a real location, **with her clothing
+  altered by AI** — the client disclosed this up front. Treat it as a
+  retouched photograph rather than a fabricated one: the face, the person
+  and the setting are genuine; only the outfit is generated. That is a
+  different thing from a synthetic likeness and is why it is used here.
+  Already 4:5 at source, so no cropping was needed.
+
+  It replaced `angelica-hero.jpg`, a fully AI-generated portrait of
+  **somebody who was not Angelica** — different face, no camera metadata,
+  prompt-style filename. That file has been deleted rather than left in
+  the repo, so it cannot be picked up again by mistake; it is still in git
+  history if anyone needs it.
 
 
 - **`src/assets/images/angelica-portrait.jpg`** — a real, current photo of
