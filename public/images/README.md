@@ -11,8 +11,13 @@ className/aspect ratio.
 ## In place
 
 - **`src/assets/images/angelica-patio.jpg`** — the About page bio portrait.
-  Replaced a 200x250 thumbnail that rendered visibly soft in a slot about
-  500px wide; this one is cropped to 4:5 from a 1932x2576 original.
+  A background-removed cutout (red blazer), padded with headroom and
+  flattened onto the page's own warm-white `#faf8f4` rather than cropped,
+  because the source is near-square and cropping to 4:5 would have cut into
+  her shoulders. Flattening onto the page colour makes the rounded frame
+  disappear, so she reads as a portrait on the page instead of a cutout in
+  a box. **If the page background ever changes, this image has to be
+  re-flattened onto the new colour** or it will show as a pale rectangle.
 
 
 - **`src/assets/images/angelica-hero.jpg`** — the homepage hero portrait.
