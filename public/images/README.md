@@ -11,13 +11,15 @@ className/aspect ratio.
 ## In place
 
 - **`src/assets/images/angelica-patio.jpg`** — the About page bio portrait.
-  A background-removed cutout (red blazer), padded with headroom and
-  flattened onto the page's own warm-white `#faf8f4` rather than cropped,
-  because the source is near-square and cropping to 4:5 would have cut into
-  her shoulders. Flattening onto the page colour makes the rounded frame
-  disappear, so she reads as a portrait on the page instead of a cutout in
-  a box. **If the page background ever changes, this image has to be
-  re-flattened onto the new colour** or it will show as a pale rectangle.
+  The original, uncropped version of the red-blazer photo, cropped to 4:5
+  from a phone screenshot (the real content sat at rows 487-2044; the black
+  letterbox bars above and below were detected by row luminance and
+  trimmed). This replaced a background-removed cutout of the same shot,
+  which had stair-stepped edges along the shoulder that showed against flat
+  cream. Prefer an original over a cutout whenever both exist.
+
+  Note it is a seasonal photo — there is a lit Christmas tree in frame — so
+  it may want swapping outside the holidays.
 
 
 - **`src/assets/images/angelica-hero.jpg`** — the homepage hero portrait.
